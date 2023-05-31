@@ -932,13 +932,14 @@ body .contacts .contacts_info-wrapper .form_container .submit_wrap .submit_btn {
 }
 body .contacts .contacts_info-wrapper .contacts_cards_wrapper {
   width: 55%;
-  max-width: 528px;
+  max-width: 648px;
 }
 body .contacts .contacts_info-wrapper .contacts_cards_wrapper .contact_card {
   margin-bottom: 24px;
 }
 body .contacts .contacts_info-wrapper .contacts_cards_wrapper .contact_card .content_wrap {
   display: flex;
+  justify-content: space-between;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 16px;
 }

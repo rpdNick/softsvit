@@ -1112,13 +1112,14 @@ body {
 
       .contacts_cards_wrapper {
         width: 55%;
-        max-width: 528px;
+        max-width: 648px;
 
         .contact_card {
           margin-bottom: 24px;
 
           .content_wrap {
             display: flex;
+            justify-content: space-between;
             background: rgba(0, 0, 0, 0.4);
             border-radius: 16px;
 
