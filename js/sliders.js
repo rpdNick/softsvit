@@ -11,7 +11,7 @@ const feedbackSliderOptions = {
   longSwipes: true,
   longSwipesRatio: 0,
   threshold: 0,
-  slideToClickedSlide: true,
+  slideToClickedSlide: false,
   speed: 400,
   loop: true,
   loopedSlides: 2,
@@ -27,11 +27,12 @@ const feedbackSliderOptions = {
     onlyInViewport: true,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".feedback-slider .swiper-pagination",
+    clickable: true,
   },
   navigation: {
-    nextEl: ".slider-button-next",
-    prevEl: ".slider-button-prev",
+    nextEl: ".feedback-slider .slider-button-next",
+    prevEl: ".feedback-slider .slider-button-prev",
   },
 };
 

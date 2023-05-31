@@ -54,17 +54,6 @@ body {
   .section-wrapper {
     position: relative;
     overflow: hidden;
-
-    // .cover-image {
-    //   position: absolute;
-    //   top: -200px;
-    //   width: 100%;
-    //   left: 0;
-    //   right: 0;
-    //   margin: 0 auto;
-    //   object-fit: contain;
-    //   z-index: -1;
-    // }
   }
 
   .ellipse {
@@ -169,6 +158,10 @@ body {
       letter-spacing: 0.02em;
       padding: 16px 40px;
       min-width: 258px;
+    }
+
+    &.w-100 {
+      width: 100%;
     }
   }
 
@@ -392,6 +385,7 @@ body {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        gap: 5px;
       }
     }
 
@@ -426,12 +420,11 @@ body {
 
   /* Sliders */
   .swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
     &.feedback-slider {
       // max-width: 962px;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
       max-width: 1100px;
 
       .swiper-slide {
@@ -544,12 +537,30 @@ body {
       }
     }
 
+    // &.vacancy-slider {
+    //   width: 100%;
+    //   height: 100%;
+    //   padding: 50px 0;
+
+    //   .swiper-slide {
+    //     text-align: center;
+    //     font-size: 18px;
+    //     background: #fff;
+    //     height: calc((100% - 24px) / 2) !important;
+
+    //     /* Center slide text vertically */
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //   }
+    // }
+
     .slider-control {
       position: relative;
       bottom: -24px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: baseline;
       width: fit-content;
 
       .slider-button-prev,
@@ -800,11 +811,31 @@ body {
       right: 0px;
       top: -10px;
       z-index: 1;
+
+      @media screen and (max-height: 786px) {
+        top: -30px;
+      }
+
+      &.animate {
+        animation: move 3s linear;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(calc(-100% - var(--gap)));
+        }
+        100% {
+        }
+      }
     }
 
     .social_block {
       display: flex;
       flex-direction: column;
+      gap: 5px;
       position: absolute;
       right: 0;
       bottom: 68px;
@@ -889,7 +920,7 @@ body {
     background-image: url(../img/section-bg.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     padding: 57px 0px;
 
     .cards_wrapper {
@@ -988,7 +1019,7 @@ body {
     padding-bottom: 47px;
     background-image: url(../img/contacts-bg.png);
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 
     .contacts_info-wrapper {
@@ -1101,12 +1132,6 @@ body {
 
         .submit_wrap {
           margin-top: 26px;
-
-          .submit_btn {
-            width: 100%;
-            font-size: 20px;
-            padding: 16px 20px;
-          }
         }
       }
 
@@ -1200,6 +1225,7 @@ body {
 
           .social_block {
             display: flex;
+            gap: 5px;
           }
         }
       }
