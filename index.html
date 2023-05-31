@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="./style/icomoon/style.css">
+  <link rel="stylesheet" href="./style/marquee.css">
+  <link rel="stylesheet" href="./style/loader.css">
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/swiper-bundle.min.css" />
+  <title>SOFTSVIT</title>
+</head>
+
+<body class="loading">
+  <header class="center">
+    <div class="main_header content-wrapper center">
+      <a class="logo" href="#">
+        <img src="./img/logo.svg" alt="logo" />
+      </a>
+      <div class="menu_button" id="toggle_menu">
+        <span class="content_default">меню <i class="menu_icon icon_arrow_right"></i></span>
+        <span class="content_active">закрити <i class="menu_icon icon_close"></i></span>
+      </div>
+    </div>
+  </header>
+  <div class="main_screen_wrap container">
+    <div class="main_screen_content content-wrapper">
+      <div class="main_screen_title">
+        <h1>твори, прокачуйся та розважайся разом із <span class="green_txt">sofTsvit</span></h1>
+      </div>
+      <button class="button apply_button big filling_bg scroll-to" href="#contacts">подати заявку</button>
+      <div class="social_block">
+        <a class="social-item" href="#">
+          <i class="icon-telegram"></i>
+        </a>
+        <a class="social-item" href="#">
+          <i class="icon-instagram"></i>
+        </a>
+        <a class="social-item" href="#">
+          <i class="icon-linkedin"></i>
+        </a>
+      </div>
+      <img class="sphere" src="./img/sphere.png" alt="sphere">
+      <div class="main_screen_footer">
+        <div class="experience_row">
+          <div class="experience_item">
+            <span class="count">6</span>
+            <span>Років досвіду</span>
+          </div>
+          <div class="experience_item">
+            <span class="count">500+</span>
+            <span>Спеціалістів</span>
+          </div>
+          <div class="experience_item">
+            <span class="count infinity">&#8734;</span>
+            <span>Можливостей</span>
+          </div>
+        </div>
+        <div class="language-mode-switch">
+          <div class="language_switch">
+            <span data-lang="en">eng</span>
+            <span class="active" data-lang="uk">укр</span>
+            <div class="color-mode-switch"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="ellipse main_screen_ellipse-left" src="./img/ellipse-left.svg" alt="">
+    <div class="starfield_box">
+      <canvas id="starfield"></canvas>
+    </div>
+    <img class="ellipse main_screen_ellipse-right" src="./img/ellipse-right.svg" alt="">
+  </div>
+  <section class="about_us container" id="about_us">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">про нас</p>
+      <div class="about_us_categories">
+        <div class="category_item">
+          <h5 class="category_title">Місія</h5>
+          <div class="category_description">Абсолютно різноманітна та амбіційна команда однодумців, яких об’єднала
+            спільна мета, жага до розвитку.</div>
+        </div>
+        <div class="category_item">
+          <h5 class="category_title">Досвід</h5>
+          <div class="category_description">Вже 6 років активно розвиваємось на ринку, не плануємо зупинятись, ставимо
+            все більш амбіційні цілі та успішно їх реалізовуємо.</div>
+        </div>
+        <div class="category_item">
+          <h5 class="category_title">Команда</h5>
+          <div class="category_description">У нашій команді наразі більше 500 крутих спеціалістів. З нами працюють
+            найкращі і стають ще кращими.</div>
+        </div>
+        <div class="category_item">
+          <h5 class="category_title">Розвиток</h5>
+          <div class="category_description">У нашій команді наразі більше 500 крутих спеціалістів. З нами працюють
+            найкращі і стають ще кращими.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="marquee-wraper">
+    <div class="marquee">
+      <span class="marquee__content">
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">розваг</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">кольорів</span></span>
+      </span>
+      <span class="marquee__content">
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">розваг</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+      </span>
+    </div>
+  </div>
+  <section class="why_softsvit container" id="why_softsvit">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">чому ми</p>
+      <div class="cards_wrapper">
+        <div class="card_item">
+          <div class="card_front">
+            <div class="icon-box">
+              <img src="./img/cards/office.png" alt="office">
+            </div>
+            <div class="card-title">Комфортний офіс</div>
+          </div>
+          <div class="card_description">Зручний та сучасний офіс у пішій ході від метро, обладнаний потужним
+            генератором
+            та старлінками, аби ми мали змогу не зупинятися ні на хвилину.</div>
+          <img class="card_mark" src="./img/cards/mark.svg" alt="mark">
+        </div>
+        <div class="card_item">
+          <div class="card_front">
+            <div class="icon-box">
+              <img src="./img/cards/health.png" alt="health">
+            </div>
+            <div class="card-title">Здоров’я</div>
+          </div>
+          <div class="card_description">Зручний та сучасний офіс у пішій ході від метро, обладнаний потужним
+            генератором
+            та старлінками, аби ми мали змогу не зупинятися ні на хвилину.</div>
+          <img class="card_mark" src="./img/cards/mark.svg" alt="mark">
+        </div>
+        <div class="card_item">
+          <div class="card_front">
+            <div class="icon-box">
+              <img src="./img/cards/knowledge.png" alt="knowledge">
+            </div>
+            <div class="card-title">Знання</div>
+          </div>
+          <div class="card_description">Зручний та сучасний офіс у пішій ході від метро, обладнаний потужним
+            генератором
+            та старлінками, аби ми мали змогу не зупинятися ні на хвилину.</div>
+          <img class="card_mark" src="./img/cards/mark.svg" alt="mark">
+        </div>
+        <div class="card_item">
+          <div class="card_front">
+            <div class="icon-box">
+              <img src="./img/cards/software.png" alt="software">
+            </div>
+            <div class="card-title">Техніка</div>
+          </div>
+          <div class="card_description">Зручний та сучасний офіс у пішій ході від метро, обладнаний потужним
+            генератором
+            та старлінками, аби ми мали змогу не зупинятися ні на хвилину.</div>
+          <img class="card_mark" src="./img/cards/mark.svg" alt="mark">
+        </div>
+        <div class="card_item">
+          <div class="card_front">
+            <div class="icon-box">
+              <img src="./img/cards/sport.png" alt="sport">
+            </div>
+            <div class="card-title">Спорт</div>
+          </div>
+          <div class="card_description">Зручний та сучасний офіс у пішій ході від метро, обладнаний потужним
+            генератором
+            та старлінками, аби ми мали змогу не зупинятися ні на хвилину.</div>
+          <img class="card_mark" src="./img/cards/mark.svg" alt="mark">
+        </div>
+        <div class="card_item">
+          <div class="card_front">
+            <div class="icon-box">
+              <img src="./img/cards/sweets.png" alt="sweets">
+            </div>
+            <div class="card-title">Смаколики</div>
+          </div>
+          <div class="card_description">Зручний та сучасний офіс у пішій ході від метро, обладнаний потужним
+            генератором
+            та старлінками, аби ми мали змогу не зупинятися ні на хвилину.</div>
+          <img class="card_mark" src="./img/cards/mark.svg" alt="mark">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cool_with_us container" id="cool_with_us">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">З нами круто</p>
+      <div class="swiper feedback-slider center">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide_content">
+              <div class="img_box">
+                <img src="./img/sliders/girl-2.png" alt="">
+              </div>
+              <div class="feedback_block">
+                <h5 class="title">Анастасія (UI/UX Designer)</h5>
+                <p class="feedback_text">Компанія про турботу до працівників у всіх аспектах, про відкритість, про
+                  вміння і бажання почути і спробувати, про чудову командну роботу з високою експертизою, про
+                  швидкість
+                  і при цьому високу якість.</p>
+              </div>
+              <img class="slide-hover-arrows" src="./img/sliders/slide-hover-arrows.svg" alt="">
+              <img class="slide-hover-diamonds" src="./img/sliders/slide-hover-diamonds.svg" alt="">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="slide-circle" cx="124" cy="124" r="100" stroke="#009A75" />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide_content">
+              <div class="img_box">
+                <img src="./img/sliders/girl-1.png" alt="">
+              </div>
+              <div class="feedback_block">
+                <h5 class="title">Анастасія (UI/UX Designer)</h5>
+                <p class="feedback_text">Компанія про турботу до працівників у всіх аспектах, про відкритість, про
+                  вміння і бажання почути і спробувати, про чудову командну роботу з високою експертизою, про
+                  швидкість
+                  і при цьому високу якість.</p>
+              </div>
+              <img class="slide-hover-arrows" src="./img/sliders/slide-hover-arrows.svg" alt="">
+              <img class="slide-hover-diamonds" src="./img/sliders/slide-hover-diamonds.svg" alt="">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="slide-circle" cx="124" cy="124" r="100" stroke="#009A75" />
+              </svg>
+            </div>
+            <div class="mask"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide_content">
+              <div class="img_box">
+                <img src="./img/sliders/girl-2.png" alt="">
+              </div>
+              <div class="feedback_block">
+                <h5 class="title">Анастасія (UI/UX Designer)</h5>
+                <p class="feedback_text">Компанія про турботу до працівників у всіх аспектах, про відкритість, про
+                  вміння і бажання почути і спробувати, про чудову командну роботу з високою експертизою, про
+                  швидкість
+                  і при цьому високу якість.</p>
+              </div>
+              <img class="slide-hover-arrows" src="./img/sliders/slide-hover-arrows.svg" alt="">
+              <img class="slide-hover-diamonds" src="./img/sliders/slide-hover-diamonds.svg" alt="">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="slide-circle" cx="124" cy="124" r="100" stroke="#009A75" />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide_content">
+              <div class="img_box">
+                <img src="./img/sliders/girl-1.png" alt="">
+              </div>
+              <div class="feedback_block">
+                <h5 class="title">Анастасія (UI/UX Designer)</h5>
+                <p class="feedback_text">Компанія про турботу до працівників у всіх аспектах, про відкритість, про
+                  вміння і бажання почути і спробувати, про чудову командну роботу з високою експертизою, про
+                  швидкість
+                  і при цьому високу якість.</p>
+              </div>
+              <img class="slide-hover-arrows" src="./img/sliders/slide-hover-arrows.svg" alt="">
+              <img class="slide-hover-diamonds" src="./img/sliders/slide-hover-diamonds.svg" alt="">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="slide-circle" cx="124" cy="124" r="100" stroke="#009A75" />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide_content">
+              <div class="img_box">
+                <img src="./img/sliders/girl-1.png" alt="">
+              </div>
+              <div class="feedback_block">
+                <h5 class="title">Анастасія (UI/UX Designer)</h5>
+                <p class="feedback_text">Компанія про турботу до працівників у всіх аспектах, про відкритість, про
+                  вміння і бажання почути і спробувати, про чудову командну роботу з високою експертизою, про
+                  швидкість
+                  і при цьому високу якість.</p>
+              </div>
+              <img class="slide-hover-arrows" src="./img/sliders/slide-hover-arrows.svg" alt="">
+              <img class="slide-hover-diamonds" src="./img/sliders/slide-hover-diamonds.svg" alt="">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="slide-circle" cx="124" cy="124" r="100" stroke="#009A75" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="slider-control center">
+          <div class="slider-button-next">
+            <i class="arrow-icon"></i>
+          </div>
+          <div class="slider-button-prev">
+            <i class="arrow-icon"></i>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <img class="ellipse feedback_left_ellipse" src="./img/feedback-left-ellipse.svg" alt="">
+    <img class="ellipse feedback_right_ellipse" src="./img/feedback-right-ellipse.svg" alt="">
+  </section>
+  <section class="vacancy container" id="vacancy">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">Вакансії</p>
+      <div class="switch_tabs">
+        <div class="s-tab active" data-tab="all">all 16</div>
+        <div class="s-tab" data-tab="product">product</div>
+        <div class="s-tab" data-tab="development">development</div>
+        <div class="s-tab" data-tab="marketing">marketing</div>
+        <div class="s-tab" data-tab="call-center">call center</div>
+      </div>
+      <div class="swiper vacancy-slider center stab-content" data-tab=""></div>
+    </div>
+  </section>
+  <section class="contacts container" id="contacts">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">долучайся до нас</p>
+      <div class="contacts_info-wrapper">
+        <div class="form_container">
+          <p class="form_title">Надсилай своє резюме</p>
+          <form action="" id="send-cv" method="">
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="name" type="text" required>
+              <label for="name">Ім’я та Прізвище</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="phone" type="tel" maxlength="16" required>
+              <label for="phone">Номер телефону</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="email" type="email" required>
+              <label for="email">Email</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="user-vacancy" type="text" required>
+              <label for="user-vacancy">Вакансія</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item attachment">
+              <label for="file-cv">
+                <input class="form_control" id="file-cv" type="file">
+                <div class="file_items">
+                  <span>Резюме</span>
+                  <div class="file-button">Файл</div>
+                </div>
+              </label>
+            </div>
+            <div class="form_agreement checkbox_item">
+              <label for="agreement">
+                <input type="checkbox" id="agreement" required>
+                <i class="checkbox"></i>
+                <span class="checkbox_txt"> Я даю згоду на обробку персональних даних</span>
+              </label>
+            </div>
+            <div class="submit_wrap">
+              <button class="button filling_bg submit_btn" type="submit">подати заявку</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="main_menu center" id="menu">
+    <div class="menu_column">
+      <div class="menu_list">
+        <a href="#about_us" class="menu_list_item scroll-to">Про нас</a>
+        <a href="#why_softsvit" class="menu_list_item scroll-to">Чому ми</a>
+        <a href="#cool_with_us" class="menu_list_item scroll-to">з нами круто</a>
+        <a href="#vacancy" class="menu_list_item scroll-to">вакансії</a>
+        <a href="#contacts" class="menu_list_item scroll-to">долучайтесь до нас</a>
+      </div>
+      <div class="language-mode-switch">
+        <div class="language_switch">
+          <span data-lang="en">eng</span>
+          <span class="active" data-lang="uk">укр</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu_column">
+      <div class="contacts_block">
+        <div class="contact_item">
+          <p class="contact_item_name">Телефон</p>
+          <p class="contact_item_info">
+            <span>Марія</span><span>+380 932 260 291</span>
+          </p>
+        </div>
+        <div class="contact_item">
+          <p class="contact_item_name">Наш email</p>
+          <p class="contact_item_info">
+            hr@softum.io
+          </p>
+        </div>
+        <div class="contact_item">
+          <p class="contact_item_name">Графiк роботи:</p>
+          <p class="contact_item_info">
+            Пн-Пт з 10:00 до 19:00
+          </p>
+        </div>
+        <div class="social_block">
+          <a class="social-item" href="#">
+            <i class="icon-telegram"></i>
+          </a>
+          <a class="social-item" href="#">
+            <i class="icon-instagram"></i>
+          </a>
+          <a class="social-item" href="#">
+            <i class="icon-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay center"></div>
+  <div class="preloader_wrapper active" id="preloader">
+    <div class="content-wrapper">
+      <div class="logo">
+        <img src="./img/logo.svg" alt="logo">
+      </div>
+      <div class="preloader">
+        <div class="preloader__ring">
+          <div class="preloader__sector">L</div>
+          <div class="preloader__sector">o</div>
+          <div class="preloader__sector">a</div>
+          <div class="preloader__sector">d</div>
+          <div class="preloader__sector">i</div>
+          <div class="preloader__sector">n</div>
+          <div class="preloader__sector">g</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+        </div>
+        <div class="preloader__ring">
+          <div class="preloader__sector">L</div>
+          <div class="preloader__sector">o</div>
+          <div class="preloader__sector">a</div>
+          <div class="preloader__sector">d</div>
+          <div class="preloader__sector">i</div>
+          <div class="preloader__sector">n</div>
+          <div class="preloader__sector">g</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+        </div>
+      </div>
+    </div>
+    <img class="top-left-ellipse" src="./img/ellipse-left.svg" alt="">
+    <img class="bottom-right-ellipse" src="./img/loader-ellipse_bottom.svg" alt="">
+  </div>
+</body>
+<script src="./js/libs/swiper-bundle.min.js"></script>
+<script src="./js/libs/sparticles.js"></script>
+<script src="./js/libs/starfield.js"></script>
+<!-- <script src="./js/init-sparticles.js"></script> -->
+<script src="./js/menu.js"></script>
+<script src="./js/marquee.js"></script>
+<script src="./js/language_switch.js"></script>
+<script src="./js/loader.js"></script>
+<script src="./js/sliders.js"></script>
+
+</html>
