@@ -36,4 +36,22 @@ const feedbackSliderOptions = {
   },
 };
 
+const vacancySliderOptions = {
+  slidesPerView: 3,
+  grid: {
+    rows: 2,
+    fill: "row",
+  },
+  spaceBetween: 24,
+  pagination: {
+    el: ".vacancy-slider .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".vacancy-slider .slider-button-next",
+    prevEl: ".vacancy-slider .slider-button-prev",
+  },
+};
+
 initSlider(".feedback-slider", feedbackSliderOptions);
+initSlider(".vacancy-slider", vacancySliderOptions);
