@@ -55,3 +55,30 @@ const vacancySliderOptions = {
 
 initSlider(".feedback-slider", feedbackSliderOptions);
 initSlider(".vacancy-slider", vacancySliderOptions);
+
+/** Switch Tabs */
+
+const tabsBlock = document.querySelectorAll(".switch_tabs");
+let tabContent;
+tabsBlock.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    let curentTabs = this.children;
+    let activeTab = e.target;
+    tabContent = activeTab
+      .closest(".tab-wrapper")
+      .querySelector(".tab_content");
+    setActiveTab(activeTab, curentTabs, tabContent);
+  });
+});
+
+function setActiveTab(activeTab, tabsElements, tabContent) {
+
+  if (activeTab.classList.contains("s-tab")) {
+    for (let i = 0; i < tabsElements.length; i++) {
+      tabsElements[i].classList.remove("active");
+    }
+    activeTab.classList.add("active");
+  } else {
+    return;
+  }
+}
