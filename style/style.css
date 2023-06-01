@@ -491,12 +491,33 @@ body .swiper.vacancy-slider {
   padding: 28px 0 50px;
 }
 body .swiper.vacancy-slider .swiper-slide {
+  position: relative;
   text-align: center;
   font-size: 18px;
   background: #fff;
   height: calc((100% - 24px) / 2) !important;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+body .swiper.vacancy-slider .swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/sliders/vacancy-slide-hover-bg.svg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+body .swiper.vacancy-slider .swiper-slide:hover::before {
+  opacity: 1;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content {
   padding: 16px;
@@ -530,8 +551,19 @@ body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap {
   justify-content: space-between;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap button {
-  padding: 11px 8px;
+  padding: 11px 2px;
   width: 170px;
+}
+@media screen and (max-width: 1368px) {
+  body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap {
+    flex-direction: column;
+  }
+  body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap button {
+    width: 100%;
+  }
+  body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap button:first-child {
+    margin-bottom: 12px;
+  }
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content .vacancy-badge {
   font-weight: 700;
@@ -946,6 +978,29 @@ body .cool_with_us {
 }
 body .vacancy {
   margin-top: 208px;
+  position: relative;
+  overflow: hidden;
+}
+body .vacancy .figure {
+  position: absolute;
+  z-index: -1;
+}
+body .vacancy .figure.left-bottom-figure {
+  max-width: 335px;
+  left: -2px;
+  bottom: 0;
+}
+body .vacancy .figure.top-center-figure {
+  max-width: 340px;
+  left: 30px;
+  right: 0;
+  margin: 0 auto;
+  top: 85px;
+}
+body .vacancy .figure.right-bottom-figure {
+  max-width: 340px;
+  right: 0;
+  bottom: 0px;
 }
 body .contacts {
   margin-top: 148px;

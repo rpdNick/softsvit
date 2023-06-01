@@ -574,12 +574,36 @@ body {
       padding: 28px 0 50px;
 
       .swiper-slide {
+        position: relative;
         text-align: center;
         font-size: 18px;
         background: #fff;
         height: calc((100% - 24px) / 2) !important;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
+        backdrop-filter: blur(50px);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-image: url(../img/sliders/vacancy-slide-hover-bg.svg);
+          background-position: center;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          opacity: 0;
+          transition: 0.3s;
+          z-index: -1;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
 
         .slide-content {
           padding: 16px;
@@ -617,8 +641,20 @@ body {
             justify-content: space-between;
 
             button {
-              padding: 11px 8px;
+              padding: 11px 2px;
               width: 170px;
+            }
+
+            @media screen and (max-width: 1368px) {
+              flex-direction: column;
+
+              button {
+                width: 100%;
+
+                &:first-child {
+                  margin-bottom: 12px;
+                }
+              }
             }
           }
 
@@ -1110,6 +1146,33 @@ body {
 
   .vacancy {
     margin-top: 208px;
+    position: relative;
+    overflow: hidden;
+
+    .figure {
+      position: absolute;
+      z-index: -1;
+
+      &.left-bottom-figure {
+        max-width: 335px;
+        left: -2px;
+        bottom: 0;
+      }
+
+      &.top-center-figure {
+        max-width: 340px;
+        left: 30px;
+        right: 0;
+        margin: 0 auto;
+        top: 85px;
+      }
+
+      &.right-bottom-figure {
+        max-width: 340px;
+        right: 0;
+        bottom: 0px;
+      }
+    }
   }
 
   .contacts {
