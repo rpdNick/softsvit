@@ -15,6 +15,7 @@
     transition: 0.3s;
     display: flex;
     padding: 58px 0 0;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     z-index: 3;

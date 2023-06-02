@@ -6,6 +6,11 @@
   padding: 16px 0px;
   max-width: 1400px;
 }
+@media screen and (max-width: 768px) {
+  .marquee-wraper {
+    margin-top: 60px;
+  }
+}
 .marquee-wraper .marquee {
   --gap: 40px;
   position: relative;

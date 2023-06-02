@@ -5,7 +5,7 @@ function initSlider(sliderElement, sliderOptions) {
 const feedbackSliderOptions = {
   effect: "coverflow",
   centeredSlides: true,
-  slidesPerView: "auto",
+  slidesPerView: 3,
   longSwipesMs: 0,
   loopPreventsSlide: false,
   longSwipes: true,
@@ -15,6 +15,7 @@ const feedbackSliderOptions = {
   speed: 400,
   loop: true,
   loopedSlides: 2,
+  updateOnWindowResize:true,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -22,10 +23,43 @@ const feedbackSliderOptions = {
     modifier: 2,
     // slideShadows: true,
   },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      effect: "slide",
+      slidesPerView: 1,
+      spaceBetween: 12,
+      centeredSlides: false,
+      loop: false,
+      updateOnWindowResize:true,
+    },
+    // when window width is >= 575px
+    575: {
+      effect: "slide",
+      slidesPerView: 2,
+      spaceBetween: 24,
+      centeredSlides: false,
+      loop: false,
+      updateOnWindowResize:true,
+    },
+    768: {
+      effect: "coverflow",
+      centeredSlides: true,
+      slidesPerView: "auto",
+      longSwipesMs: 0,
+      loopPreventsSlide: false,
+      longSwipes: true,
+      longSwipesRatio: 0,
+      threshold: 0,
+      slideToClickedSlide: false,
+      speed: 400,
+      loop: true,
+      loopedSlides: 2,
+      updateOnWindowResize:true,
+    },
   },
+
   pagination: {
     el: ".feedback-slider .swiper-pagination",
     clickable: true,
@@ -36,6 +70,50 @@ const feedbackSliderOptions = {
   },
 };
 
+
+const whySoftsvitSliderOptions = {
+  slidesPerView: 3,
+  grid: {
+    rows: 2,
+    fill: "row",
+  },
+  spaceBetween: 24,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.1,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 12,
+    },
+    // when window width is >= 575px
+    575: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+      spaceBetween: 24,
+    },
+  },
+  pagination: {
+    el: ".why_softsvit_slider .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".why_softsvit_slider .slider-button-next",
+    prevEl: ".why_softsvit_slider .slider-button-prev",
+  },
+};
+
 const vacancySliderOptions = {
   slidesPerView: 3,
   grid: {
@@ -43,6 +121,31 @@ const vacancySliderOptions = {
     fill: "row",
   },
   spaceBetween: 24,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 12,
+    },
+
+    575: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+      spaceBetween: 24,
+    },
+  },
   pagination: {
     el: ".vacancy-slider .swiper-pagination",
     clickable: true,
@@ -55,30 +158,39 @@ const vacancySliderOptions = {
 
 initSlider(".feedback-slider", feedbackSliderOptions);
 initSlider(".vacancy-slider", vacancySliderOptions);
+initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 
 /** Switch Tabs */
 
 const tabsBlock = document.querySelectorAll(".switch_tabs");
-let tabContent;
 tabsBlock.forEach((item) => {
   item.addEventListener("click", function (e) {
     let curentTabs = this.children;
     let activeTab = e.target;
-    tabContent = activeTab
+    let tabIndex = e.target.getAttribute("data-tab");
+
+    let tabContentBlocks = activeTab
       .closest(".tab-wrapper")
-      .querySelector(".tab_content");
-    setActiveTab(activeTab, curentTabs, tabContent);
+      .querySelectorAll(".tab_content");
+
+    tabContentBlocks.forEach((contentBlock) => {
+      if (contentBlock.getAttribute("data-tab") == tabIndex) {
+        setActiveTab(activeTab, curentTabs, contentBlock, tabContentBlocks);
+      }
+    });
   });
 });
 
-function setActiveTab(activeTab, tabsElements, tabContent) {
-
-  if (activeTab.classList.contains("s-tab")) {
-    for (let i = 0; i < tabsElements.length; i++) {
-      tabsElements[i].classList.remove("active");
-    }
-    activeTab.classList.add("active");
-  } else {
-    return;
+function setActiveTab(
+  activeTab,
+  tabsElements,
+  currentContentBlock,
+  tabContentBlocks
+) {
+  for (let i = 0; i < tabsElements.length; i++) {
+    tabsElements[i].classList.remove("active");
+    tabContentBlocks[i].classList.remove("active");
   }
+  activeTab.classList.add("active");
+  currentContentBlock.classList.add("active");
 }
