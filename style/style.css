@@ -12,7 +12,7 @@ html {
 
 body {
   background: #000000;
-  /* Glogal */
+  /* Global */
   /* Sliders */
   /* Sliders */
   /* Glogal end*/
@@ -94,6 +94,13 @@ body .container {
 body .section-wrapper {
   position: relative;
   overflow: hidden;
+}
+body .drag-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
 }
 body .ellipse {
   position: absolute;
@@ -474,15 +481,10 @@ body .main_menu .contacts_block .social_block {
   }
 }
 body .switch_tabs {
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 14px auto 0px;
-  display: flex;
-  gap: 12px;
-  min-width: 570px;
-  overflow-x: auto;
 }
 body .switch_tabs .s-tab {
+  display: inline-block;
   font-weight: 700;
   font-size: 14px;
   color: #ffffff;
@@ -1289,6 +1291,15 @@ body .vacancy .figure.right-bottom-figure {
   body .vacancy .figure.right-bottom-figure {
     max-width: 200px;
     bottom: 80px;
+  }
+}
+body .vacancy .tab-wrapper .switch_tabs {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 575px) {
+  body .vacancy .tab-wrapper .switch_tabs {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
