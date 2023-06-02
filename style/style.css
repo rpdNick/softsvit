@@ -927,6 +927,64 @@ body header .main_header .menu_button.active .content_default {
 body header .main_header .menu_button.active .content_active {
   display: block;
 }
+@media screen and (max-width: 640px) {
+  body header .main_header .menu_button {
+    display: none;
+    pointer-events: none;
+  }
+}
+body header .main_header #burger_toggle {
+  display: none;
+  pointer-events: none;
+  width: 18px;
+  height: 12px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+body header .main_header #burger_toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #00ffb2;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+body header .main_header #burger_toggle span:nth-child(1) {
+  top: 0px;
+}
+body header .main_header #burger_toggle span:nth-child(2), body header .main_header #burger_toggle span:nth-child(3) {
+  top: 4px;
+}
+body header .main_header #burger_toggle span:nth-child(4) {
+  top: 8px;
+}
+body header .main_header #burger_toggle.active span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+body header .main_header #burger_toggle.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+body header .main_header #burger_toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+body header .main_header #burger_toggle.active span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+@media screen and (max-width: 640px) {
+  body header .main_header #burger_toggle {
+    display: block;
+    pointer-events: inherit;
+  }
+}
 @media screen and (max-width: 1200px) {
   body header {
     left: 60px;

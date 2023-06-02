@@ -1,15 +1,20 @@
 const menuButton = document.getElementById("toggle_menu");
 const siteBody = document.querySelector("body");
 const menu = document.getElementById("menu");
+const mobileMenu = document.getElementById("burger_toggle");
 
 menuButton.addEventListener("click", () => {
-  showMenu();
+  showMenu(menuButton);
 });
 
-function showMenu() {
+mobileMenu.addEventListener("click", () => {
+  showMenu(mobileMenu);
+});
+
+function showMenu(el) {
   siteBody.classList.toggle("modal_open");
   menu.classList.toggle("active");
-  menuButton.classList.toggle("active");
+  el.classList.toggle("active");
 }
 
 // Menu scroll
