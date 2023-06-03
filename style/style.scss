@@ -144,11 +144,20 @@ body {
 
     &.main_screen_ellipse-left {
       left: 0;
+
+      @media screen and (max-width: $medium) {
+        max-width: 100%;
+      }
     }
 
     &.main_screen_ellipse-right {
       right: 0;
       max-width: 530px;
+
+      @media screen and (max-width: $medium) {
+        max-width: 100%;
+        top: 60%;
+      }
     }
 
     &.feedback_left_ellipse {

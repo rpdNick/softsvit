@@ -131,9 +131,20 @@ body .ellipse {
 body .ellipse.main_screen_ellipse-left {
   left: 0;
 }
+@media screen and (max-width: 640px) {
+  body .ellipse.main_screen_ellipse-left {
+    max-width: 100%;
+  }
+}
 body .ellipse.main_screen_ellipse-right {
   right: 0;
   max-width: 530px;
+}
+@media screen and (max-width: 640px) {
+  body .ellipse.main_screen_ellipse-right {
+    max-width: 100%;
+    top: 60%;
+  }
 }
 body .ellipse.feedback_left_ellipse {
   width: 561px;
