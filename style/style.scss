@@ -109,8 +109,15 @@ body {
       z-index: -1;
     }
 
-    &.why_softsvit {
+    &.why_softsvit_over-wrap {
       background-image: url(../img/section-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &.contacts_over-wrap {
+      background-image: url(../img/contacts-bg.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
@@ -1694,10 +1701,10 @@ body {
   .contacts {
     margin-top: 148px;
     padding-bottom: 47px;
-    background-image: url(../img/contacts-bg.png);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    // background-image: url(../img/contacts-bg.png);
+    // background-position: center;
+    // background-size: 100%;
+    // background-repeat: no-repeat;
 
     .contacts_info-wrapper {
       display: flex;

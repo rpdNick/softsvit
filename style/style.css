@@ -100,8 +100,14 @@ body .over-wrap .section-bg {
   width: 100%;
   z-index: -1;
 }
-body .over-wrap.why_softsvit {
+body .over-wrap.why_softsvit_over-wrap {
   background-image: url(../img/section-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .over-wrap.contacts_over-wrap {
+  background-image: url(../img/contacts-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1499,10 +1505,6 @@ body .vacancy_modal .modal-content .form_container {
 body .contacts {
   margin-top: 148px;
   padding-bottom: 47px;
-  background-image: url(../img/contacts-bg.png);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 body .contacts .contacts_info-wrapper {
   display: flex;
