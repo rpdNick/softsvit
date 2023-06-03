@@ -26,7 +26,7 @@ html {
 body {
   background: $color-fillg;
 
-  .main {
+  .wrapper {
     max-width: 1400px;
     overflow: hidden;
     position: relative;
@@ -99,6 +99,24 @@ body {
     margin: 0 auto;
   }
 
+  .over-wrap {
+    position: relative;
+    overflow: hidden;
+
+    .section-bg {
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &.why_softsvit {
+      background-image: url(../img/section-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
   .section-wrapper {
     position: relative;
     overflow: hidden;
@@ -161,7 +179,7 @@ body {
     padding-top: 96px;
   }
 
-  .starfield_box {
+  .sparticles_box {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -970,6 +988,119 @@ body {
 
   /* Sliders */
 
+  .form_container {
+    width: 45%;
+    max-width: 502px;
+    padding: 24px;
+    background: rgba(0, 255, 194, 0.2);
+    backdrop-filter: blur(50px);
+    border-radius: 16px;
+
+    .form_title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+
+    .form_item {
+      margin-bottom: 44px;
+      position: relative;
+
+      label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: 700;
+        font-size: 14px;
+        color: $color-gray;
+        transition: 0.3s;
+      }
+
+      .error_txt {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: $color-main-red;
+        display: none;
+      }
+
+      .form_control {
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border-radius: 0;
+        -webkit-appearance: none;
+        border: none;
+        border-bottom: 1px solid #ffffff66;
+        font-weight: 700;
+        font-size: 14px;
+        padding-bottom: 8px;
+        color: #ffffff;
+
+        &.has-error {
+          border-color: $color-main-red;
+        }
+      }
+
+      .form_control:focus + label,
+      .form_control:not(:placeholder-shown) + label,
+      .form_control:-webkit-autofill + label {
+        font-size: 10px;
+        transform: translateY(-20px);
+        opacity: 1;
+      }
+    }
+
+    .attachment {
+      margin: 0;
+
+      input {
+        display: none;
+      }
+
+      label {
+        display: block;
+        position: relative;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+        .file_items {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .file-button {
+            width: fit-content;
+            padding: 2px 8px;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .form_agreement {
+      margin-top: 35px;
+    }
+
+    .submit_wrap {
+      margin-top: 26px;
+    }
+
+    @media screen and (max-width: 940px) {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
   /* Glogal end*/
 
   header {
@@ -1312,10 +1443,6 @@ body {
   }
 
   .why_softsvit {
-    background-image: url(../img/section-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
     padding: 60px 0px;
 
     .cards_wrapper {
@@ -1476,6 +1603,94 @@ body {
     }
   }
 
+  .vacancy_modal {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    max-width: 1200px;
+    opacity: 0;
+    visibility: hidden;
+    visibility: hidden;
+    transition: 0.8s;
+    z-index: 3;
+
+    .title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 24px;
+        background-image: url("../img/arrow-right.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 16px;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      display: flex;
+      margin-top: 24px;
+
+      .description_block,
+      .form_container {
+        max-height: 558px;
+      }
+
+      .description_block {
+        width: 55%;
+        max-width: 601px;
+        margin-right: 24px;
+        max-height: 558px;
+        overflow-y: auto;
+        border-radius: 12px;
+
+        &::-webkit-scrollbar-track {
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background-color: #00ffc2;
+        }
+
+        .description_content {
+          backdrop-filter: blur(20px);
+          background: rgba(0, 0, 0, 0.6);
+          padding: 16px;
+          color: #ffffff;
+          margin-right: 12px;
+          border-radius: 12px;
+          min-height: 100%;
+        }
+      }
+
+      .form_container {
+        max-width: 558px;
+      }
+    }
+  }
+
   .contacts {
     margin-top: 148px;
     padding-bottom: 47px;
@@ -1488,119 +1703,6 @@ body {
       display: flex;
       gap: 32px;
       padding-top: 64px;
-
-      .form_container {
-        width: 45%;
-        max-width: 502px;
-        padding: 24px;
-        background: rgba(0, 255, 194, 0.2);
-        backdrop-filter: blur(50px);
-        border-radius: 16px;
-
-        .form_title {
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 32px;
-          color: #ffffff;
-          margin-bottom: 40px;
-        }
-
-        .form_item {
-          margin-bottom: 44px;
-          position: relative;
-
-          label {
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-weight: 700;
-            font-size: 14px;
-            color: $color-gray;
-            transition: 0.3s;
-          }
-
-          .error_txt {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
-            color: $color-main-red;
-            display: none;
-          }
-
-          .form_control {
-            width: 100%;
-            background: transparent;
-            outline: none;
-            border-radius: 0;
-            -webkit-appearance: none;
-            border: none;
-            border-bottom: 1px solid #ffffff66;
-            font-weight: 700;
-            font-size: 14px;
-            padding-bottom: 8px;
-            color: #ffffff;
-
-            &.has-error {
-              border-color: $color-main-red;
-            }
-          }
-
-          .form_control:focus + label,
-          .form_control:not(:placeholder-shown) + label,
-          .form_control:-webkit-autofill + label {
-            font-size: 10px;
-            transform: translateY(-20px);
-            opacity: 1;
-          }
-        }
-
-        .attachment {
-          margin: 0;
-
-          input {
-            display: none;
-          }
-
-          label {
-            display: block;
-            position: relative;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-
-            .file_items {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-
-              .file-button {
-                width: fit-content;
-                padding: 2px 8px;
-                color: #ffffff;
-                font-weight: 700;
-                font-size: 12px;
-                text-align: center;
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid #ffffff;
-                border-radius: 6px;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-
-        .form_agreement {
-          margin-top: 35px;
-        }
-
-        .submit_wrap {
-          margin-top: 26px;
-        }
-
-        @media screen and (max-width: 940px) {
-          width: 100%;
-          max-width: unset;
-        }
-      }
 
       .contacts_cards_block {
         width: 55%;
@@ -1650,6 +1752,7 @@ body {
                 .write_btn {
                   margin-top: 18px;
                   line-height: 18px;
+                  display: inline-block;
                 }
               }
 
@@ -1768,20 +1871,35 @@ body {
     }
   }
 
+  .modal {
+    padding: 0 24px;
+
+    @media screen and (max-width: $x-large) {
+      left: 60px;
+      right: 60px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      left: 24px;
+      right: 24px;
+    }
+
+    @media screen and (max-width: $small) {
+      left: 12px;
+      right: 12px;
+    }
+  }
+
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-    background-color: #000;
   }
 
   &::-webkit-scrollbar {
-    width: 6px;
-    background-color: #000;
+    width: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: $color-main-green;
+    background-color: #00ffc2;
   }
 }

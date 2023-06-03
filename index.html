@@ -14,8 +14,10 @@
 </head>
 
 <body class="loading">
-  <div class="main center">
-    <img class="sphere" src="./img/sphere.png" alt="sphere">
+  <img class="ellipse main_screen_ellipse-right" src="./img/ellipse-right.svg" alt="">
+  <img class="ellipse main_screen_ellipse-left" src="./img/ellipse-left.svg" alt="">
+  <div class="wrapper center">
+    <img class="sphere" id="sphere" src="./img/sphere.png" alt="sphere">
     <header class="center">
       <div class="main_header content-wrapper center">
         <a class="logo" href="#">
@@ -74,11 +76,7 @@
           </div>
         </div>
       </div>
-      <img class="ellipse main_screen_ellipse-left" src="./img/ellipse-left.svg" alt="">
-      <div class="starfield_box">
-        <canvas id="starfield"></canvas>
-      </div>
-      <img class="ellipse main_screen_ellipse-right" src="./img/ellipse-right.svg" alt="">
+      <div class="sparticles_box"></div>
     </div>
     <section class="about_us container" id="about_us">
       <div class="content-wrapper">
@@ -107,38 +105,41 @@
         </div>
       </div>
     </section>
-    <div class="marquee-wraper">
-      <div class="marquee">
-        <span class="marquee__content">
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">настрою</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">настрою</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">настрою</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">настрою</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">розваг</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">кольорів</span></span>
-        </span>
-        <span class="marquee__content">
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">турботи</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">турботи</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">настрою</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">турботи</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">розваг</span></span>
-          <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
-          <span>svit &nbsp;<span class="green_txt">турботи</span></span>
-        </span>
-      </div>
+  </div>
+  <div class="marquee-wraper">
+    <div class="marquee">
+      <span class="marquee__content">
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">розваг</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">кольорів</span></span>
+      </span>
+      <span class="marquee__content">
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">настрою</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">розваг</span></span>
+        <img class="marquee_icon" src="./img/marquee-icon.svg" alt="">
+        <span>svit &nbsp;<span class="green_txt">турботи</span></span>
+      </span>
     </div>
+  </div>
+  <div class="over-wrap why_softsvit">
+    <!-- <img class="section-bg" src="./img/section-bg.png" alt=""> -->
     <section class="why_softsvit container" id="why_softsvit">
       <div class="content-wrapper">
         <p class="section_title arrowed">чому ми</p>
@@ -229,6 +230,8 @@
         </div>
       </div>
     </section>
+  </div>
+  <div class="over-wrap">
     <section class="cool_with_us container" id="cool_with_us">
       <div class="content-wrapper">
         <p class="section_title arrowed">З нами круто</p>
@@ -342,796 +345,942 @@
           </div>
         </div>
       </div>
-      <img class="ellipse feedback_left_ellipse" src="./img/feedback-left-ellipse.svg" alt="">
-      <img class="ellipse feedback_right_ellipse" src="./img/feedback-right-ellipse.svg" alt="">
     </section>
-    <section class="vacancy container" id="vacancy">
-      <div class="content-wrapper">
-        <p class="section_title arrowed">Вакансії</p>
-        <div class="tab-wrapper">
-          <div class="switch_tabs drag-slider center">
-            <div class="s-tab drag-item active" data-tab="all">all 16</div>
-            <div class="s-tab drag-item" data-tab="product">product</div>
-            <div class="s-tab drag-item" data-tab="development">development</div>
-            <div class="s-tab drag-item" data-tab="marketing">marketing</div>
-            <div class="s-tab drag-item" data-tab="call-center">call center</div>
-          </div>
-          <div class="tab_content active" data-tab="all">
-            <div class="swiper vacancy-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-control center">
-                <div class="slider-button-next">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="slider-button-prev">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-          <div class="tab_content" data-tab="product">
-            <div class="swiper vacancy-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-control center">
-                <div class="slider-button-next">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="slider-button-prev">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-          <div class="tab_content" data-tab="development">
-            <div class="swiper vacancy-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-control center">
-                <div class="slider-button-next">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="slider-button-prev">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-          <div class="tab_content" data-tab="marketing">
-            <div class="swiper vacancy-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-control center">
-                <div class="slider-button-next">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="slider-button-prev">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-          <div class="tab_content" data-tab="call-center">
-            <div class="swiper vacancy-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-content">
-                    <div class="info-wrap">
-                      <div class="info">
-                        <div class="title">PPC Media Buying Specialist</div>
-                        <div class="description">Design / Kyiv / Full-time</div>
-                      </div>
-                      <div class="vacancy-badge">
-                        <span>junior</span>
-                      </div>
-                    </div>
-                    <div class="buttons-wrap">
-                      <button class="button transparrent green_border">Порадити фахівця</button>
-                      <button class="button filling_bg">подати заявку</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-control center">
-                <div class="slider-button-next">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="slider-button-prev">
-                  <i class="arrow-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
+    <img class="ellipse feedback_left_ellipse" src="./img/feedback-left-ellipse.svg" alt="">
+    <img class="ellipse feedback_right_ellipse" src="./img/feedback-right-ellipse.svg" alt="">
+  </div>
+  <section class="vacancy container" id="vacancy">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">Вакансії</p>
+      <div class="tab-wrapper">
+        <div class="switch_tabs drag-slider center">
+          <div class="s-tab drag-item active" data-tab="all">all 16</div>
+          <div class="s-tab drag-item" data-tab="product">product</div>
+          <div class="s-tab drag-item" data-tab="development">development</div>
+          <div class="s-tab drag-item" data-tab="marketing">marketing</div>
+          <div class="s-tab drag-item" data-tab="call-center">call center</div>
         </div>
-      </div>
-      <img class="figure left-bottom-figure" src="./img/vacancy_left_bg-figure.svg" alt="">
-      <img class="figure top-center-figure" src="./img/vacancy_center_bg-figure.svg" alt="">
-      <img class="figure right-bottom-figure" src="./img/vacancy_right_bg-figure.svg" alt="">
-    </section>
-    <section class="contacts container" id="contacts">
-      <div class="content-wrapper">
-        <p class="section_title arrowed">долучайся до нас</p>
-        <div class="contacts_info-wrapper">
-          <div class="form_container">
-            <p class="form_title">Надсилай своє резюме</p>
-            <form action="" id="send-cv" method="">
-              <div class="form_item">
-                <input class="form_control" placeholder=" " id="name" type="text" required>
-                <label for="name">Ім’я та Прізвище</label>
-                <div class="error_txt">Error</div>
-              </div>
-              <div class="form_item">
-                <input class="form_control" placeholder=" " id="phone" type="tel" maxlength="16" required>
-                <label for="phone">Номер телефону</label>
-                <div class="error_txt">Error</div>
-              </div>
-              <div class="form_item">
-                <input class="form_control" placeholder=" " id="email" type="email" required>
-                <label for="email">Email</label>
-                <div class="error_txt">Error</div>
-              </div>
-              <div class="form_item">
-                <input class="form_control" placeholder=" " id="user-vacancy" type="text" required>
-                <label for="user-vacancy">Вакансія</label>
-                <div class="error_txt">Error</div>
-              </div>
-              <div class="form_item attachment">
-                <label for="file-cv">
-                  <input class="form_control" id="file-cv" type="file">
-                  <div class="file_items">
-                    <span>Резюме</span>
-                    <div class="file-button">Файл</div>
-                  </div>
-                </label>
-              </div>
-              <div class="form_agreement checkbox_item">
-                <label for="agreement">
-                  <input type="checkbox" id="agreement" required>
-                  <i class="checkbox"></i>
-                  <span class="checkbox_txt"> Я даю згоду на обробку персональних даних</span>
-                </label>
-              </div>
-              <div class="submit_wrap">
-                <button class="button big w-100 filling_bg submit_btn" type="submit" id="apply">подати заявку</button>
-              </div>
-            </form>
-          </div>
-          <div class="contacts_cards_block">
-            <div class="cards_wrap">
-              <div class="contact_card">
-                <div class="content_wrap">
-                  <div class="content">
-                    <div class="title">Recruiter</div>
+        <div class="tab_content active" data-tab="all">
+          <div class="swiper vacancy-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
                     <div class="info">
-                      <p class="name">Daria Kovalevskaya</p>
-                      <p class="phone">
-                        <span>Телефон:</span>
-                        <span>+380 932 260 291</span>
-                      </p>
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
                     </div>
-                    <button class="button transparrent green_border write_btn">написати</button>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
                   </div>
-                  <img class="photo" src="./img/cards/contact/girl.png" alt="photo">
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
                 </div>
               </div>
-              <div class="contact_card">
-                <div class="content_wrap">
-                  <div class="content">
-                    <div class="title">Recruiter</div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
                     <div class="info">
-                      <p class="name">Daria Kovalevskaya</p>
-                      <p class="phone">
-                        <span>Телефон:</span>
-                        <span>+380 932 260 291</span>
-                      </p>
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
                     </div>
-                    <button class="button transparrent green_border write_btn">написати</button>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
                   </div>
-                  <img class="photo" src="./img/cards/contact/girl.png" alt="photo">
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="contact_data">
-              <div class="contact_item">
-                <div class="title">Телефон</div>
-                <div class="data">
-                  <span>Марія</span>
-                  <span>+380 932 260 291</span>
-                </div>
+            <div class="slider-control center">
+              <div class="slider-button-next">
+                <i class="arrow-icon"></i>
               </div>
-              <div class="contact_item">
-                <div class="title">Наш email</div>
-                <div class="data">
-                  <span>hr@softum.io</span>
-                </div>
+              <div class="slider-button-prev">
+                <i class="arrow-icon"></i>
               </div>
-              <div class="contact_item">
-                <div class="title">Графiк роботи:</div>
-                <div class="data">
-                  <span>Пн-Пт з 10:00 до 19:00</span>
-                </div>
-              </div>
-            </div>
-            <div class="socials">
-              <img class="logo" src="./img/logo.svg" alt="logo">
-              <div class="social_block">
-                <a class="social-item" href="#">
-                  <i class="icon-telegram"></i>
-                </a>
-                <a class="social-item" href="#">
-                  <i class="icon-instagram"></i>
-                </a>
-                <a class="social-item" href="#">
-                  <i class="icon-linkedin"></i>
-                </a>
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="main_menu content-wrapper center" id="menu">
-      <div class="menu_column">
-        <div class="menu_list">
-          <a href="#about_us" class="menu_list_item scroll-to">Про нас</a>
-          <a href="#why_softsvit" class="menu_list_item scroll-to">Чому ми</a>
-          <a href="#cool_with_us" class="menu_list_item scroll-to">з нами круто</a>
-          <a href="#vacancy" class="menu_list_item scroll-to">вакансії</a>
-          <a href="#contacts" class="menu_list_item scroll-to">долучайтесь до нас</a>
-        </div>
-        <div class="language-mode-switch">
-          <div class="language_switch">
-            <span data-lang="en">eng</span>
-            <span class="active" data-lang="uk">укр</span>
+        <div class="tab_content" data-tab="product">
+          <div class="swiper vacancy-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-control center">
+              <div class="slider-button-next">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="slider-button-prev">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="menu_column">
-        <div class="contacts_block">
-          <div class="contact_item">
-            <p class="contact_item_name">Телефон</p>
-            <p class="contact_item_info">
-              <span>Марія</span><span>+380 932 260 291</span>
-            </p>
+        <div class="tab_content" data-tab="development">
+          <div class="swiper vacancy-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-control center">
+              <div class="slider-button-next">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="slider-button-prev">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-          <div class="contact_item">
-            <p class="contact_item_name">Наш email</p>
-            <p class="contact_item_info">
-              hr@softum.io
-            </p>
+        </div>
+        <div class="tab_content" data-tab="marketing">
+          <div class="swiper vacancy-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-control center">
+              <div class="slider-button-next">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="slider-button-prev">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-          <div class="contact_item">
-            <p class="contact_item_name">Графiк роботи:</p>
-            <p class="contact_item_info">
-              Пн-Пт з 10:00 до 19:00
-            </p>
-          </div>
-          <div class="social_block">
-            <a class="social-item" href="#">
-              <i class="icon-telegram"></i>
-            </a>
-            <a class="social-item" href="#">
-              <i class="icon-instagram"></i>
-            </a>
-            <a class="social-item" href="#">
-              <i class="icon-linkedin"></i>
-            </a>
+        </div>
+        <div class="tab_content" data-tab="call-center">
+          <div class="swiper vacancy-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="info-wrap">
+                    <div class="info">
+                      <div class="title">PPC Media Buying Specialist</div>
+                      <div class="description">Design / Kyiv / Full-time</div>
+                    </div>
+                    <div class="vacancy-badge">
+                      <span>junior</span>
+                    </div>
+                  </div>
+                  <div class="buttons-wrap">
+                    <button class="button transparrent green_border">Порадити фахівця</button>
+                    <button class="button filling_bg">подати заявку</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-control center">
+              <div class="slider-button-next">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="slider-button-prev">
+                <i class="arrow-icon"></i>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="overlay center"></div>
-    <div class="preloader_wrapper active" id="preloader">
-      <div class="content-wrapper">
-        <div class="logo">
-          <img src="./img/logo.svg" alt="logo">
+    <img class="figure left-bottom-figure" src="./img/vacancy_left_bg-figure.svg" alt="">
+    <img class="figure top-center-figure" src="./img/vacancy_center_bg-figure.svg" alt="">
+    <img class="figure right-bottom-figure" src="./img/vacancy_right_bg-figure.svg" alt="">
+  </section>
+  <section class="contacts container" id="contacts">
+    <div class="content-wrapper">
+      <p class="section_title arrowed">долучайся до нас</p>
+      <div class="contacts_info-wrapper">
+        <div class="form_container">
+          <p class="form_title">Надсилай своє резюме</p>
+          <form action="" id="send-cv" method="">
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="name" type="text" required>
+              <label for="name">Ім’я та Прізвище</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="phone" type="tel" maxlength="16" required>
+              <label for="phone">Номер телефону</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="email" type="email" required>
+              <label for="email">Email</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item">
+              <input class="form_control" placeholder=" " id="user-vacancy" type="text" required>
+              <label for="user-vacancy">Вакансія</label>
+              <div class="error_txt">Error</div>
+            </div>
+            <div class="form_item attachment">
+              <label for="file-cv">
+                <input class="form_control" id="file-cv" type="file">
+                <div class="file_items">
+                  <span>Резюме</span>
+                  <div class="file-button">Файл</div>
+                </div>
+              </label>
+            </div>
+            <div class="form_agreement checkbox_item">
+              <label for="agreement">
+                <input type="checkbox" id="agreement" required>
+                <i class="checkbox"></i>
+                <span class="checkbox_txt"> Я даю згоду на обробку персональних даних</span>
+              </label>
+            </div>
+            <div class="submit_wrap">
+              <button class="button big w-100 filling_bg submit_btn" type="submit" id="apply">подати заявку</button>
+            </div>
+          </form>
         </div>
-        <div class="preloader">
-          <div class="preloader__ring">
-            <div class="preloader__sector">L</div>
-            <div class="preloader__sector">o</div>
-            <div class="preloader__sector">a</div>
-            <div class="preloader__sector">d</div>
-            <div class="preloader__sector">i</div>
-            <div class="preloader__sector">n</div>
-            <div class="preloader__sector">g</div>
-            <div class="preloader__sector">.</div>
-            <div class="preloader__sector">.</div>
-            <div class="preloader__sector">.</div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
+        <div class="contacts_cards_block">
+          <div class="cards_wrap">
+            <div class="contact_card">
+              <div class="content_wrap">
+                <div class="content">
+                  <div class="title">Recruiter</div>
+                  <div class="info">
+                    <p class="name">Daria Kovalevskaya</p>
+                    <p class="phone">
+                      <span>Телефон:</span>
+                      <span>+380 932 260 291</span>
+                    </p>
+                  </div>
+                  <a class="button transparrent green_border write_btn">написати</a>
+                </div>
+                <img class="photo" src="./img/cards/contact/girl.png" alt="photo">
+              </div>
+            </div>
+            <div class="contact_card">
+              <div class="content_wrap">
+                <div class="content">
+                  <div class="title">Recruiter</div>
+                  <div class="info">
+                    <p class="name">Daria Kovalevskaya</p>
+                    <p class="phone">
+                      <span>Телефон:</span>
+                      <span>+380 932 260 291</span>
+                    </p>
+                  </div>
+                  <a class="button transparrent green_border write_btn">написати</a>
+                </div>
+                <img class="photo" src="./img/cards/contact/girl.png" alt="photo">
+              </div>
+            </div>
           </div>
-          <div class="preloader__ring">
-            <div class="preloader__sector">L</div>
-            <div class="preloader__sector">o</div>
-            <div class="preloader__sector">a</div>
-            <div class="preloader__sector">d</div>
-            <div class="preloader__sector">i</div>
-            <div class="preloader__sector">n</div>
-            <div class="preloader__sector">g</div>
-            <div class="preloader__sector">.</div>
-            <div class="preloader__sector">.</div>
-            <div class="preloader__sector">.</div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
-            <div class="preloader__sector"></div>
+          <div class="contact_data">
+            <div class="contact_item">
+              <div class="title">Телефон</div>
+              <div class="data">
+                <span>Марія</span>
+                <span>+380 932 260 291</span>
+              </div>
+            </div>
+            <div class="contact_item">
+              <div class="title">Наш email</div>
+              <div class="data">
+                <span>hr@softum.io</span>
+              </div>
+            </div>
+            <div class="contact_item">
+              <div class="title">Графiк роботи:</div>
+              <div class="data">
+                <span>Пн-Пт з 10:00 до 19:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="socials">
+            <img class="logo" src="./img/logo.svg" alt="logo">
+            <div class="social_block">
+              <a class="social-item" href="#">
+                <i class="icon-telegram"></i>
+              </a>
+              <a class="social-item" href="#">
+                <i class="icon-instagram"></i>
+              </a>
+              <a class="social-item" href="#">
+                <i class="icon-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <img class="top-left-ellipse" src="./img/ellipse-left.svg" alt="">
-      <img class="bottom-right-ellipse" src="./img/loader-ellipse_bottom.svg" alt="">
     </div>
+  </section>
+  <div class="main_menu content-wrapper center" id="menu">
+    <div class="menu_column">
+      <div class="menu_list">
+        <a href="#about_us" class="menu_list_item scroll-to">Про нас</a>
+        <a href="#why_softsvit" class="menu_list_item scroll-to">Чому ми</a>
+        <a href="#cool_with_us" class="menu_list_item scroll-to">з нами круто</a>
+        <a href="#vacancy" class="menu_list_item scroll-to">вакансії</a>
+        <a href="#contacts" class="menu_list_item scroll-to">долучайтесь до нас</a>
+      </div>
+      <div class="language-mode-switch">
+        <div class="language_switch">
+          <span data-lang="en">eng</span>
+          <span class="active" data-lang="uk">укр</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu_column">
+      <div class="contacts_block">
+        <div class="contact_item">
+          <p class="contact_item_name">Телефон</p>
+          <p class="contact_item_info">
+            <span>Марія</span><span>+380 932 260 291</span>
+          </p>
+        </div>
+        <div class="contact_item">
+          <p class="contact_item_name">Наш email</p>
+          <p class="contact_item_info">
+            hr@softum.io
+          </p>
+        </div>
+        <div class="contact_item">
+          <p class="contact_item_name">Графiк роботи:</p>
+          <p class="contact_item_info">
+            Пн-Пт з 10:00 до 19:00
+          </p>
+        </div>
+        <div class="social_block">
+          <a class="social-item" href="#">
+            <i class="icon-telegram"></i>
+          </a>
+          <a class="social-item" href="#">
+            <i class="icon-instagram"></i>
+          </a>
+          <a class="social-item" href="#">
+            <i class="icon-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vacancy_modal modal my-cv content-wrapper center">
+    <div class="title">PPC Media Buying Specialist</div>
+    <div class="modal-content">
+      <div class="description_block">
+        <div class="description_content">
+          <p> Softum — продуктова IT компанія, яка займається не тільки розробкою, а й просуванням свого продукту.
+            Зараз ми шукаємо у свою команду PPC Media Buying Specialist</p>
+          <p>Вимоги:</p>
+          Досвід роботи від 3-х років на позиції Graphic Designer;
+          Просунуте володіння Photoshop, Illustrator, After Effects, Figma;
+          Знання 3D дизайну — буде перевагою;
+          Досвід роботи в агенції — буде перевагою.
+          Обов’язки:
+          Розробка графічного контенту для digital каналів комунікації;
+          Створення графіки для рекламних проявів продуктів компанії;
+          Формування базової анімації (банери, контент для SMM);
+          Дизайн лендингів.
+          Ми пропонуємо:
+          Сучасний офіс поруч з метро;
+          Молодий і дружній колектив;
+          Графік роботи з 10:00 до 19:00;
+          Кафе на території офісу;
+          Можливість кар'єрного і професійного зростання;
+          Офіційне оформлення, оплачувана відпустка та лікарняні;
+          Піца, напої, настільні ігри коштом компанії;
+          Ми за спорт, тому щотижня граємо у волейбол;
+          Кава, чай, печиво, фрукти та гарний настрій щодня.
+          Чекаємо на твоє резюме із зазначенням бажаного рівня заробітної плати.
+          <p> Softum — продуктова IT компанія, яка займається не тільки розробкою, а й просуванням свого продукту.
+            Зараз ми шукаємо у свою команду PPC Media Buying Specialist</p>
+          <p>Вимоги:</p>
+          Досвід роботи від 3-х років на позиції Graphic Designer;
+          Просунуте володіння Photoshop, Illustrator, After Effects, Figma;
+          Знання 3D дизайну — буде перевагою;
+          Досвід роботи в агенції — буде перевагою.
+          Обов’язки:
+          Розробка графічного контенту для digital каналів комунікації;
+          Створення графіки для рекламних проявів продуктів компанії;
+          Формування базової анімації (банери, контент для SMM);
+          Дизайн лендингів.
+          Ми пропонуємо:
+          Сучасний офіс поруч з метро;
+          Молодий і дружній колектив;
+          Графік роботи з 10:00 до 19:00;
+          Кафе на території офісу;
+          Можливість кар'єрного і професійного зростання;
+          Офіційне оформлення, оплачувана відпустка та лікарняні;
+          Піца, напої, настільні ігри коштом компанії;
+          Ми за спорт, тому щотижня граємо у волейбол;
+          Кава, чай, печиво, фрукти та гарний настрій щодня.
+          Чекаємо на твоє резюме із зазначенням бажаного рівня заробітної плати.
+          <p> Softum — продуктова IT компанія, яка займається не тільки розробкою, а й просуванням свого продукту.
+            Зараз ми шукаємо у свою команду PPC Media Buying Specialist</p>
+          <p>Вимоги:</p>
+          Досвід роботи від 3-х років на позиції Graphic Designer;
+          Просунуте володіння Photoshop, Illustrator, After Effects, Figma;
+          Знання 3D дизайну — буде перевагою;
+          Досвід роботи в агенції — буде перевагою.
+          Обов’язки:
+          Розробка графічного контенту для digital каналів комунікації;
+          Створення графіки для рекламних проявів продуктів компанії;
+          Формування базової анімації (банери, контент для SMM);
+          Дизайн лендингів.
+          Ми пропонуємо:
+          Сучасний офіс поруч з метро;
+          Молодий і дружній колектив;
+          Графік роботи з 10:00 до 19:00;
+          Кафе на території офісу;
+          Можливість кар'єрного і професійного зростання;
+          Офіційне оформлення, оплачувана відпустка та лікарняні;
+          Піца, напої, настільні ігри коштом компанії;
+          Ми за спорт, тому щотижня граємо у волейбол;
+          Кава, чай, печиво, фрукти та гарний настрій щодня.
+          Чекаємо на твоє резюме із зазначенням бажаного рівня заробітної плати.
+          <p> Softum — продуктова IT компанія, яка займається не тільки розробкою, а й просуванням свого продукту.
+            Зараз ми шукаємо у свою команду PPC Media Buying Specialist</p>
+          <p>Вимоги:</p>
+          Досвід роботи від 3-х років на позиції Graphic Designer;
+          Просунуте володіння Photoshop, Illustrator, After Effects, Figma;
+          Знання 3D дизайну — буде перевагою;
+          Досвід роботи в агенції — буде перевагою.
+          Обов’язки:
+          Розробка графічного контенту для digital каналів комунікації;
+          Створення графіки для рекламних проявів продуктів компанії;
+          Формування базової анімації (банери, контент для SMM);
+          Дизайн лендингів.
+          Ми пропонуємо:
+          Сучасний офіс поруч з метро;
+          Молодий і дружній колектив;
+          Графік роботи з 10:00 до 19:00;
+          Кафе на території офісу;
+          Можливість кар'єрного і професійного зростання;
+          Офіційне оформлення, оплачувана відпустка та лікарняні;
+          Піца, напої, настільні ігри коштом компанії;
+          Ми за спорт, тому щотижня граємо у волейбол;
+          Кава, чай, печиво, фрукти та гарний настрій щодня.
+          Чекаємо на твоє резюме із зазначенням бажаного рівня заробітної плати.
+        </div>
+      </div>
+      <div class="form_container">
+        <p class="form_title">Надсилай своє резюме</p>
+        <form action="" id="" method="">
+          <div class="form_item">
+            <input class="form_control" placeholder=" " id="name" type="text" required>
+            <label for="name">Ім’я та Прізвище</label>
+            <div class="error_txt">Error</div>
+          </div>
+          <div class="form_item">
+            <input class="form_control" placeholder=" " id="email" type="email" required>
+            <label for="email">Email</label>
+            <div class="error_txt">Error</div>
+          </div>
+          <div class="form_item">
+            <input class="form_control" placeholder=" " id="phone" type="tel" maxlength="16" required>
+            <label for="phone">Номер телефону</label>
+            <div class="error_txt">Error</div>
+          </div>
+          <div class="form_item">
+            <input class="form_control" placeholder=" " id="user-vacancy" type="text" required>
+            <label for="user-vacancy">Вакансія</label>
+            <div class="error_txt">Error</div>
+          </div>
+          <div class="form_item attachment">
+            <label for="file-cv">
+              <input class="form_control" id="file-cv" type="file">
+              <div class="file_items">
+                <span>Резюме</span>
+                <div class="file-button">Файл</div>
+              </div>
+            </label>
+          </div>
+          <div class="form_agreement checkbox_item">
+            <label for="agreement-2">
+              <input type="checkbox" id="agreement-2" required>
+              <i class="checkbox"></i>
+              <span class="checkbox_txt"> Я даю згоду на обробку персональних даних</span>
+            </label>
+          </div>
+          <div class="submit_wrap">
+            <button class="button big w-100 filling_bg submit_btn" type="submit">подати заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="overlay center"></div>
+  <div class="preloader_wrapper active" id="preloader">
+    <div class="content-wrapper">
+      <div class="logo">
+        <img src="./img/logo.svg" alt="logo">
+      </div>
+      <div class="preloader">
+        <div class="preloader__ring">
+          <div class="preloader__sector">L</div>
+          <div class="preloader__sector">o</div>
+          <div class="preloader__sector">a</div>
+          <div class="preloader__sector">d</div>
+          <div class="preloader__sector">i</div>
+          <div class="preloader__sector">n</div>
+          <div class="preloader__sector">g</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+        </div>
+        <div class="preloader__ring">
+          <div class="preloader__sector">L</div>
+          <div class="preloader__sector">o</div>
+          <div class="preloader__sector">a</div>
+          <div class="preloader__sector">d</div>
+          <div class="preloader__sector">i</div>
+          <div class="preloader__sector">n</div>
+          <div class="preloader__sector">g</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector">.</div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+          <div class="preloader__sector"></div>
+        </div>
+      </div>
+    </div>
+    <img class="top-left-ellipse" src="./img/ellipse-left.svg" alt="">
+    <img class="bottom-right-ellipse" src="./img/loader-ellipse_bottom.svg" alt="">
   </div>
 </body>
 <script src="./js/drag-slider.js"></script>
 <script src="./js/libs/swiper-bundle.min.js"></script>
-<script src="./js/libs/starfield.js"></script>
+<script src="./js/libs/sparticles.js"></script>
+<script src="./js/init-sparticles.js"></script>
 <script src="./js/menu.js"></script>
 <script src="./js/marquee.js"></script>
 <script src="./js/language_switch.js"></script>
