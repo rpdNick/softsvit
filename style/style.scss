@@ -24,15 +24,16 @@ html {
 }
 
 body {
+  position: relative;
   background: $color-fillg;
 
-  .wrapper {
-    max-width: 1400px;
+  .scroll-area {
+    // max-width: 1400px;
     overflow: hidden;
     position: relative;
   }
 
-  .sphere {
+  .sphere-box {
     width: 674px;
     height: 674px;
     position: absolute;
@@ -67,6 +68,12 @@ body {
 
     @media screen and (max-width: 460px) {
       right: -250px;
+    }
+    .sphere {
+      width: 100%;
+      transform-style: preserve-3d;
+      perspective: 800;
+      transition: 0.1s;
     }
   }
 
@@ -120,7 +127,7 @@ body {
       background-image: url(../img/contacts-bg.png);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 100% 100%;
     }
   }
 
@@ -193,21 +200,26 @@ body {
   .main_screen_wrap {
     position: relative;
     padding-top: 96px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
+  .sparticles-area {
+    position: relative;
 
-  .sparticles_box {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-    width: 100%;
-
-    #starfield {
+    .sparticles_box {
       position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
       top: 0;
+      bottom: 0;
+      overflow: hidden;
+      width: 100%;
+
+      #starfield {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+      }
     }
   }
 
@@ -403,17 +415,19 @@ body {
   .main_menu {
     position: fixed;
     top: 242px;
-    left: 0;
-    right: 0;
+    left: 100px;
+    right: 100px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     height: fit-content;
     max-width: 1200px;
+    height: calc(100% - 140px);
+    overflow: auto;
     opacity: 0;
     visibility: hidden;
     transition: 0.8s;
-    z-index: 3;
+    z-index: 4;
 
     &.active {
       opacity: 1;
@@ -1627,7 +1641,8 @@ body {
     max-width: 1200px;
     opacity: 0;
     visibility: hidden;
-    visibility: hidden;
+    overflow: auto;
+    height: calc(100% - 140px);
     transition: 0.8s;
     z-index: 3;
 
@@ -1705,15 +1720,24 @@ body {
         max-width: 558px;
       }
     }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: #00ffc2;
+    }
   }
 
   .contacts {
     margin-top: 148px;
     padding-bottom: 47px;
-    // background-image: url(../img/contacts-bg.png);
-    // background-position: center;
-    // background-size: 100%;
-    // background-repeat: no-repeat;
 
     .contacts_info-wrapper {
       display: flex;

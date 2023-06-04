@@ -11,18 +11,18 @@ html {
 }
 
 body {
+  position: relative;
   background: #000000;
   /* Global */
   /* Sliders */
   /* Sliders */
   /* Glogal end*/
 }
-body .wrapper {
-  max-width: 1400px;
+body .scroll-area {
   overflow: hidden;
   position: relative;
 }
-body .sphere {
+body .sphere-box {
   width: 674px;
   height: 674px;
   position: absolute;
@@ -31,40 +31,46 @@ body .sphere {
   z-index: 1;
 }
 @media screen and (max-width: 1200px) {
-  body .sphere {
+  body .sphere-box {
     right: 60px;
   }
 }
 @media screen and (max-width: 1140px) {
-  body .sphere {
+  body .sphere-box {
     right: 24px;
   }
 }
 @media screen and (max-width: 979px) {
-  body .sphere {
+  body .sphere-box {
     width: 497px;
     height: 497px;
   }
 }
 @media screen and (max-height: 786px) {
-  body .sphere {
+  body .sphere-box {
     top: -15px;
   }
 }
 @media screen and (max-width: 768px) {
-  body .sphere {
+  body .sphere-box {
     right: 0;
   }
 }
 @media screen and (max-width: 640px) {
-  body .sphere {
+  body .sphere-box {
     right: -105px;
   }
 }
 @media screen and (max-width: 460px) {
-  body .sphere {
+  body .sphere-box {
     right: -250px;
   }
+}
+body .sphere-box .sphere {
+  width: 100%;
+  transform-style: preserve-3d;
+  perspective: 800;
+  transition: 0.1s;
 }
 body .overlay {
   position: fixed;
@@ -110,7 +116,7 @@ body .over-wrap.contacts_over-wrap {
   background-image: url(../img/contacts-bg.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 body .section-wrapper {
   position: relative;
@@ -178,15 +184,20 @@ body .content-wrapper {
 body .main_screen_wrap {
   position: relative;
   padding-top: 96px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-body .sparticles_box {
+body .sparticles-area {
+  position: relative;
+}
+body .sparticles-area .sparticles_box {
   position: absolute;
   top: 0;
   bottom: 0;
   overflow: hidden;
   width: 100%;
 }
-body .sparticles_box #starfield {
+body .sparticles-area .sparticles_box #starfield {
   position: absolute;
   left: 0;
   right: 0;
@@ -357,18 +368,20 @@ body section .section_title.arrowed::after {
 body .main_menu {
   position: fixed;
   top: 242px;
-  left: 0;
-  right: 0;
+  left: 100px;
+  right: 100px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: -moz-fit-content;
   height: fit-content;
   max-width: 1200px;
+  height: calc(100% - 140px);
+  overflow: auto;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s;
-  z-index: 3;
+  z-index: 4;
 }
 body .main_menu.active {
   opacity: 1;
@@ -1444,7 +1457,8 @@ body .vacancy_modal {
   max-width: 1200px;
   opacity: 0;
   visibility: hidden;
-  visibility: hidden;
+  overflow: auto;
+  height: calc(100% - 140px);
   transition: 0.8s;
   z-index: 3;
 }
@@ -1512,6 +1526,16 @@ body .vacancy_modal .modal-content .description_block .description_content {
 }
 body .vacancy_modal .modal-content .form_container {
   max-width: 558px;
+}
+body .vacancy_modal::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+body .vacancy_modal::-webkit-scrollbar {
+  width: 4px;
+}
+body .vacancy_modal::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #00ffc2;
 }
 body .contacts {
   margin-top: 148px;
