@@ -370,13 +370,8 @@ body .main_menu {
   top: 242px;
   left: 100px;
   right: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: -moz-fit-content;
-  height: fit-content;
   max-width: 1200px;
-  height: calc(100% - 140px);
+  height: calc(100% - 165px);
   overflow: auto;
   opacity: 0;
   visibility: hidden;
@@ -386,6 +381,14 @@ body .main_menu {
 body .main_menu.active {
   opacity: 1;
   visibility: visible;
+}
+body .main_menu .flex-wrap {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 body .main_menu .menu_list .menu_list_item {
   display: block;

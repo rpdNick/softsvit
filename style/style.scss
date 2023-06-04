@@ -417,12 +417,8 @@ body {
     top: 242px;
     left: 100px;
     right: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: fit-content;
     max-width: 1200px;
-    height: calc(100% - 140px);
+    height: calc(100% - 165px);
     overflow: auto;
     opacity: 0;
     visibility: hidden;
@@ -432,6 +428,14 @@ body {
     &.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    .flex-wrap {
+      display: flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: fit-content;
     }
 
     .menu_list {
