@@ -28,7 +28,7 @@ const feedbackSliderOptions = {
     // when window width is >= 320px
     320: {
       effect: "slide",
-      slidesPerView: 1,
+      slidesPerView: 1.07,
       spaceBetween: 12,
       centeredSlides: false,
       loop: false,

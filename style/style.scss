@@ -432,10 +432,14 @@ body {
 
     .flex-wrap {
       display: flex;
-      display: flex;
       justify-content: space-between;
       align-items: flex-end;
       height: fit-content;
+
+      @media screen and (max-width: 724px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     .menu_list {
@@ -629,7 +633,6 @@ body {
         }
 
         .slide_content {
-          position: relative;
           width: 100%;
           overflow: hidden;
 
@@ -637,10 +640,48 @@ body {
             position: relative;
             z-index: 1;
 
-            img {
+            .photo {
               display: block;
               margin: 0 auto;
               height: 188px;
+              position: relative;
+              z-index: 1;
+            }
+
+            .slide-hover-arrows {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              width: 100%;
+              height: 100%;
+              transition: 0.6s ease-in-out;
+              object-fit: cover;
+              opacity: 0;
+            }
+
+            .slide-hover-diamonds {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 100%;
+              transition: 0.6s ease-in-out;
+              object-fit: cover;
+            }
+
+            svg {
+              width: 248px;
+              position: absolute;
+              top: 93px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+
+              .slide-circle {
+                transition: 0.6s ease-in-out;
+                margin: 0 auto;
+              }
             }
           }
           .feedback_block {
@@ -668,38 +709,6 @@ body {
               color: $color-gray;
             }
           }
-
-          .slide-hover-arrows {
-            position: absolute;
-            top: 56px;
-            left: 12px;
-            right: 0;
-            margin: 0 auto;
-            width: 220px;
-            transition: 0.6s ease-in-out;
-            opacity: 0;
-          }
-
-          .slide-hover-diamonds {
-            position: absolute;
-            width: 100%;
-            top: 100%;
-            transition: 0.6s ease-in-out;
-          }
-
-          svg {
-            width: 248px;
-            position: absolute;
-            top: 93px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-
-            .slide-circle {
-              transition: 0.6s ease-in-out;
-              margin: 0 auto;
-            }
-          }
         }
 
         &.swiper-slide-prev,
@@ -718,11 +727,11 @@ body {
 
         &:hover {
           .slide-hover-arrows {
-            opacity: 1;
+            opacity: 1 !important;
           }
 
           .slide-hover-diamonds {
-            top: 0;
+            top: 0 !important;
           }
 
           svg {
@@ -1537,6 +1546,31 @@ body {
         }
 
         &:hover {
+          background-image: url(../img/cards/mark-hover.png);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          .card_front {
+            justify-content: flex-start;
+            height: fit-content;
+
+            .icon-box {
+              width: 56px;
+              height: 56px;
+            }
+
+            .card-title {
+              margin-top: 16px;
+            }
+          }
+
+          .card_description {
+            visibility: visible;
+          }
+        }
+
+        @media screen and (max-width: $tablet) {
           background-image: url(../img/cards/mark-hover.png);
           background-position: center;
           background-size: cover;

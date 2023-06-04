@@ -384,11 +384,16 @@ body .main_menu.active {
 }
 body .main_menu .flex-wrap {
   display: flex;
-  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: -moz-fit-content;
   height: fit-content;
+}
+@media screen and (max-width: 724px) {
+  body .main_menu .flex-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 body .main_menu .menu_list .menu_list_item {
   display: block;
@@ -573,7 +578,6 @@ body .swiper.feedback-slider .swiper-slide {
   }
 }
 body .swiper.feedback-slider .swiper-slide .slide_content {
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -581,10 +585,46 @@ body .swiper.feedback-slider .swiper-slide .slide_content .img_box {
   position: relative;
   z-index: 1;
 }
-body .swiper.feedback-slider .swiper-slide .slide_content .img_box img {
+body .swiper.feedback-slider .swiper-slide .slide_content .img_box .photo {
   display: block;
   margin: 0 auto;
   height: 188px;
+  position: relative;
+  z-index: 1;
+}
+body .swiper.feedback-slider .swiper-slide .slide_content .img_box .slide-hover-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+}
+body .swiper.feedback-slider .swiper-slide .slide_content .img_box .slide-hover-diamonds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  transition: 0.6s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .swiper.feedback-slider .swiper-slide .slide_content .img_box svg {
+  width: 248px;
+  position: absolute;
+  top: 93px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+body .swiper.feedback-slider .swiper-slide .slide_content .img_box svg .slide-circle {
+  transition: 0.6s ease-in-out;
+  margin: 0 auto;
 }
 body .swiper.feedback-slider .swiper-slide .slide_content .feedback_block {
   position: relative;
@@ -609,34 +649,6 @@ body .swiper.feedback-slider .swiper-slide .slide_content .feedback_block .feedb
   line-height: 20px;
   color: rgba(255, 255, 255, 0.6);
 }
-body .swiper.feedback-slider .swiper-slide .slide_content .slide-hover-arrows {
-  position: absolute;
-  top: 56px;
-  left: 12px;
-  right: 0;
-  margin: 0 auto;
-  width: 220px;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-}
-body .swiper.feedback-slider .swiper-slide .slide_content .slide-hover-diamonds {
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  transition: 0.6s ease-in-out;
-}
-body .swiper.feedback-slider .swiper-slide .slide_content svg {
-  width: 248px;
-  position: absolute;
-  top: 93px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-body .swiper.feedback-slider .swiper-slide .slide_content svg .slide-circle {
-  transition: 0.6s ease-in-out;
-  margin: 0 auto;
-}
 body .swiper.feedback-slider .swiper-slide.swiper-slide-prev, body .swiper.feedback-slider .swiper-slide.swiper-slide-next {
   opacity: 0.3;
 }
@@ -650,10 +662,10 @@ body .swiper.feedback-slider .swiper-slide.swiper-slide-active {
   bottom: 0px;
 }
 body .swiper.feedback-slider .swiper-slide:hover .slide-hover-arrows {
-  opacity: 1;
+  opacity: 1 !important;
 }
 body .swiper.feedback-slider .swiper-slide:hover .slide-hover-diamonds {
-  top: 0;
+  top: 0 !important;
 }
 body .swiper.feedback-slider .swiper-slide:hover svg {
   top: 60px;
@@ -1380,6 +1392,29 @@ body .why_softsvit .cards_wrapper .card_item:hover .card_front .card-title {
 }
 body .why_softsvit .cards_wrapper .card_item:hover .card_description {
   visibility: visible;
+}
+@media screen and (max-width: 768px) {
+  body .why_softsvit .cards_wrapper .card_item {
+    background-image: url(../img/cards/mark-hover.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  body .why_softsvit .cards_wrapper .card_item .card_front {
+    justify-content: flex-start;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body .why_softsvit .cards_wrapper .card_item .card_front .icon-box {
+    width: 56px;
+    height: 56px;
+  }
+  body .why_softsvit .cards_wrapper .card_item .card_front .card-title {
+    margin-top: 16px;
+  }
+  body .why_softsvit .cards_wrapper .card_item .card_description {
+    visibility: visible;
+  }
 }
 body .cool_with_us {
   margin-top: 107px;
