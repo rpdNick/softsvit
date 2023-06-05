@@ -185,7 +185,7 @@ function mobileSphereAnimation() {
     } else {
       sphareContainer.style.top = scrollTop + "px";
       rotation = rotation + 1;
-      sphere.style.transform = "rotate(" + scrollTop / 5 + "deg)";
+      sphere.style.transform = "rotate(" + scrollTop / 8 + "deg)";
     }
   });
 }
