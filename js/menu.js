@@ -50,6 +50,7 @@ const scrollTo = function () {
       siteBody.classList.remove("menu_open");
       menu.classList.remove("active");
       menuButton.classList.remove("active");
+      mobileMenu.classList.remove("active");
       const currentTarget = this.getAttribute("href");
       smoothScroll(currentTarget, 800);
     });
