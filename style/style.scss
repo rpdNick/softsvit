@@ -45,7 +45,7 @@ body {
       transform-style: preserve-3d;
       transition: 1.5s;
 
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: 979px) {
         transition: 0.6s;
       }
     }
@@ -60,6 +60,7 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
+      transition: 0.6s;
     }
 
     @media screen and (max-height: 786px) {
@@ -72,10 +73,6 @@ body {
 
     @media screen and (max-width: $medium) {
       right: -105px;
-    }
-
-    @media screen and (max-width: $small) {
-      transition: 0.6s;
     }
 
     @media screen and (max-width: 460px) {

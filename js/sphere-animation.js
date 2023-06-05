@@ -96,7 +96,7 @@ sphereW979 = {
   start: [
     {
       width: "497",
-      right: "60",
+      right: "-105",
       rotation: "rotate(0deg)",
       opacity: "1",
     },
