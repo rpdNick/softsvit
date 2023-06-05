@@ -47,7 +47,7 @@ const scrollTo = function () {
   const links = document.querySelectorAll(".scroll-to");
   links.forEach((item) => {
     item.addEventListener("click", function () {
-      siteBody.classList.remove("modal_open");
+      siteBody.classList.remove("menu_open");
       menu.classList.remove("active");
       menuButton.classList.remove("active");
       const currentTarget = this.getAttribute("href");
