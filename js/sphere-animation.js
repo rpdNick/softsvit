@@ -12,6 +12,14 @@ let rotation = 0;
 
 let scrollArea = document.querySelector(".scroll-area").offsetHeight;
 
+window.addEventListener("resize", () => {
+  getPageWidth();
+});
+
+window.addEventListener("load", () => {
+  getPageWidth();
+});
+
 function getPageWidth() {
   const pageWidth = window.innerWidth;
   if (pageWidth <= 768) {
@@ -119,6 +127,23 @@ sphereW979 = {
   ],
 };
 
+function mobileSphereAnimation() {
+  window.addEventListener("scroll", function () {
+    const endScroll =
+      document
+        .getElementById("mob-end-animation-scroll")
+        .getBoundingClientRect().top + window.scrollY;
+    var scrollTop = window.pageYOffset || window.scrollTop;
+
+    if (scrollTop >= endScroll) {
+      return;
+    } else {
+      sphareContainer.style.top = scrollTop + 84 + "px";
+      sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+    }
+  });
+}
+
 function animationStartPosition(elContainer, el, position, params) {
   elContainer.style.width = params.start[0].width + "px";
   elContainer.style.top = position + "px";
@@ -143,14 +168,6 @@ function animationEndPosition(elContainer, el, position, params) {
   el.style.opacity = params.end[0].opacity;
 }
 
-window.addEventListener("resize", () => {
-  getPageWidth();
-});
-
-window.addEventListener("load", () => {
-  getPageWidth();
-});
-
 function animateSphere(params) {
   document.addEventListener("scroll", (e) => {
     let currentScroll =
@@ -166,23 +183,6 @@ function animateSphere(params) {
 
     if (currentScroll <= startPosition) {
       animationStartPosition(sphareContainer, sphere, 84, params);
-    }
-  });
-}
-
-function mobileSphereAnimation() {
-  window.addEventListener("scroll", function () {
-    const endScroll =
-      document
-        .getElementById("mob-end-animation-scroll")
-        .getBoundingClientRect().top + window.scrollY;
-    var scrollTop = window.pageYOffset || window.scrollTop;
-
-    if (scrollTop >= endScroll) {
-      return;
-    } else {
-      sphareContainer.style.top = scrollTop + 84 + "px";
-      sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
