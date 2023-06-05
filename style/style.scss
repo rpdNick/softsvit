@@ -40,6 +40,16 @@ body {
     transition: 1.5s;
     z-index: 1;
 
+    .sphere {
+      width: 100%;
+      transform-style: preserve-3d;
+      transition: 1.5s;
+
+      @media screen and (max-width: $small) {
+        transition: 0.6s;
+      }
+    }
+
     @media screen and (max-width: $x-large) {
       right: 60px;
     }
@@ -64,13 +74,12 @@ body {
       right: -105px;
     }
 
+    @media screen and (max-width: $small) {
+      transition: 0.6s;
+    }
+
     @media screen and (max-width: 460px) {
       right: -250px;
-    }
-    .sphere {
-      width: 100%;
-      transform-style: preserve-3d;
-      transition: 1.5s;
     }
   }
 

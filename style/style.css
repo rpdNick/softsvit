@@ -30,6 +30,16 @@ body .sphere-box {
   transition: 1.5s;
   z-index: 1;
 }
+body .sphere-box .sphere {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+}
+@media screen and (max-width: 575px) {
+  body .sphere-box .sphere {
+    transition: 0.6s;
+  }
+}
 @media screen and (max-width: 1200px) {
   body .sphere-box {
     right: 60px;
@@ -60,15 +70,15 @@ body .sphere-box {
     right: -105px;
   }
 }
+@media screen and (max-width: 575px) {
+  body .sphere-box {
+    transition: 0.6s;
+  }
+}
 @media screen and (max-width: 460px) {
   body .sphere-box {
     right: -250px;
   }
-}
-body .sphere-box .sphere {
-  width: 100%;
-  transform-style: preserve-3d;
-  transition: 1.5s;
 }
 body .overlay {
   position: fixed;

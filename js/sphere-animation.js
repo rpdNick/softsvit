@@ -8,7 +8,6 @@ const secondPosition =
     .top +
   window.scrollY -
   100;
-console.log(secondPosition);
 let rotation = 0;
 
 let scrollArea = document.querySelector(".scroll-area").offsetHeight;
@@ -17,38 +16,133 @@ function scrollDirection() {}
 
 function getPageWidth() {
   const pageWidth = window.innerWidth;
-  if (pageWidth > 575) {
-    animateSphere();
-  } else {
+  if (pageWidth <= 768) {
     mobileSphereAnimation();
+  }
+
+  if (pageWidth > 1200) {
+    animateSphere(sphereDeskPosition);
+  }
+  console.log(pageWidth);
+  if (pageWidth <= 1200 && pageWidth >= 1139) {
+    animateSphere(sphereTabletPosition);
+  }
+
+  if (pageWidth <= 979 && pageWidth >= 767) {
+    animateSphere(sphereW979);
   }
 }
 
-function animationStartPosition(elContainer, el, position) {
-  elContainer.style.width = "674px";
-  elContainer.style.height = "674px";
+// Sphere position params
+sphereDeskPosition = {
+  start: [
+    {
+      width: "674",
+      right: "100",
+      rotation: "rotate(0deg)",
+      opacity: "1",
+    },
+  ],
+
+  second: [
+    {
+      width: "848",
+      right: "-250",
+      rotation: "rotate(-90deg)",
+      opacity: "1",
+    },
+  ],
+
+  end: [
+    {
+      width: "514",
+      right: "80",
+      rotation: "rotate(-150deg)",
+      opacity: "0.2",
+    },
+  ],
+};
+
+sphereTabletPosition = {
+  start: [
+    {
+      width: "674",
+      right: "60",
+      rotation: "rotate(0deg)",
+      opacity: "1",
+    },
+  ],
+
+  second: [
+    {
+      width: "848",
+      right: "-250",
+      rotation: "rotate(-90deg)",
+      opacity: "1",
+    },
+  ],
+
+  end: [
+    {
+      width: "514",
+      right: "80",
+      rotation: "rotate(-150deg)",
+      opacity: "0.2",
+    },
+  ],
+};
+
+sphereW979 = {
+  start: [
+    {
+      width: "497",
+      right: "60",
+      rotation: "rotate(0deg)",
+      opacity: "1",
+    },
+  ],
+
+  second: [
+    {
+      width: "748",
+      right: "-150",
+      rotation: "rotate(-90deg)",
+      opacity: "1",
+    },
+  ],
+
+  end: [
+    {
+      width: "414",
+      right: "80",
+      rotation: "rotate(-150deg)",
+      opacity: "0.2",
+    },
+  ],
+};
+
+function animationStartPosition(elContainer, el, position, params) {
+  elContainer.style.width = params.start[0].width + "px";
   elContainer.style.top = position + "px";
-  elContainer.style.right = "100px";
-  el.style.transform = "rotate(0deg)";
-  el.style.opacity = "1";
+  elContainer.style.right = params.start[0].right + "px";
+  el.style.transform = params.start[0].rotation;
+  el.style.opacity = params.start[0].opacity;
 }
 
-function animationSecondPosition(elContainer, el, position) {
-  elContainer.style.width = "848px";
-  elContainer.style.height = "848px";
-  elContainer.style.top = position * 1.5 + "px";
-  elContainer.style.right = "-250px";
-  el.style.transform = "rotate(-90deg)";
-  el.style.opacity = "1";
+function animationSecondPosition(elContainer, el, position, params) {
+  elContainer.style.width = params.second[0].width + "px";
+  elContainer.style.top = position + "px";
+  elContainer.style.right = params.second[0].right + "px";
+  el.style.transform = params.second[0].rotation;
+  el.style.opacity = params.second[0].opacity;
 }
 
-function animationEndPosition(elContainer, el, position) {
-  elContainer.style.width = "514px";
-  elContainer.style.height = "514px";
+function animationEndPosition(elContainer, el, position, params) {
+  elContainer.style.width = params.end[0].width + "px";
   elContainer.style.top = position * 1.6 + "px";
-  elContainer.style.right = "80%";
-  el.style.transform = "rotate(-100deg)";
-  el.style.opacity = "0.2";
+  elContainer.style.right = params.end[0].right + "%";
+  el.style.transform = params.end[0].rotation;
+  el.style.opacity = params.end[0].opacity;
 }
 
 window.addEventListener("resize", () => {
@@ -57,65 +151,41 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("load", () => {
   getPageWidth();
-  let lastScroll = 0;
 });
 
-function animateSphere() {
+function animateSphere(params) {
   document.addEventListener("scroll", (e) => {
     let currentScroll =
       document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
 
     if (currentScroll >= startPosition && currentScroll < secondPosition) {
-      console.log("go second");
-      animationSecondPosition(sphareContainer, sphere, startPosition);
+      animationSecondPosition(sphareContainer, sphere, startPosition, params);
     }
 
     if (currentScroll >= secondPosition) {
-      console.log("go end");
-      animationEndPosition(sphareContainer, sphere, secondPosition);
+      animationEndPosition(sphareContainer, sphere, secondPosition, params);
     }
 
     if (currentScroll <= startPosition) {
-      console.log("go");
-      animationStartPosition(sphareContainer, sphere, 84);
+      animationStartPosition(sphareContainer, sphere, 84, params);
     }
   });
 }
 
 function mobileSphereAnimation() {
   window.addEventListener("scroll", function () {
+    const endScroll =
+      document
+        .getElementById("mob-end-animation-scroll")
+        .getBoundingClientRect().top + window.scrollY;
     var scrollTop = window.pageYOffset || window.scrollTop;
-    var scrollPercent = scrollTop / scrollArea || 0;
-    // console.log(scrollPercent);
-    sphareContainer.style.top = scrollTop + "px";
-    rotation = rotation + 1;
-    console.log(rotation);
-    sphere.style.transform = "rotate(" + scrollTop / 10 + "deg)";
+
+    if (scrollTop >= endScroll) {
+      return;
+    } else {
+      sphareContainer.style.top = scrollTop + "px";
+      rotation = rotation + 1;
+      sphere.style.transform = "rotate(" + scrollTop / 5 + "deg)";
+    }
   });
 }
-
-// spherePositions = {
-//   start: [
-//     {
-//       width: "674px",
-//       height: "674px",
-//       rotation: "0deg",
-//     },
-//   ],
-
-//   second: [
-//     {
-//       width: "848px",
-//       height: "848px",
-//       rotation: "90deg",
-//     },
-//   ],
-
-//   end: [
-//     {
-//         width: "514px",
-//         height: "514px",
-//         rotation: "180deg",
-//     },
-//   ],
-// };
