@@ -45,7 +45,7 @@ body {
       transition: 1.5s;
 
       @media screen and (max-width: 979px) {
-        transition: 0.3s;
+        transition: all 0.2s ease;
       }
     }
 
@@ -59,7 +59,7 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     @media screen and (max-height: 786px) {

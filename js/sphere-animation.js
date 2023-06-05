@@ -12,8 +12,6 @@ let rotation = 0;
 
 let scrollArea = document.querySelector(".scroll-area").offsetHeight;
 
-function scrollDirection() {}
-
 function getPageWidth() {
   const pageWidth = window.innerWidth;
   if (pageWidth <= 768) {
@@ -183,9 +181,8 @@ function mobileSphereAnimation() {
     if (scrollTop >= endScroll) {
       return;
     } else {
-      sphareContainer.style.top = scrollTop + "px";
-      rotation = rotation + 1;
-      sphere.style.transform = "rotate(" + scrollTop / 8 + "deg)";
+      sphareContainer.style.top = scrollTop + 84 + "px";
+      sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
