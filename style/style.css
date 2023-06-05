@@ -32,7 +32,6 @@ body .sphere-box {
 }
 body .sphere-box .sphere {
   width: 100%;
-  transform-style: preserve-3d;
   transition: 1.5s;
 }
 @media screen and (max-width: 979px) {
