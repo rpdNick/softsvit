@@ -132,8 +132,8 @@ function mobileSphereAnimation() {
     const endScroll =
       document
         .getElementById("mob-end-animation-scroll")
-        .getBoundingClientRect().top + window.scrollY;
-    var scrollTop = window.pageYOffset || window.scrollTop;
+        .getBoundingClientRect().top + window.scrollY - 100;
+    let scrollTop = window.pageYOffset || window.scrollTop;
 
     if (scrollTop >= endScroll) {
       return;
