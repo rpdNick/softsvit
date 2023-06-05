@@ -12,7 +12,7 @@ mobileMenu.addEventListener("click", () => {
 });
 
 function showMenu(el) {
-  siteBody.classList.toggle("modal_open");
+  siteBody.classList.toggle("menu_open");
   menu.classList.toggle("active");
   el.classList.toggle("active");
 }
@@ -26,11 +26,11 @@ const smoothScroll = function (targetEl, duration) {
   let startPosition = window.pageYOffset;
   let startTime = null;
 
-  const ease = function (t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
+  const ease = function (time, start, target, duration) {
+    time /= duration / 2;
+    if (time < 1) return (target / 2) * time * time + start;
+    time--;
+    return (-target / 2) * (time * (time - 2) - 1) + start;
   };
 
   const animation = function (currentTime) {
