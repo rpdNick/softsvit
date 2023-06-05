@@ -33,7 +33,7 @@ function getPageWidth() {
   }
 }
 
-// Sphere position params
+// Sphere position params for screen size
 sphereDeskPosition = {
   start: [
     {
