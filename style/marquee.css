@@ -1,14 +1,8 @@
 .marquee-wraper {
-  margin-top: 196px;
   background: linear-gradient(270deg, rgba(13, 35, 20, 0) 21.88%, rgba(13, 35, 20, 0) 21.88%, #0d2314 78.13%);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   padding: 16px 0px;
-}
-@media screen and (max-width: 768px) {
-  .marquee-wraper {
-    margin-top: 60px;
-  }
 }
 .marquee-wraper .marquee {
   --gap: 40px;

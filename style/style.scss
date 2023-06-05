@@ -34,10 +34,10 @@ body {
 
   .sphere-box {
     width: 674px;
-    height: 674px;
     position: absolute;
     right: 100px;
     top: 84px;
+    transition: 1.5s;
     z-index: 1;
 
     @media screen and (max-width: $x-large) {
@@ -50,11 +50,10 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      height: 497px;
     }
 
     @media screen and (max-height: 786px) {
-      top: -15px;
+      width: 574px;
     }
 
     @media screen and (max-width: $tablet) {
@@ -71,8 +70,7 @@ body {
     .sphere {
       width: 100%;
       transform-style: preserve-3d;
-      perspective: 800;
-      transition: 0.1s;
+      transition: 1.5s;
     }
   }
 
@@ -1473,6 +1471,7 @@ body {
 
   .about_us {
     margin-top: 300px;
+    padding-bottom: 196px;
 
     .about_us_categories {
       display: grid;
@@ -1508,6 +1507,7 @@ body {
 
     @media screen and (max-width: $tablet) {
       margin-top: 133px;
+      padding-bottom: 60px;
     }
   }
 

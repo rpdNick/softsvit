@@ -24,10 +24,10 @@ body .scroll-area {
 }
 body .sphere-box {
   width: 674px;
-  height: 674px;
   position: absolute;
   right: 100px;
   top: 84px;
+  transition: 1.5s;
   z-index: 1;
 }
 @media screen and (max-width: 1200px) {
@@ -43,12 +43,11 @@ body .sphere-box {
 @media screen and (max-width: 979px) {
   body .sphere-box {
     width: 497px;
-    height: 497px;
   }
 }
 @media screen and (max-height: 786px) {
   body .sphere-box {
-    top: -15px;
+    width: 574px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -69,8 +68,7 @@ body .sphere-box {
 body .sphere-box .sphere {
   width: 100%;
   transform-style: preserve-3d;
-  perspective: 800;
-  transition: 0.1s;
+  transition: 1.5s;
 }
 body .overlay {
   position: fixed;
@@ -1302,6 +1300,7 @@ body .main_screen_content .main_screen_footer .language-mode-switch {
 }
 body .about_us {
   margin-top: 300px;
+  padding-bottom: 196px;
 }
 body .about_us .about_us_categories {
   display: grid;
@@ -1335,6 +1334,7 @@ body .about_us .about_us_categories .category_item .category_description {
 @media screen and (max-width: 768px) {
   body .about_us {
     margin-top: 133px;
+    padding-bottom: 60px;
   }
 }
 body .why_softsvit {
