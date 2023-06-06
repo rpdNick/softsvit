@@ -196,7 +196,7 @@ function mobileSphereAnimation() {
     let scrollTop = window.pageYOffset || window.scrollTop;
     if (scrollTop <= endScroll) {
       sphareContainer.style.transform =
-        "translateY(" + scrollTop / 5 + "%) rotate(" + scrollTop / 4 + "deg)";
+        "translateY(" + scrollTop / 2 + "%) rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
