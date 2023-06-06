@@ -45,7 +45,7 @@ body {
       transition: 1s;
 
       @media screen and (max-width: 979px) {
-        transition: all 0.5s ease;
+        transition: all 0.8s ease;
       }
     }
 
@@ -59,12 +59,12 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      transition: all 0.5s ease;
+      transition: all 0.8s ease;
     }
 
-    // @media screen and (max-height: 786px) {
-    //   width: 574px;
-    // }
+    @media screen and (max-height: 786px) {
+      width: 574px;
+    }
 
     @media screen and (max-width: $tablet) {
       right: 0;
@@ -639,7 +639,7 @@ body {
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
-      max-width: 1100px;
+      max-width: 1200px;
 
       .swiper-slide {
         width: 384px;
