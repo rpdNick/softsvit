@@ -36,7 +36,7 @@ body .sphere-box .sphere {
 }
 @media screen and (max-width: 979px) {
   body .sphere-box .sphere {
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -52,7 +52,7 @@ body .sphere-box .sphere {
 @media screen and (max-width: 979px) {
   body .sphere-box {
     width: 497px;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
   }
 }
 @media screen and (max-height: 786px) {
