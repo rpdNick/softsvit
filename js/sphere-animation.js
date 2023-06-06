@@ -1,7 +1,5 @@
 const sphareContainer = document.querySelector(".sphere-box");
 const sphere = document.getElementById("sphere");
-const screenHeight = screen.height;
-console.log(screenHeight)
 const startPosition =
   document.getElementById("scroll-first-position").getBoundingClientRect().top +
   window.scrollY;
@@ -15,15 +13,16 @@ let rotation = 0;
 let scrollArea = document.querySelector(".scroll-area").offsetHeight;
 
 window.addEventListener("resize", () => {
-  getPageWidth();
+  getPageSiaze();
 });
 
 window.addEventListener("load", () => {
-  getPageWidth();
+  getPageSiaze();
 });
 
-function getPageWidth() {
+function getPageSiaze() {
   const pageWidth = window.innerWidth;
+  const screenHeight = screen.height;
   if (pageWidth <= 768) {
     mobileSphereAnimation();
   }
