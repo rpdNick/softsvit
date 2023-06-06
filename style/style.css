@@ -27,16 +27,16 @@ body .sphere-box {
   position: absolute;
   right: 100px;
   top: 84px;
-  transition: all 1s ease;
+  transition: all 1s ease-out;
   z-index: -1;
 }
 body .sphere-box .sphere {
   width: 100%;
-  transition: all 1s ease;
+  transition: all 1s ease-out;
 }
 @media screen and (max-width: 979px) {
   body .sphere-box .sphere {
-    transition: all 0.8s ease;
+    transition: all 0.8s ease-out;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -52,7 +52,7 @@ body .sphere-box .sphere {
 @media screen and (max-width: 979px) {
   body .sphere-box {
     width: 497px;
-    transition: all 0.8s ease;
+    transition: all 0.8s ease-out;
   }
 }
 @media screen and (max-height: 786px) {
@@ -1237,9 +1237,9 @@ body .main_screen_content .main_screen_title h1 {
 }
 @media screen and (max-width: 979px) {
   body .main_screen_content .main_screen_title h1 {
-    font-size: 32px;
-    line-height: 44px;
-    max-width: 344px;
+    font-size: 52px;
+    line-height: 64px;
+    max-width: 582px;
   }
 }
 @media screen and (max-width: 575px) {

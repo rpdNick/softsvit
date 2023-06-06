@@ -8,6 +8,7 @@ const secondPosition =
     .top +
   window.scrollY -
   100;
+const topPosition = 84;
 let rotation = 0;
 
 let scrollArea = document.querySelector(".scroll-area").offsetHeight;
@@ -23,24 +24,45 @@ window.addEventListener("load", () => {
 function getPageSiaze() {
   const pageWidth = window.innerWidth;
   const screenHeight = screen.height;
-  if (pageWidth <= 768) {
-    mobileSphereAnimation();
-  }
 
   if (pageWidth > 1200 && screenHeight > 864) {
     animateSphere(sphereDeskPosition);
+    animationStartPosition(
+      sphareContainer,
+      sphere,
+      topPosition,
+      sphereDeskPosition
+    );
+    console.log(1);
   }
 
   if (pageWidth > 1200 && screenHeight <= 864) {
     animateSphere(sphereDeskPositionH864);
+    animationStartPosition(
+      sphareContainer,
+      sphere,
+      topPosition,
+      sphereDeskPositionH864
+    );
   }
 
   if (pageWidth <= 1200 && pageWidth >= 1139) {
     animateSphere(sphereTabletPosition);
+    animationStartPosition(
+      sphareContainer,
+      sphere,
+      topPosition,
+      sphereTabletPosition
+    );
   }
 
-  if (pageWidth <= 979 && pageWidth >= 767) {
+  if (pageWidth <= 979 && pageWidth >= 769) {
     animateSphere(sphereW979);
+    animationStartPosition(sphareContainer, sphere, topPosition, sphereW979);
+  }
+
+  if (pageWidth <= 768) {
+    mobileSphereAnimation();
   }
 }
 
@@ -86,7 +108,7 @@ sphereTabletPosition = {
 
   second: [
     {
-      width: "848",
+      width: "748",
       right: "-250",
       rotation: "rotate(-90deg)",
       opacity: "1",
@@ -115,7 +137,7 @@ sphereDeskPositionH864 = {
 
   second: [
     {
-      width: "848",
+      width: "648",
       right: "-250",
       rotation: "rotate(-90deg)",
       opacity: "1",
@@ -144,7 +166,7 @@ sphereW979 = {
 
   second: [
     {
-      width: "748",
+      width: "648",
       right: "-150",
       rotation: "rotate(-90deg)",
       opacity: "1",
@@ -162,44 +184,6 @@ sphereW979 = {
 };
 
 getPageSiaze();
-
-// function mobileSphereAnimation() {
-//   window.addEventListener("scroll", function () {
-//     const endScroll =
-//       document
-//         .getElementById("mob-end-animation-scroll")
-//         .getBoundingClientRect().top +
-//       window.scrollY -
-//       100;
-//     let scrollTop = window.pageYOffset || window.scrollTop;
-
-//     if (scrollTop >= endScroll) {
-//       return;
-//     } else {
-//       // sphareContainer.style.top = scrollTop + 84 + "px";
-//       // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
-
-//       sphareContainer.style.transform = "translateY(" + scrollTop / 100 + 84  + "px)";
-//       // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
-//     }
-//   });
-// }
-
-function mobileSphereAnimation() {
-  window.addEventListener("scroll", function () {
-    const endScroll =
-      document
-        .getElementById("mob-end-animation-scroll")
-        .getBoundingClientRect().top +
-      window.scrollY -
-      150;
-    let scrollTop = window.pageYOffset || window.scrollTop;
-    if (scrollTop <= endScroll) {
-      sphareContainer.style.transform =
-        "translateY(" + scrollTop / 5 + "%) rotate(" + scrollTop / 4 + "deg)";
-    }
-  });
-}
 
 function animationStartPosition(elContainer, el, position, params) {
   elContainer.style.width = params.start[0].width + "px";
@@ -226,7 +210,8 @@ function animationEndPosition(elContainer, el, position, params) {
 }
 
 function animateSphere(params) {
-  document.addEventListener("scroll", (e) => {
+  console.log('suka')
+  document.addEventListener("scroll", () => {
     let currentScroll =
       document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
 
@@ -240,6 +225,24 @@ function animateSphere(params) {
 
     if (currentScroll <= startPosition) {
       animationStartPosition(sphareContainer, sphere, 84, params);
+    }
+  });
+}
+
+function mobileSphereAnimation() {
+  console.log("Mobile");
+  document.addEventListener("scroll", function () {
+    console.log("Mobile scroll");
+    const endScroll =
+      document
+        .getElementById("mob-end-animation-scroll")
+        .getBoundingClientRect().top +
+      window.scrollY -
+      150;
+    let scrollTop = window.pageYOffset;
+    if (scrollTop <= endScroll) {
+      sphareContainer.style.transform =
+        "translateY(" + scrollTop / 5 + "%) rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }

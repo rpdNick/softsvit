@@ -37,15 +37,15 @@ body {
     position: absolute;
     right: 100px;
     top: 84px;
-    transition: all 1s ease;
+    transition: all 1s ease-out;
     z-index: -1;
 
     .sphere {
       width: 100%;
-      transition: all 1s ease;
+      transition: all 1s ease-out;
 
       @media screen and (max-width: 979px) {
-        transition: all 0.8s ease;
+        transition: all 0.8s ease-out;
       }
     }
 
@@ -59,7 +59,7 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      transition: all 0.8s ease;
+      transition: all 0.8s ease-out;
     }
 
     @media screen and (max-height: 786px) {
@@ -1408,9 +1408,9 @@ body {
         z-index: 2;
 
         @media screen and (max-width: 979px) {
-          font-size: 32px;
-          line-height: 44px;
-          max-width: 344px;
+          font-size: 52px;
+          line-height: 64px;
+          max-width: 582px;
         }
 
         @media screen and (max-width: $small) {
