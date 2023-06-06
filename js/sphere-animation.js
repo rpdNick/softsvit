@@ -176,8 +176,11 @@ function mobileSphereAnimation() {
     if (scrollTop >= endScroll) {
       return;
     } else {
-      sphareContainer.style.top = scrollTop + 84 + "px";
-      sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+      // sphareContainer.style.top = scrollTop + 84 + "px";
+      // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+
+      sphareContainer.style.transform = "translateY(" + scrollTop + 84  + "px)";
+      // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
