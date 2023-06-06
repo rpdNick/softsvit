@@ -50,11 +50,11 @@ body {
       transition: all 1s ease;
 
       @media screen and (max-width: 979px) {
-        transition: all 0.5s ease;
-        -webkit-transition: -webkit-transform 0.5s ease;
-        -moz-transition: -moz-transform 0.5s ease;
-        -o-transition: -o-transform 0.5s ease;
-        transition: transform 0.5s ease;
+        transition: all 0.3s ease;
+        -webkit-transition: -webkit-transform 0.3s ease;
+        -moz-transition: -moz-transform 0.3s ease;
+        -o-transition: -o-transform 0.3s ease;
+        transition: transform 0.3s ease;
       }
     }
 
@@ -68,11 +68,11 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      transition: all 0.5s ease;
-      -webkit-transition: -webkit-transform 0.5s ease;
-      -moz-transition: -moz-transform 0.5s ease;
-      -o-transition: -o-transform 0.5s ease;
-      transition: transform 0.5s ease;
+      transition: all 0.3s ease;
+      -webkit-transition: -webkit-transform 0.3s ease;
+      -moz-transition: -moz-transform 0.3s ease;
+      -o-transition: -o-transform 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     @media screen and (max-height: 786px) {
