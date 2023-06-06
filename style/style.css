@@ -1558,6 +1558,7 @@ body .vacancy_modal .modal-content {
 body .vacancy_modal .modal-content .description_block {
   width: 55%;
   max-width: 601px;
+  max-height: 582px;
   margin-right: 24px;
   overflow-y: auto;
   border-radius: 12px;
@@ -1568,10 +1569,17 @@ body .vacancy_modal .modal-content .description_block .description_content {
   background: rgba(0, 0, 0, 0.6);
   padding: 16px;
   font-size: 14px;
+  line-height: 28px;
   color: #ffffff;
   margin-right: 12px;
   border-radius: 12px;
   min-height: 100%;
+}
+body .vacancy_modal .modal-content .description_block .description_content > div {
+  margin-top: 30px;
+}
+body .vacancy_modal .modal-content .description_block .description_content ul {
+  padding-left: 16px;
 }
 body .vacancy_modal .modal-content .description_block::-webkit-scrollbar-track {
   border-radius: 4px;
