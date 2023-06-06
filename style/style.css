@@ -28,7 +28,6 @@ body .sphere-box {
   right: 100px;
   top: 84px;
   transition: all 1s ease;
-  transition: transform 0.1s ease;
   z-index: -1;
 }
 body .sphere-box .sphere {
@@ -37,8 +36,7 @@ body .sphere-box .sphere {
 }
 @media screen and (max-width: 979px) {
   body .sphere-box .sphere {
-    transition: all 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: all 0.5s ease;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -54,13 +52,12 @@ body .sphere-box .sphere {
 @media screen and (max-width: 979px) {
   body .sphere-box {
     width: 497px;
-    transition: all 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: all 0.5s ease;
   }
 }
 @media screen and (max-height: 786px) {
   body .sphere-box {
-    width: 200px;
+    width: 574px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -75,7 +72,7 @@ body .sphere-box .sphere {
 }
 @media screen and (max-width: 460px) {
   body .sphere-box {
-    right: 0px;
+    right: -250px;
   }
 }
 body .overlay {

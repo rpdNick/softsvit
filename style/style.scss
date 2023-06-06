@@ -38,11 +38,6 @@ body {
     right: 100px;
     top: 84px;
     transition: all 1s ease;
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    -o-transition: -o-transform 1s ease;
-    transition: transform 0.1s ease;
-
     z-index: -1;
 
     .sphere {
@@ -50,11 +45,7 @@ body {
       transition: all 1s ease;
 
       @media screen and (max-width: 979px) {
-        transition: all 0.3s ease;
-        -webkit-transition: -webkit-transform 0.3s ease;
-        -moz-transition: -moz-transform 0.3s ease;
-        -o-transition: -o-transform 0.3s ease;
-        transition: transform 0.3s ease;
+        transition: all 0.5s ease;
       }
     }
 
@@ -68,16 +59,11 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      transition: all 0.3s ease;
-      -webkit-transition: -webkit-transform 0.3s ease;
-      -moz-transition: -moz-transform 0.3s ease;
-      -o-transition: -o-transform 0.3s ease;
-      transition: transform 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     @media screen and (max-height: 786px) {
-      // width: 574px;
-      width: 200px;
+      width: 574px;
     }
 
     @media screen and (max-width: $tablet) {
@@ -89,8 +75,7 @@ body {
     }
 
     @media screen and (max-width: 460px) {
-      // right: -250px;
-      right: 0px;
+      right: -250px;
     }
   }
 
