@@ -187,9 +187,9 @@ sphereW979 = {
 
 function mobileSphereAnimation() {
   window.addEventListener("scroll", function () {
-    // const endScroll =
+    const endScroll = document.getElementById("mob-end-animation-scroll").getBoundingClientRect().top + window.scrollY - 150;
     let scrollTop = window.pageYOffset || window.scrollTop;
-    if (scrollTop < 1000) {
+    if (scrollTop <= endScroll) {
       sphareContainer.style.transform = "translateY(" + scrollTop / 5 + "%)";
       sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
     }
