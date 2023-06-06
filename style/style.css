@@ -27,16 +27,16 @@ body .sphere-box {
   position: absolute;
   right: 100px;
   top: 84px;
-  transition: 1.5s;
+  transition: 1s;
   z-index: -1;
 }
 body .sphere-box .sphere {
   width: 100%;
-  transition: 1.5s;
+  transition: 1s;
 }
 @media screen and (max-width: 979px) {
   body .sphere-box .sphere {
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -52,7 +52,7 @@ body .sphere-box .sphere {
 @media screen and (max-width: 979px) {
   body .sphere-box {
     width: 497px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 }
 @media screen and (max-width: 768px) {
