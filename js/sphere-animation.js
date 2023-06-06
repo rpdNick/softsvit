@@ -163,24 +163,35 @@ sphereW979 = {
   ],
 };
 
+// function mobileSphereAnimation() {
+//   window.addEventListener("scroll", function () {
+//     const endScroll =
+//       document
+//         .getElementById("mob-end-animation-scroll")
+//         .getBoundingClientRect().top +
+//       window.scrollY -
+//       100;
+//     let scrollTop = window.pageYOffset || window.scrollTop;
+
+//     if (scrollTop >= endScroll) {
+//       return;
+//     } else {
+//       // sphareContainer.style.top = scrollTop + 84 + "px";
+//       // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+
+//       sphareContainer.style.transform = "translateY(" + scrollTop / 100 + 84  + "px)";
+//       // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+//     }
+//   });
+// }
+
 function mobileSphereAnimation() {
   window.addEventListener("scroll", function () {
-    const endScroll =
-      document
-        .getElementById("mob-end-animation-scroll")
-        .getBoundingClientRect().top +
-      window.scrollY -
-      100;
+    // const endScroll =
     let scrollTop = window.pageYOffset || window.scrollTop;
-
-    if (scrollTop >= endScroll) {
-      return;
-    } else {
-      // sphareContainer.style.top = scrollTop + 84 + "px";
-      // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
-
-      sphareContainer.style.transform = "translateY(" + scrollTop + 84  + "px)";
-      // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+    if (scrollTop < 1000) {
+      sphareContainer.style.transform = "translateY(" + scrollTop / 5 + "%)";
+      sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
