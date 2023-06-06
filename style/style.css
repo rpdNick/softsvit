@@ -149,8 +149,18 @@ body .ellipse.main_screen_ellipse-right {
 }
 @media screen and (max-width: 640px) {
   body .ellipse.main_screen_ellipse-right {
-    max-width: 100%;
-    top: 60%;
+    display: none;
+  }
+}
+body .ellipse.main_screen_ellipse-right-mobile {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  body .ellipse.main_screen_ellipse-right-mobile {
+    display: block;
+    width: 100%;
+    top: 100px;
+    right: 0;
   }
 }
 body .ellipse.feedback_left_ellipse {

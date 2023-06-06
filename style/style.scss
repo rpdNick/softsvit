@@ -171,8 +171,19 @@ body {
       max-width: 530px;
 
       @media screen and (max-width: $medium) {
-        max-width: 100%;
-        top: 60%;
+       display: none;
+      }
+    }
+
+    &.main_screen_ellipse-right-mobile {
+      
+      display: none;
+
+      @media screen and (max-width: $medium) {
+        display: block;
+        width: 100%;
+        top: 100px;
+        right: 0;
       }
     }
 
