@@ -171,12 +171,11 @@ body {
       max-width: 530px;
 
       @media screen and (max-width: $medium) {
-       display: none;
+        display: none;
       }
     }
 
     &.main_screen_ellipse-right-mobile {
-      
       display: none;
 
       @media screen and (max-width: $medium) {
@@ -826,7 +825,10 @@ body {
         }
 
         .slide-content {
+          display: flex;
+          flex-direction: column;
           padding: 16px;
+          min-height: 247px;
 
           .info-wrap {
             display: flex;
@@ -856,7 +858,7 @@ body {
           }
 
           .buttons-wrap {
-            margin-top: 32px;
+            margin-top: auto;
             display: flex;
             justify-content: space-between;
 

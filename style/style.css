@@ -749,7 +749,10 @@ body .swiper.vacancy-slider .swiper-slide:hover::before {
   opacity: 1;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content {
+  display: flex;
+  flex-direction: column;
   padding: 16px;
+  min-height: 247px;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap {
   display: flex;
@@ -775,7 +778,7 @@ body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap .info .descr
   text-align: left;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap {
-  margin-top: 32px;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
 }
