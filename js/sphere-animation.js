@@ -33,7 +33,6 @@ function getPageSiaze() {
       topPosition,
       sphereDeskPosition
     );
-    console.log(1);
   }
 
   if (pageWidth > 1200 && screenHeight <= 864) {
@@ -210,7 +209,6 @@ function animationEndPosition(elContainer, el, position, params) {
 }
 
 function animateSphere(params) {
-  console.log('suka')
   document.addEventListener("scroll", () => {
     let currentScroll =
       document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value

@@ -519,11 +519,11 @@ body {
 
         .contact_item_name {
           font-weight: 700;
-          font-size: 20px;
-          line-height: 24px;
+          font-size: 14px;
+          line-height: 18px;
           letter-spacing: 0.02em;
           text-transform: uppercase;
-          color: #ffffff;
+          color: $color-gray;
           margin-bottom: 12px;
 
           @media screen and (max-width: $medium) {
@@ -536,7 +536,7 @@ body {
           font-weight: 700;
           font-size: 14px;
           line-height: 20px;
-          color: $color-gray;
+          color: #ffffff;
 
           span:nth-of-type(1) {
             margin-right: 4px;
@@ -1961,17 +1961,18 @@ body {
 
           .contact_item {
             .title {
+              color: $color-gray;
               font-weight: 700;
               font-size: 14px;
               line-height: 20px;
-              color: #ffffff;
+              text-transform: uppercase;
             }
 
             .data {
-              font-weight: 300;
+              color: #ffffff;
+              font-weight: 700;
               font-size: 14px;
               line-height: 20px;
-              color: $color-gray;
               margin-top: 4px;
             }
           }
