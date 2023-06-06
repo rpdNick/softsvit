@@ -190,8 +190,7 @@ function mobileSphereAnimation() {
     const endScroll = document.getElementById("mob-end-animation-scroll").getBoundingClientRect().top + window.scrollY - 150;
     let scrollTop = window.pageYOffset || window.scrollTop;
     if (scrollTop <= endScroll) {
-      sphareContainer.style.transform = "translateY(" + scrollTop / 5 + "%)";
-      // sphere.style.transform = "rotate(" + scrollTop / 4 + "deg)";
+      sphareContainer.style.transform = "translateY(" + scrollTop / 5 + "%) rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
