@@ -1234,82 +1234,88 @@ body {
 
       @media screen and (max-width: $medium) {
         display: none;
-        pointer-events: none;
       }
     }
 
-    #burger_toggle {
+    .burger-wrapper {
       display: none;
-      pointer-events: none;
-      width: 18px;
-      height: 12px;
-      position: relative;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: 0.5s ease-in-out;
-      -moz-transition: 0.5s ease-in-out;
-      -o-transition: 0.5s ease-in-out;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
+      width: 40px;
+      height: 40px;
 
-      span {
-        display: block;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background: $color-main-green;
-        opacity: 1;
-        left: 0;
+      .burger {
+        width: 18px;
+        height: 12px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
         transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
 
-        &:nth-child(1) {
-          top: 0px;
-        }
+        span {
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: $color-main-green;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
 
-        &:nth-child(2),
-        &:nth-child(3) {
-          top: 4px;
-        }
+          &:nth-child(1) {
+            top: 0px;
+          }
 
-        &:nth-child(4) {
-          top: 8px;
+          &:nth-child(2),
+          &:nth-child(3) {
+            top: 4px;
+          }
+
+          &:nth-child(4) {
+            top: 8px;
+          }
         }
       }
 
       &.active {
-        span:nth-child(1) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
+        .burger {
+          span:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+          }
 
-        span:nth-child(2) {
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-        }
+          span:nth-child(2) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
 
-        span:nth-child(3) {
-          -webkit-transform: rotate(-45deg);
-          -moz-transform: rotate(-45deg);
-          -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-        }
+          span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+          }
 
-        span:nth-child(4) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
+          span:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+          }
         }
       }
 
       @media screen and (max-width: $medium) {
-        display: block;
-        pointer-events: inherit;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
       }
     }
 
@@ -1317,8 +1323,7 @@ body {
       max-width: 1200px;
 
       .close-modal {
-        display: block;
-        pointer-events: unset;
+        display: flex;
 
         .close_modal_inner {
           cursor: pointer;
@@ -1328,6 +1333,17 @@ body {
             > span {
               display: none;
             }
+          }
+        }
+
+        @media screen and (max-width: $medium) {
+          width: 40px;
+          height: 40px;
+          justify-content: flex-end;
+          align-items: center;
+
+          .menu_icon {
+            margin-left: 0;
           }
         }
       }

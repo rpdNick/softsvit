@@ -1094,12 +1094,14 @@ body .main_header .menu_button.active .content_active {
 @media screen and (max-width: 640px) {
   body .main_header .menu_button {
     display: none;
-    pointer-events: none;
   }
 }
-body .main_header #burger_toggle {
+body .main_header .burger-wrapper {
   display: none;
-  pointer-events: none;
+  width: 40px;
+  height: 40px;
+}
+body .main_header .burger-wrapper .burger {
   width: 18px;
   height: 12px;
   position: relative;
@@ -1107,7 +1109,7 @@ body .main_header #burger_toggle {
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
-body .main_header #burger_toggle span {
+body .main_header .burger-wrapper .burger span {
   display: block;
   position: absolute;
   height: 2px;
@@ -1118,43 +1120,43 @@ body .main_header #burger_toggle span {
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
 }
-body .main_header #burger_toggle span:nth-child(1) {
+body .main_header .burger-wrapper .burger span:nth-child(1) {
   top: 0px;
 }
-body .main_header #burger_toggle span:nth-child(2), body .main_header #burger_toggle span:nth-child(3) {
+body .main_header .burger-wrapper .burger span:nth-child(2), body .main_header .burger-wrapper .burger span:nth-child(3) {
   top: 4px;
 }
-body .main_header #burger_toggle span:nth-child(4) {
+body .main_header .burger-wrapper .burger span:nth-child(4) {
   top: 8px;
 }
-body .main_header #burger_toggle.active span:nth-child(1) {
+body .main_header .burger-wrapper.active .burger span:nth-child(1) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
-body .main_header #burger_toggle.active span:nth-child(2) {
+body .main_header .burger-wrapper.active .burger span:nth-child(2) {
   transform: rotate(45deg);
 }
-body .main_header #burger_toggle.active span:nth-child(3) {
+body .main_header .burger-wrapper.active .burger span:nth-child(3) {
   transform: rotate(-45deg);
 }
-body .main_header #burger_toggle.active span:nth-child(4) {
+body .main_header .burger-wrapper.active .burger span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
 @media screen and (max-width: 640px) {
-  body .main_header #burger_toggle {
-    display: block;
-    pointer-events: inherit;
+  body .main_header .burger-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 body .main_header.modal_header {
   max-width: 1200px;
 }
 body .main_header.modal_header .close-modal {
-  display: block;
-  pointer-events: unset;
+  display: flex;
 }
 body .main_header.modal_header .close-modal .close_modal_inner {
   cursor: pointer;
@@ -1164,6 +1166,17 @@ body .main_header.modal_header .close-modal .close_modal_inner {
 @media screen and (max-width: 640px) {
   body .main_header.modal_header .close-modal .close_modal_inner > span {
     display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  body .main_header.modal_header .close-modal {
+    width: 40px;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  body .main_header.modal_header .close-modal .menu_icon {
+    margin-left: 0;
   }
 }
 body header {
