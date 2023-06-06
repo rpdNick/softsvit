@@ -13,11 +13,11 @@ let rotation = 0;
 let scrollArea = document.querySelector(".scroll-area").offsetHeight;
 
 window.addEventListener("resize", () => {
-  getPageSiaze();
+  window.requestAnimationFrame(getPageSiaze);
 });
 
 window.addEventListener("load", () => {
-  getPageSiaze();
+  window.requestAnimationFrame(getPageSiaze);
 });
 
 function getPageSiaze() {
@@ -43,6 +43,8 @@ function getPageSiaze() {
     animateSphere(sphereW979);
   }
 }
+
+getPageSiaze();
 
 // Sphere position params for screen size
 sphereDeskPosition = {
