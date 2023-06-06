@@ -76,7 +76,8 @@ body {
     }
 
     @media screen and (max-height: 786px) {
-      width: 574px;
+      // width: 574px;
+      width: 200px;
     }
 
     @media screen and (max-width: $tablet) {
@@ -88,7 +89,8 @@ body {
     }
 
     @media screen and (max-width: 460px) {
-      right: -250px;
+      // right: -250px;
+      right: 0px;
     }
   }
 

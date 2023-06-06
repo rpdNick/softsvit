@@ -60,7 +60,7 @@ body .sphere-box .sphere {
 }
 @media screen and (max-height: 786px) {
   body .sphere-box {
-    width: 574px;
+    width: 200px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -75,7 +75,7 @@ body .sphere-box .sphere {
 }
 @media screen and (max-width: 460px) {
   body .sphere-box {
-    right: -250px;
+    right: 0px;
   }
 }
 body .overlay {
