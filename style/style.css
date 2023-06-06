@@ -1012,6 +1012,10 @@ body .form_container .attachment label .file_items .file-button {
   border-radius: 6px;
   cursor: pointer;
 }
+body .form_container .attachment label .file_items .file-button.active {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: transparent;
+}
 body .form_container .form_agreement {
   margin-top: 35px;
 }

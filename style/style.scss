@@ -1134,6 +1134,11 @@ body {
             border: 1px solid #ffffff;
             border-radius: 6px;
             cursor: pointer;
+
+            &.active {
+              background: rgba(255, 255, 255, 0.4);
+              border-color: transparent;
+            }
           }
         }
       }
