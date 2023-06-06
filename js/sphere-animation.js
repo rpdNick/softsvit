@@ -1,5 +1,7 @@
 const sphareContainer = document.querySelector(".sphere-box");
 const sphere = document.getElementById("sphere");
+const screenHeight = screen.height;
+console.log(screenHeight)
 const startPosition =
   document.getElementById("scroll-first-position").getBoundingClientRect().top +
   window.scrollY;
@@ -26,10 +28,14 @@ function getPageWidth() {
     mobileSphereAnimation();
   }
 
-  if (pageWidth > 1200) {
+  if (pageWidth > 1200 && screenHeight > 864) {
     animateSphere(sphereDeskPosition);
   }
-  console.log(pageWidth);
+
+  if (pageWidth > 1200 && screenHeight <= 864) {
+    animateSphere(sphereDeskPositionH864);
+  }
+
   if (pageWidth <= 1200 && pageWidth >= 1139) {
     animateSphere(sphereTabletPosition);
   }
@@ -44,6 +50,35 @@ sphereDeskPosition = {
   start: [
     {
       width: "674",
+      right: "100",
+      rotation: "rotate(0deg)",
+      opacity: "1",
+    },
+  ],
+
+  second: [
+    {
+      width: "848",
+      right: "-250",
+      rotation: "rotate(-90deg)",
+      opacity: "1",
+    },
+  ],
+
+  end: [
+    {
+      width: "514",
+      right: "80",
+      rotation: "rotate(-150deg)",
+      opacity: "0.2",
+    },
+  ],
+};
+
+sphereDeskPositionH864 = {
+  start: [
+    {
+      width: "574",
       right: "100",
       rotation: "rotate(0deg)",
       opacity: "1",
@@ -132,7 +167,9 @@ function mobileSphereAnimation() {
     const endScroll =
       document
         .getElementById("mob-end-animation-scroll")
-        .getBoundingClientRect().top + window.scrollY - 100;
+        .getBoundingClientRect().top +
+      window.scrollY -
+      100;
     let scrollTop = window.pageYOffset || window.scrollTop;
 
     if (scrollTop >= endScroll) {
