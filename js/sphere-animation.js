@@ -44,42 +44,11 @@ function getPageSiaze() {
   }
 }
 
-getPageSiaze();
-
 // Sphere position params for screen size
 sphereDeskPosition = {
   start: [
     {
       width: "674",
-      right: "100",
-      rotation: "rotate(0deg)",
-      opacity: "1",
-    },
-  ],
-
-  second: [
-    {
-      width: "848",
-      right: "-250",
-      rotation: "rotate(-90deg)",
-      opacity: "1",
-    },
-  ],
-
-  end: [
-    {
-      width: "514",
-      right: "80",
-      rotation: "rotate(-150deg)",
-      opacity: "0.2",
-    },
-  ],
-};
-
-sphereDeskPositionH864 = {
-  start: [
-    {
-      width: "574",
       right: "100",
       rotation: "rotate(0deg)",
       opacity: "1",
@@ -134,6 +103,35 @@ sphereTabletPosition = {
   ],
 };
 
+sphereDeskPositionH864 = {
+  start: [
+    {
+      width: "574",
+      right: "100",
+      rotation: "rotate(0deg)",
+      opacity: "1",
+    },
+  ],
+
+  second: [
+    {
+      width: "848",
+      right: "-250",
+      rotation: "rotate(-90deg)",
+      opacity: "1",
+    },
+  ],
+
+  end: [
+    {
+      width: "514",
+      right: "80",
+      rotation: "rotate(-150deg)",
+      opacity: "0.2",
+    },
+  ],
+};
+
 sphereW979 = {
   start: [
     {
@@ -163,6 +161,8 @@ sphereW979 = {
   ],
 };
 
+getPageSiaze();
+
 // function mobileSphereAnimation() {
 //   window.addEventListener("scroll", function () {
 //     const endScroll =
@@ -187,10 +187,16 @@ sphereW979 = {
 
 function mobileSphereAnimation() {
   window.addEventListener("scroll", function () {
-    const endScroll = document.getElementById("mob-end-animation-scroll").getBoundingClientRect().top + window.scrollY - 150;
+    const endScroll =
+      document
+        .getElementById("mob-end-animation-scroll")
+        .getBoundingClientRect().top +
+      window.scrollY -
+      150;
     let scrollTop = window.pageYOffset || window.scrollTop;
     if (scrollTop <= endScroll) {
-      sphareContainer.style.transform = "translateY(" + scrollTop / 5 + "%) rotate(" + scrollTop / 4 + "deg)";
+      sphareContainer.style.transform =
+        "translateY(" + scrollTop / 5 + "%) rotate(" + scrollTop / 4 + "deg)";
     }
   });
 }
