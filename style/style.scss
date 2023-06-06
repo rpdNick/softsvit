@@ -38,7 +38,7 @@ body {
     right: 100px;
     top: 84px;
     transition: 1.5s;
-    z-index: 1;
+    z-index: -1;
 
     .sphere {
       width: 100%;
@@ -62,9 +62,9 @@ body {
       transition: all 0.3s ease;
     }
 
-    @media screen and (max-height: 786px) {
-      width: 574px;
-    }
+    // @media screen and (max-height: 786px) {
+    //   width: 574px;
+    // }
 
     @media screen and (max-width: $tablet) {
       right: 0;
@@ -221,6 +221,7 @@ body {
       bottom: 0;
       overflow: hidden;
       width: 100%;
+      z-index: -1;
 
       #starfield {
         position: absolute;
@@ -1437,19 +1438,31 @@ body {
           display: flex;
           align-items: center;
           text-transform: uppercase;
-          color: #ffffff66;
           font-weight: 700;
           font-size: 16px;
           line-height: 20px;
 
-          .count {
-            font-size: 48px;
+          > span {
             color: #ffffff;
+
+            &:nth-of-type(2) {
+              font-size: 14px;
+            }
+          }
+
+          .count {
+            display: block;
+            font-size: 48px;
             line-height: 40px;
             margin-right: 12px;
 
             &.infinity {
-              font-size: 96px;
+              width: 54px;
+              display: flex;
+
+              img {
+                width: 100%;
+              }
             }
 
             @media screen and (max-width: 979px) {
@@ -1457,11 +1470,10 @@ body {
               line-height: 44px;
 
               &.infinity {
-                font-size: 48px;
-                line-height: 64px;
+                width: 31px;
 
                 @media screen and (max-width: 560px) {
-                  font-size: 32px;
+                  width: 21px;
                 }
               }
             }

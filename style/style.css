@@ -28,7 +28,7 @@ body .sphere-box {
   right: 100px;
   top: 84px;
   transition: 1.5s;
-  z-index: 1;
+  z-index: -1;
 }
 body .sphere-box .sphere {
   width: 100%;
@@ -53,11 +53,6 @@ body .sphere-box .sphere {
   body .sphere-box {
     width: 497px;
     transition: all 0.3s ease;
-  }
-}
-@media screen and (max-height: 786px) {
-  body .sphere-box {
-    width: 574px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -202,6 +197,7 @@ body .sparticles-area .sparticles_box {
   bottom: 0;
   overflow: hidden;
   width: 100%;
+  z-index: -1;
 }
 body .sparticles-area .sparticles_box #starfield {
   position: absolute;
@@ -1263,19 +1259,28 @@ body .main_screen_content .main_screen_footer .experience_row .experience_item {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
 }
-body .main_screen_content .main_screen_footer .experience_row .experience_item .count {
-  font-size: 48px;
+body .main_screen_content .main_screen_footer .experience_row .experience_item > span {
   color: #ffffff;
+}
+body .main_screen_content .main_screen_footer .experience_row .experience_item > span:nth-of-type(2) {
+  font-size: 14px;
+}
+body .main_screen_content .main_screen_footer .experience_row .experience_item .count {
+  display: block;
+  font-size: 48px;
   line-height: 40px;
   margin-right: 12px;
 }
 body .main_screen_content .main_screen_footer .experience_row .experience_item .count.infinity {
-  font-size: 96px;
+  width: 54px;
+  display: flex;
+}
+body .main_screen_content .main_screen_footer .experience_row .experience_item .count.infinity img {
+  width: 100%;
 }
 @media screen and (max-width: 979px) {
   body .main_screen_content .main_screen_footer .experience_row .experience_item .count {
@@ -1283,13 +1288,12 @@ body .main_screen_content .main_screen_footer .experience_row .experience_item .
     line-height: 44px;
   }
   body .main_screen_content .main_screen_footer .experience_row .experience_item .count.infinity {
-    font-size: 48px;
-    line-height: 64px;
+    width: 31px;
   }
 }
 @media screen and (max-width: 979px) and (max-width: 560px) {
   body .main_screen_content .main_screen_footer .experience_row .experience_item .count.infinity {
-    font-size: 32px;
+    width: 21px;
   }
 }
 @media screen and (max-width: 979px) {
