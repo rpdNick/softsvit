@@ -1242,6 +1242,12 @@ body .main_screen_content .main_screen_title h1 {
     max-width: 344px;
   }
 }
+@media screen and (max-width: 575px) {
+  body .main_screen_content .main_screen_title h1 {
+    font-size: 31px;
+    max-width: 100%;
+  }
+}
 body .main_screen_content .apply_button {
   position: relative;
   display: block;

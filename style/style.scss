@@ -1412,6 +1412,11 @@ body {
           line-height: 44px;
           max-width: 344px;
         }
+
+        @media screen and (max-width: $small) {
+          font-size: 31px;
+          max-width: 100%;
+        }
       }
     }
 
