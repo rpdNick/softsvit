@@ -1055,8 +1055,11 @@ body .main_header {
           backdrop-filter: blur(8px);
 }
 body .main_header .logo {
-  width: 154px;
+  width: 147px;
   cursor: pointer;
+}
+body .main_header .logo > img {
+  width: 100%;
 }
 body .main_header .menu_button {
   position: relative;

@@ -1184,8 +1184,12 @@ body {
     backdrop-filter: blur(8px);
 
     .logo {
-      width: 154px;
+      width: 147px;
       cursor: pointer;
+
+      > img {
+        width: 100%;
+      }
     }
 
     .menu_button {
