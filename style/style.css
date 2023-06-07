@@ -246,6 +246,7 @@ body .button.transparrent {
 }
 body .button.filling_bg {
   background: #00ffb2;
+  color: #000000;
 }
 body .button.filling_bg:hover {
   background: #ffffff;
