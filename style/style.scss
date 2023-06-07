@@ -543,6 +543,13 @@ body {
             margin-right: 4px;
           }
 
+          a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+          }
+
           @media screen and (max-width: $medium) {
             font-size: 14px;
             line-height: 18px;
@@ -1897,6 +1904,13 @@ body {
                     > span:first-child {
                       margin-right: 2px;
                     }
+
+                    > a {
+                      text-decoration: none;
+                      font-weight: 300;
+                      font-size: 14px;
+                      color: $color-main-green;
+                    }
                   }
                 }
 
@@ -1979,6 +1993,13 @@ body {
               font-size: 14px;
               line-height: 20px;
               margin-top: 4px;
+
+              a {
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                color: #ffffff;
+              }
             }
           }
 

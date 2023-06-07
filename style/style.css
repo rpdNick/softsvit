@@ -488,6 +488,12 @@ body .main_menu .contacts_block .contact_item .contact_item_info {
 body .main_menu .contacts_block .contact_item .contact_item_info span:nth-of-type(1) {
   margin-right: 4px;
 }
+body .main_menu .contacts_block .contact_item .contact_item_info a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
 @media screen and (max-width: 640px) {
   body .main_menu .contacts_block .contact_item .contact_item_info {
     font-size: 14px;
@@ -1684,6 +1690,12 @@ body .contacts .contacts_info-wrapper .contacts_cards_block .cards_wrap .contact
 body .contacts .contacts_info-wrapper .contacts_cards_block .cards_wrap .contact_card .content_wrap .content .info .phone > span:first-child {
   margin-right: 2px;
 }
+body .contacts .contacts_info-wrapper .contacts_cards_block .cards_wrap .contact_card .content_wrap .content .info .phone > a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  color: #00ffb2;
+}
 body .contacts .contacts_info-wrapper .contacts_cards_block .cards_wrap .contact_card .content_wrap .content .write_btn {
   margin-top: 18px;
   line-height: 18px;
@@ -1751,6 +1763,12 @@ body .contacts .contacts_info-wrapper .contacts_cards_block .contact_data .conta
   font-size: 14px;
   line-height: 20px;
   margin-top: 4px;
+}
+body .contacts .contacts_info-wrapper .contacts_cards_block .contact_data .contact_item .data a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
 }
 @media screen and (max-width: 548px) {
   body .contacts .contacts_info-wrapper .contacts_cards_block .contact_data {
