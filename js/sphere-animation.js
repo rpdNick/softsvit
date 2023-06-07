@@ -228,9 +228,7 @@ function animateSphere(params) {
 }
 
 function mobileSphereAnimation() {
-  console.log("Mobile");
   document.addEventListener("scroll", function () {
-    console.log("Mobile scroll");
     const endScroll =
       document
         .getElementById("mob-end-animation-scroll")
