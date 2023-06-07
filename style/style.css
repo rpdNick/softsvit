@@ -490,8 +490,6 @@ body .main_menu .contacts_block .contact_item .contact_item_info span:nth-of-typ
 }
 body .main_menu .contacts_block .contact_item .contact_item_info a {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
   color: #ffffff;
 }
 @media screen and (max-width: 640px) {
