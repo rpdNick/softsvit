@@ -32,12 +32,7 @@ body .sphere-box {
 }
 body .sphere-box .sphere {
   width: 100%;
-  transition: all 1s ease-out;
-}
-@media screen and (max-width: 979px) {
-  body .sphere-box .sphere {
-    transition: all 0.8s ease-out;
-  }
+  transition: all 0.2s ease-out;
 }
 @media screen and (max-width: 1200px) {
   body .sphere-box {
@@ -52,7 +47,7 @@ body .sphere-box .sphere {
 @media screen and (max-width: 979px) {
   body .sphere-box {
     width: 497px;
-    transition: all 0.8s ease-out;
+    transition: transform 0.8s ease-out;
   }
 }
 @media screen and (max-height: 786px) {
@@ -1449,7 +1444,7 @@ body .why_softsvit .cards_wrapper .card_item .card_description {
   line-height: 20px;
   text-align: center;
   visibility: hidden;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 body .why_softsvit .cards_wrapper .card_item .card_mark {
   width: 80px;

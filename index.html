@@ -17,7 +17,7 @@
 
 <body class="loading">
   <img class="ellipse main_screen_ellipse-right" src="./img/ellipse-right.svg" alt="blure-image">
-  <img class="ellipse main_screen_ellipse-right-mobile" src="./img/ellipse-right-mobile.svg" alt="blure-image">
+  <!-- <img class="ellipse main_screen_ellipse-right-mobile" src="./img/ellipse-right-mobile.svg" alt="blure-image"> -->
   <img class="ellipse main_screen_ellipse-left" src="./img/ellipse-left.svg" alt="blure-image">
 
   <div class="scroll-area">
@@ -42,16 +42,19 @@
     </header>
     <div class="sparticles-area">
       <div class="main_screen_wrap">
-        <div class="sphere-box">
-          <img class="sphere" id="sphere" src="./img/sphere.png" alt="sphere">
+        <div class="sphere-box" id="sphereDesktop">
+          <img class="sphere" src="./img/sphere.png" alt="sphere">
+        </div>
+        <div class="sphere-box" id="sphereMobile" style="display: none;">
+          <img class="sphere" src="./img/sphere.png" alt="sphere">
         </div>
         <div class="main_screen_content content-wrapper container">
           <div class="main_screen_title">
-            <h1 id="scroll-first-position">
+            <h1>
               <span class="green_txt">SoftSvit</span> - svit твоїх можливостей!
             </h1>
           </div>
-          <button class="button apply_button big filling_bg scroll-to" href="#contacts">подати заявку</button>
+          <button class="button apply_button big filling_bg scroll-to" id="scroll-first-position" href="#contacts">подати заявку</button>
           <div class="social_block">
             <a class="social-item" href="#">
               <i class="icon-telegram"></i>
@@ -799,6 +802,7 @@
         <div class="form_container">
           <p class="form_title">Надсилай своє резюме</p>
           <form action="" id="" method="">
+            <input class="title-value" type="hidden">
             <div class="form_item">
               <input class="form_control" placeholder=" " id="name" type="text" required>
               <label for="name">Ім’я та Прізвище</label>
@@ -899,6 +903,7 @@
         <div class="form_container">
           <p class="form_title">Надішли контакти друга</p>
           <form action="" id="" method="">
+            <input class="title-value" type="hidden">
             <div class="form_item">
               <input class="form_control" placeholder=" " id="name" type="text" required>
               <label for="name">Ім’я та Прізвище</label>
@@ -1021,9 +1026,8 @@
 <script src="./js/menu.js"></script>
 <script src="./js/language_switch.js"></script>
 <script src="./js/loader.js"></script>
-<script src="./js/sliders.js"></script>
+<script src="./js/main.js"></script>
 <script src="./js/file.js"></script>
-<script src="./js/popup.js"></script>
 <script src="./js/sphere-animation.js"></script>
 
 </html>

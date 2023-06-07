@@ -42,11 +42,7 @@ body {
 
     .sphere {
       width: 100%;
-      transition: all 1s ease-out;
-
-      @media screen and (max-width: 979px) {
-        transition: all 0.8s ease-out;
-      }
+      transition: all 0.2s ease-out;
     }
 
     @media screen and (max-width: $x-large) {
@@ -59,7 +55,7 @@ body {
 
     @media screen and (max-width: 979px) {
       width: 497px;
-      transition: all 0.8s ease-out;
+      transition: transform 0.8s ease-out;
     }
 
     @media screen and (max-height: 786px) {
@@ -1627,7 +1623,7 @@ body {
           line-height: 20px;
           text-align: center;
           visibility: hidden;
-          color: $color-gray;
+          color: #ffffff;
         }
 
         .card_mark {
