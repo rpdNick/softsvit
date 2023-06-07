@@ -98,7 +98,7 @@ sphereDeskPosition = {
 sphereTabletPosition = {
   start: [
     {
-      width: "674",
+      width: "574",
       right: "60",
       rotation: "rotate(0deg)",
       opacity: "1",
