@@ -119,6 +119,23 @@ body .over-wrap.contacts_over-wrap {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+body .over-wrap.vacancy_over-wrap {
+  padding: 101px 0;
+  background-image: url(../img/vacancy-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  body .over-wrap.vacancy_over-wrap {
+    padding: 101px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .over-wrap.vacancy_over-wrap {
+    padding: 60px 0;
+  }
+}
 body .section-wrapper {
   position: relative;
   overflow: hidden;
@@ -562,6 +579,11 @@ body .tab_content {
 body .tab_content.active {
   display: block;
 }
+@media screen and (max-width: 768px) {
+  body .tab_content {
+    min-height: 100%;
+  }
+}
 body .swiper.feedback-slider {
   width: 100%;
   padding-top: 50px;
@@ -704,7 +726,7 @@ body .swiper.why_softsvit_slider .slider-control {
 body .swiper.vacancy-slider {
   width: 100%;
   height: 100%;
-  padding: 28px 0 10px;
+  padding: 28px 0 30px;
 }
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
@@ -756,6 +778,9 @@ body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap .info .title
   line-height: 32px;
   color: #ffffff;
   text-align: left;
+  min-height: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap .info .description {
   margin-top: 8px;
@@ -1490,7 +1515,7 @@ body .cool_with_us {
 }
 @media screen and (max-width: 768px) {
   body .cool_with_us {
-    padding-top: 60px;
+    padding: 60px 0;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1499,13 +1524,12 @@ body .cool_with_us {
   }
 }
 body .vacancy {
-  padding-top: 107px;
   position: relative;
-  overflow: hidden;
-  background-image: url(../img/vacancy-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+}
+@media screen and (max-width: 575px) {
+  body .vacancy .content-wrapper {
+    margin: 0 0 0 12px;
+  }
 }
 body .vacancy .tab-wrapper .switch_tabs {
   width: -moz-fit-content;
@@ -1514,23 +1538,6 @@ body .vacancy .tab-wrapper .switch_tabs {
 @media screen and (max-width: 575px) {
   body .vacancy .tab-wrapper .switch_tabs {
     width: 100%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  body .vacancy {
-    background-image: url(../img/vacancy-bg-1200.png);
-  }
-}
-@media screen and (max-width: 768px) {
-  body .vacancy {
-    margin-top: 13px;
-  }
-}
-@media screen and (max-width: 575px) {
-  body .vacancy {
-    background-image: url(../img/vacancy-bg-mob.png);
-    background-size: 100% 80%;
-    background-position: bottom;
   }
 }
 body .vacancy_modal .modal-content {
@@ -1608,7 +1615,7 @@ body .vacancy_modal::-webkit-scrollbar-thumb {
   background-color: #00ffc2;
 }
 body .contacts {
-  margin-top: 148px;
+  margin-top: 47px;
   padding-bottom: 47px;
 }
 body .contacts .contacts_info-wrapper {
@@ -1768,7 +1775,7 @@ body .contacts .contacts_info-wrapper .contacts_cards_block .socials .social_blo
 }
 @media screen and (max-width: 768px) {
   body .contacts {
-    margin-top: 120px;
+    margin-top: 60px;
   }
 }
 @media screen and (max-width: 940px) {

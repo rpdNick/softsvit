@@ -130,14 +130,22 @@ const vacancySliderOptions = {
       spaceBetween: 12,
     },
 
-    575: {
-      slidesPerView: 2,
+    617: {
+      slidesPerView: 1.8,
       grid: {
         rows: 1,
       },
       spaceBetween: 24,
     },
     768: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 24,
+    },
+
+    1109: {
       slidesPerView: 3,
       grid: {
         rows: 2,
@@ -159,6 +167,8 @@ const vacancySliderOptions = {
 initSlider(".feedback-slider", feedbackSliderOptions);
 initSlider(".vacancy-slider", vacancySliderOptions);
 initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
+
+
 
 /** Switch Tabs */
 
