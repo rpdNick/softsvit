@@ -136,7 +136,7 @@ sphereDeskPositionH864 = {
 
   second: [
     {
-      width: "648",
+      width: "748",
       right: "-250",
       rotation: "rotate(-90deg)",
       opacity: "1",
