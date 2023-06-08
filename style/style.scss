@@ -664,7 +664,6 @@ body {
   /* Sliders */
   .swiper {
     &.feedback-slider {
-      // max-width: 962px;
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
@@ -790,6 +789,26 @@ body {
 
             .slide-circle {
               r: 123.5;
+            }
+          }
+        }
+
+        @media screen and (max-width: $small) {
+          &.swiper-slide-active {
+            .slide-hover-arrows {
+              opacity: 1 !important;
+            }
+
+            .slide-hover-diamonds {
+              top: 0 !important;
+            }
+
+            svg {
+              top: 60px;
+
+              .slide-circle {
+                r: 123.5;
+              }
             }
           }
         }

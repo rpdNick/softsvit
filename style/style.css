@@ -731,6 +731,20 @@ body .swiper.feedback-slider .swiper-slide:hover svg {
 body .swiper.feedback-slider .swiper-slide:hover svg .slide-circle {
   r: 123.5;
 }
+@media screen and (max-width: 575px) {
+  body .swiper.feedback-slider .swiper-slide.swiper-slide-active .slide-hover-arrows {
+    opacity: 1 !important;
+  }
+  body .swiper.feedback-slider .swiper-slide.swiper-slide-active .slide-hover-diamonds {
+    top: 0 !important;
+  }
+  body .swiper.feedback-slider .swiper-slide.swiper-slide-active svg {
+    top: 60px;
+  }
+  body .swiper.feedback-slider .swiper-slide.swiper-slide-active svg .slide-circle {
+    r: 123.5;
+  }
+}
 @media screen and (max-width: 768px) {
   body .swiper.why_softsvit_slider {
     padding-bottom: 30px;
