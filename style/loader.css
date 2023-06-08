@@ -15,7 +15,7 @@
     transition: 0.3s;
     display: flex;
     padding: 58px 0 0;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 3;
@@ -212,14 +212,36 @@
     }
   }
 
-  .preloader_wrapper .top-left-ellipse {
+  .loader-ellipse {
     position: absolute;
-    left: 0;
-    top: 0;
+    background: #00FFB2;
+    opacity: 0.3;
+    filter: blur(130px);
+  }
+
+  .preloader_wrapper .top-left-ellipse {
+    width: 577px;
+    height: 577px;
+    left: -289px;
+    top: -323px;
   }
 
   .preloader_wrapper .bottom-right-ellipse {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    width: 577px;
+    height: 577px;
+    left: 1112px;
+    top: 432px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .preloader_wrapper .bottom-right-ellipse {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .preloader_wrapper .bottom-right-ellipse {
+      display: none;
+    }
   }
