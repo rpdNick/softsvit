@@ -174,34 +174,41 @@ body .ellipse {
 }
 body .ellipse.main_screen_ellipse-left {
   left: 0;
+  width: 577px;
+  height: 577px;
+  left: calc(50% - 288.5px - 750.5px);
+  top: -329px;
+  background: #00ffb2;
+  opacity: 0.3;
+  filter: blur(155px);
 }
-@media screen and (max-width: 1870px) {
+@media screen and (max-width: 1400px) {
   body .ellipse.main_screen_ellipse-left {
-    width: 40%;
+    left: -289px;
+    top: -329px;
   }
 }
 body .ellipse.main_screen_ellipse-right {
-  right: 0;
+  position: absolute;
+  width: 577px;
+  height: 577px;
+  left: calc(50% - 288.5px + 608.5px);
+  top: 117px;
+  background: #00ffb2;
+  opacity: 0.3;
+  filter: blur(130px);
 }
-@media screen and (max-width: 1870px) {
+@media screen and (max-width: 1400px) {
   body .ellipse.main_screen_ellipse-right {
-    width: 50%;
+    left: 1020px;
+    top: 117px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   body .ellipse.main_screen_ellipse-right {
-    display: none;
-  }
-}
-body .ellipse.main_screen_ellipse-right-mobile {
-  display: none;
-}
-@media screen and (max-width: 640px) {
-  body .ellipse.main_screen_ellipse-right-mobile {
-    display: block;
-    width: 100%;
-    top: 100px;
-    right: 0;
+    right: -227px;
+    top: 294px;
+    left: auto;
   }
 }
 body .content-wrapper {
