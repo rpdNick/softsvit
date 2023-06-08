@@ -1282,10 +1282,17 @@ body .main_screen_content .main_screen_title h1 {
     max-width: 582px;
   }
 }
+@media screen and (max-width: 768px) {
+  body .main_screen_content .main_screen_title h1 {
+    font-size: 48px;
+    max-width: 408px;
+  }
+}
 @media screen and (max-width: 575px) {
   body .main_screen_content .main_screen_title h1 {
-    font-size: 31px;
-    max-width: 100%;
+    font-size: 32px;
+    line-height: 44px;
+    max-width: 251px;
   }
 }
 body .main_screen_content .apply_button {
@@ -1294,6 +1301,16 @@ body .main_screen_content .apply_button {
   margin-top: 64px;
   color: #000000;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  body .main_screen_content .apply_button {
+    margin-top: 48px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .main_screen_content .apply_button {
+    margin-top: 24px;
+  }
 }
 body .main_screen_content .social_block {
   display: flex;
@@ -1365,6 +1382,11 @@ body .main_screen_content .main_screen_footer .experience_row .experience_item .
     font-size: 14px;
   }
 }
+@media screen and (max-width: 575px) {
+  body .main_screen_content .main_screen_footer .experience_row .experience_item {
+    min-height: 40px;
+  }
+}
 @media screen and (max-width: 979px) {
   body .main_screen_content .main_screen_footer .experience_row {
     gap: 12px;
@@ -1373,6 +1395,7 @@ body .main_screen_content .main_screen_footer .experience_row .experience_item .
 @media screen and (max-width: 560px) {
   body .main_screen_content .main_screen_footer .experience_row {
     grid-template-columns: repeat(1, auto);
+    gap: 0;
   }
 }
 body .main_screen_content .main_screen_footer .language-mode-switch {
@@ -1383,9 +1406,24 @@ body .main_screen_content .main_screen_footer .language-mode-switch {
     display: none;
   }
 }
-@media screen and (max-height: 786px) {
+@media screen and (max-width: 1400px) {
+  body .main_screen_content .main_screen_footer {
+    margin-top: 214px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .main_screen_content .main_screen_footer {
+    margin-top: 163px;
+  }
+}
+@media screen and (max-height: 640px) {
   body .main_screen_content {
-    padding-top: 50px;
+    padding-top: 173px;
+  }
+}
+@media screen and (max-height: 575px) {
+  body .main_screen_content {
+    padding-top: 163px;
   }
 }
 body .about_us {

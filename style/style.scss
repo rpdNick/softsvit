@@ -1444,9 +1444,15 @@ body {
           max-width: 582px;
         }
 
+        @media screen and (max-width: $tablet) {
+          font-size: 48px;
+          max-width: 408px;
+        }
+
         @media screen and (max-width: $small) {
-          font-size: 31px;
-          max-width: 100%;
+          font-size: 32px;
+          line-height: 44px;
+          max-width: 251px;
         }
       }
     }
@@ -1457,6 +1463,14 @@ body {
       margin-top: 64px;
       color: #000000;
       z-index: 1;
+
+      @media screen and (max-width: $tablet) {
+        margin-top: 48px;
+      }
+
+      @media screen and (max-width: $small) {
+        margin-top: 24px;
+      }
     }
 
     .social_block {
@@ -1531,6 +1545,10 @@ body {
           @media screen and (max-width: 979px) {
             font-size: 14px;
           }
+
+          @media screen and (max-width: $small) {
+            min-height: 40px;
+          }
         }
 
         @media screen and (max-width: 979px) {
@@ -1539,6 +1557,7 @@ body {
 
         @media screen and (max-width: 560px) {
           grid-template-columns: repeat(1, auto);
+          gap: 0;
         }
       }
 
@@ -1549,10 +1568,22 @@ body {
           display: none;
         }
       }
+
+      @media screen and (max-width:$xx-large) {
+        margin-top: 214px;
+      }
+
+      @media screen and (max-width:$tablet) {
+        margin-top: 163px;
+      }
     }
 
-    @media screen and (max-height: 786px) {
-      padding-top: 50px;
+    @media screen and (max-height: $medium) {
+      padding-top: 173px;
+    }
+
+    @media screen and (max-height: $small) {
+      padding-top: 163px;
     }
   }
 
