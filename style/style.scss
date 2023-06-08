@@ -13,6 +13,7 @@ $color-main-green: #00ffb2;
 $color-gray: #ffffff99;
 $shadow-green: 0px 0px 5px #00ffc2;
 
+$xx-large: 1400px;
 $x-large: 1200px;
 $tablet: 768px;
 $medium: 640px;
@@ -127,6 +128,26 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100% 100%;
+
+      @media screen and (max-width: $xx-large) {
+        background-image: url(../img/contact-bg-1400.png);
+      }
+
+      @media screen and (max-width: $x-large) {
+        background-image: url(../img/contact-bg-1200.png);
+      }
+
+      @media screen and (max-width: $tablet) {
+        background-image: url(../img/contact-bg-768.png);
+      }
+
+      @media screen and (max-width: $medium) {
+        background-image: url(../img/contact-bg-640.png);
+      }
+
+      @media screen and (max-width: $small) {
+        background-image: url(../img/contact-bg-575.png);
+      }
     }
 
     &.vacancy_over-wrap {
@@ -629,7 +650,7 @@ body {
       display: block;
     }
     @media screen and (max-width: $tablet) {
-      min-height: 100%;
+     min-height: 100%;
     }
   }
 

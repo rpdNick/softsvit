@@ -114,6 +114,31 @@ body .over-wrap.contacts_over-wrap {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+@media screen and (max-width: 1400px) {
+  body .over-wrap.contacts_over-wrap {
+    background-image: url(../img/contact-bg-1400.png);
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .over-wrap.contacts_over-wrap {
+    background-image: url(../img/contact-bg-1200.png);
+  }
+}
+@media screen and (max-width: 768px) {
+  body .over-wrap.contacts_over-wrap {
+    background-image: url(../img/contact-bg-768.png);
+  }
+}
+@media screen and (max-width: 640px) {
+  body .over-wrap.contacts_over-wrap {
+    background-image: url(../img/contact-bg-640.png);
+  }
+}
+@media screen and (max-width: 575px) {
+  body .over-wrap.contacts_over-wrap {
+    background-image: url(../img/contact-bg-575.png);
+  }
+}
 body .over-wrap.vacancy_over-wrap {
   padding: 101px 0;
   background-image: url(../img/vacancy-bg.svg);
