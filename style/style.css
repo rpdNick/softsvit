@@ -169,7 +169,7 @@ body .drag-slider {
 }
 body .ellipse {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
 }
 body .ellipse.main_screen_ellipse-left {
@@ -745,6 +745,11 @@ body .swiper.feedback-slider .swiper-slide:hover svg .slide-circle {
     r: 123.5;
   }
 }
+@media screen and (max-width: 575px) {
+  body .swiper.feedback-slider {
+    padding-right: 12px;
+  }
+}
 @media screen and (max-width: 768px) {
   body .swiper.why_softsvit_slider {
     padding-bottom: 30px;
@@ -753,6 +758,7 @@ body .swiper.feedback-slider .swiper-slide:hover svg .slide-circle {
 @media screen and (max-width: 575px) {
   body .swiper.why_softsvit_slider {
     padding-bottom: 0;
+    padding-right: 12px;
   }
 }
 body .swiper.why_softsvit_slider .slider-control {
@@ -874,6 +880,11 @@ body .swiper.vacancy-slider .swiper-slide .slide-content .vacancy-badge {
 @media screen and (max-width: 640px) {
   body .swiper.vacancy-slider .slider-control {
     display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .swiper.vacancy-slider {
+    padding: 28px 12px 30px 0px;
   }
 }
 body .swiper .slider-control {
