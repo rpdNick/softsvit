@@ -146,6 +146,16 @@ body .over-wrap.vacancy_over-wrap {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 1200px) {
+  body .over-wrap.vacancy_over-wrap {
+    padding: 101px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .over-wrap.vacancy_over-wrap {
+    padding: 60px 0;
+  }
+}
 body .section-wrapper {
   position: relative;
   overflow: hidden;
