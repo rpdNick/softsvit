@@ -1384,7 +1384,7 @@ body .main_screen_content .main_screen_footer .experience_row .experience_item .
 }
 @media screen and (max-width: 575px) {
   body .main_screen_content .main_screen_footer .experience_row .experience_item {
-    min-height: 40px;
+    min-height: 44px;
   }
 }
 @media screen and (max-width: 979px) {
