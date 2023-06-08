@@ -150,14 +150,18 @@ body .ellipse {
 body .ellipse.main_screen_ellipse-left {
   left: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1870px) {
   body .ellipse.main_screen_ellipse-left {
-    max-width: 100%;
+    width: 40%;
   }
 }
 body .ellipse.main_screen_ellipse-right {
   right: 0;
-  max-width: 530px;
+}
+@media screen and (max-width: 1870px) {
+  body .ellipse.main_screen_ellipse-right {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 640px) {
   body .ellipse.main_screen_ellipse-right {
@@ -1400,6 +1404,11 @@ body .about_us .about_us_categories .category_item .category_description {
 }
 body .why_softsvit {
   padding: 60px 0px;
+}
+@media screen and (max-width: 575px) {
+  body .why_softsvit .content-wrapper {
+    margin: 0 0 0 12px;
+  }
 }
 body .why_softsvit .cards_wrapper {
   margin-top: 64px;
