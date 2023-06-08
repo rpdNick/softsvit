@@ -152,18 +152,18 @@ body {
 
     &.vacancy_over-wrap {
       padding: 101px 0;
-      background-image: url(../img/vacancy-bg.svg);
+      background-image: url(../img/vacancy-bg-4k.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
 
-      @media screen and (max-width: $x-large) {
-        padding: 101px 0;
-      }
+      // @media screen and (max-width: $x-large) {
+      //   padding: 101px 0;
+      // }
 
-      @media screen and (max-width: $tablet) {
-        padding: 60px 0;
-      }
+      // @media screen and (max-width: $tablet) {
+      //   padding: 60px 0;
+      // }
     }
   }
 

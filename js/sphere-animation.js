@@ -1,3 +1,4 @@
+let isAnimating = false;
 const desktopSphereBox = document.querySelector('#sphereDesktop');
 const mobileSphareBox = document.querySelector("#sphereMobile");
 
@@ -10,16 +11,25 @@ function desktopAnimation() {
   const startPosition = document.getElementById("scroll-first-position").getBoundingClientRect().top + window.scrollY;
   mobileSphareBox.style.display = "none";
   desktopSphereBox.style.display = "block";
-  let scrollTop = window.pageYOffset;
-  if (startPosition > scrollTop) {
-    // sphere top state
-    desktopSphereBox.classList.add('top-state');
-    desktopSphereBox.classList.remove('bottom-state');
-  } else {
-    // sphere bottom state
-    desktopSphereBox.classList.add('bottom-state');
-    desktopSphereBox.classList.remove('top-state');
+  // let scrollTop = window.pageYOffset;
+
+  if (!isAnimating) {
+    if (window.scrollY >= startPosition) {
+    
+    } else if (window.scrollY <= 100) {
+     
+    }
   }
+
+  // if (startPosition > scrollTop) {
+  //   // sphere top state
+  //   desktopSphereBox.classList.add('top-state');
+  //   desktopSphereBox.classList.remove('bottom-state');
+  // } else {
+  //   // sphere bottom state
+  //   desktopSphereBox.classList.add('bottom-state');
+  //   desktopSphereBox.classList.remove('top-state');
+  // }
 }
 
 function mobileSphereAnimation() {
