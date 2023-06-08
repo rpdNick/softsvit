@@ -9,6 +9,7 @@ function desktopSphereAnimation() {
 
 function desktopAnimation() {
   const startPosition = document.getElementById("scroll-first-position").getBoundingClientRect().top + window.scrollY;
+  const animateTopPosition = document.getElementById("about_us").getBoundingClientRect().top + window.scrollY;
   mobileSphareBox.style.display = "none";
   desktopSphereBox.style.display = "block";
   // let scrollTop = window.pageYOffset;
