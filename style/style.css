@@ -389,7 +389,7 @@ body .main_menu {
   overflow: auto;
   opacity: 0;
   visibility: hidden;
-  transition: 0.5s;
+  transition: 0.1s;
   z-index: 4;
 }
 body .main_menu.active {
