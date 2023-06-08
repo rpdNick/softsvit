@@ -777,7 +777,6 @@ body .swiper.vacancy-slider .swiper-slide {
   position: relative;
   text-align: center;
   font-size: 18px;
-  background: #fff;
   height: calc((100% - 24px) / 2) !important;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
