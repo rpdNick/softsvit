@@ -476,6 +476,13 @@ body .main_menu .menu_list .menu_list_item::after {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 575px) {
+  body .main_menu .menu_list .menu_list_item::after {
+    width: 5px;
+    height: 12px;
+    right: -16px;
+  }
+}
 body .main_menu .menu_list .menu_list_item:hover {
   font-size: 64px;
   color: #00ffb2;

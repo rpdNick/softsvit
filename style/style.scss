@@ -520,6 +520,12 @@ body {
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
+
+          @media screen and (max-width: $small) {
+            width: 5px;
+            height: 12px;
+            right: -16px;
+          }
         }
 
         &:hover {
