@@ -1,5 +1,8 @@
 const desktopSphereBox = document.querySelector("#sphereDesktop");
 const mobileSphareBox = document.querySelector("#sphereMobile");
+let desktopMainScreen = document.querySelector(".main_screen_wrap");
+const secondSection = document.querySelector(".about_us");
+
 
 let currentDesktopAnimationState = 0;
 
@@ -10,16 +13,20 @@ function desktopSphereAnimation() {
 
 function desktopAnimation() {
   const startPosition = document.getElementById("scroll-first-position").getBoundingClientRect().top + window.scrollY;
+  const sphereOffset = desktopSphereBox.offsetWidth;
+
+// CALCULATE PARAMS
+  let endPositionTop = secondSection.getBoundingClientRect().top + window.scrollY;
+  let endPecondLeft = sphereOffset - desktopMainScreen.offsetWidth - 400;
 
   mobileSphareBox.style.display = "none";
   desktopSphereBox.style.display = "block";
-
-  let timeout;
 
   window.addEventListener("scroll", function () {
     var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     var direction = 1; // Направление анимации (1 - вниз, -1 - вверх)
+    console.log(direction)
 
     params = {
       start: [
@@ -33,10 +40,10 @@ function desktopAnimation() {
 
       second: [
         {
-          scale: "1.3",
-          transformationY: "70",
+          scale: "1.4",
+          transformationY: "100",
           transformationX: "180",
-          rotation: "-100",
+          rotation: "-180",
           opacity: "1",
         },
       ],
@@ -44,9 +51,9 @@ function desktopAnimation() {
       end: [
         {
           scale: "0.8",
-          transformationY: "180",
-          transformationX: "-200",
-          rotation: "-150",
+          transformationY: `${endPositionTop + 200}`,
+          transformationX: `${endPecondLeft}`,
+          rotation: "-200",
           opacity: "0.2",
         },
       ],
@@ -54,6 +61,8 @@ function desktopAnimation() {
 
     if (currentScroll > startPosition) {
       if (currentDesktopAnimationState !== 1 || direction !== 1) {
+
+        console.log(direction)
         desktopSphereBox.style.scale = params.second[0].scale;
         desktopSphereBox.style.transform =
           "translate(" +
@@ -67,7 +76,8 @@ function desktopAnimation() {
 
         setTimeout(function () {
           desktopSphereBox.style.scale = params.end[0].scale;
-          desktopSphereBox.style.transform = "translate(calc(" + params.end[0].transformationX + "%), " + params.end[0].transformationY + "%)";
+          desktopSphereBox.style.transform = "translate(calc(" + params.end[0].transformationX + "px), " + params.end[0].transformationY + "px) rotate(" +
+          params.second[0].rotation + "deg)";
           desktopSphereBox.style.opacity = params.end[0].opacity;
 
           currentDesktopAnimationState = 1;
@@ -78,6 +88,7 @@ function desktopAnimation() {
       }
     } else if (currentScroll < startPosition) {
       if (currentDesktopAnimationState !== 0 || direction !== -1) {
+        console.log(direction)
         desktopSphereBox.style.scale = params.start[0].scale;
         desktopSphereBox.style.transform = "translate(" + params.start[0].transformation + "px)";
         desktopSphereBox.style.opacity = params.start[0].opacity;
