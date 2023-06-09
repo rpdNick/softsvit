@@ -34,6 +34,9 @@ body .sphere-box .sphere {
   width: 100%;
   transition: all 0.2s ease-out;
 }
+body .sphere-box#sphereMobile .sphere {
+  transition: all 0.6s ease-out;
+}
 @media screen and (max-width: 1200px) {
   body .sphere-box {
     right: 60px;
@@ -482,11 +485,18 @@ body .main_menu .menu_list .menu_list_item:hover {
     font-size: 32px;
     line-height: 44px;
   }
+  body .main_menu .menu_list .menu_list_item:hover {
+    font-size: 32px;
+    color: #ffffff;
+  }
 }
 @media screen and (max-width: 575px) {
   body .main_menu .menu_list .menu_list_item {
     font-size: 20px;
     line-height: 24px;
+  }
+  body .main_menu .menu_list .menu_list_item:hover {
+    font-size: 20px;
   }
 }
 body .main_menu .contacts_block .contact_item {
