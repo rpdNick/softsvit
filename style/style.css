@@ -604,7 +604,7 @@ body .switch_tabs .s-tab.active {
   border: 1px solid #00ffb2;
 }
 body .tab_content {
-  min-height: 556px;
+  min-height: 466px;
   display: none;
 }
 body .tab_content.active {

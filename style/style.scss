@@ -650,12 +650,13 @@ body {
   }
 
   .tab_content {
-    min-height: 556px;
+    min-height: 466px;
     display: none;
 
     &.active {
       display: block;
     }
+    
     @media screen and (max-width: $tablet) {
       min-height: 100%;
     }
