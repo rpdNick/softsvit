@@ -656,7 +656,7 @@ body {
     &.active {
       display: block;
     }
-    
+
     @media screen and (max-width: $tablet) {
       min-height: 100%;
     }
@@ -1148,6 +1148,7 @@ body {
       }
 
       .error_txt {
+        margin-top: 6px;
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
@@ -1168,7 +1169,7 @@ body {
         padding-bottom: 8px;
         color: #ffffff;
 
-        &.has-error {
+        &.error {
           border-color: $color-main-red;
         }
       }

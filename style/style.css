@@ -1035,6 +1035,7 @@ body .form_container .form_item label {
   transition: 0.3s;
 }
 body .form_container .form_item .error_txt {
+  margin-top: 6px;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -1054,7 +1055,7 @@ body .form_container .form_item .form_control {
   padding-bottom: 8px;
   color: #ffffff;
 }
-body .form_container .form_item .form_control.has-error {
+body .form_container .form_item .form_control.error {
   border-color: #dc3c6c;
 }
 body .form_container .form_item .form_control:focus + label,
