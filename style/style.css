@@ -1054,9 +1054,15 @@ body .form_container .form_item .form_control {
   font-size: 14px;
   padding-bottom: 8px;
   color: #ffffff;
+  transition: 0.2s;
 }
 body .form_container .form_item .form_control.error {
   border-color: #dc3c6c;
+}
+body .form_container .form_item .form_control:focus,
+body .form_container .form_item .form_control:not(:placeholder-shown),
+body .form_container .form_item .form_control:-webkit-autofill {
+  border-color: #00ffb2;
 }
 body .form_container .form_item .form_control:focus + label,
 body .form_container .form_item .form_control:not(:placeholder-shown) + label,

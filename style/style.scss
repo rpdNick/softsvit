@@ -1168,10 +1168,17 @@ body {
         font-size: 14px;
         padding-bottom: 8px;
         color: #ffffff;
+        transition: 0.2s;
 
         &.error {
           border-color: $color-main-red;
         }
+      }
+
+      .form_control:focus,
+      .form_control:not(:placeholder-shown),
+      .form_control:-webkit-autofill {
+        border-color: $color-main-green;
       }
 
       .form_control:focus + label,
