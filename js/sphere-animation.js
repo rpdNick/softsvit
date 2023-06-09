@@ -25,7 +25,7 @@ function desktopAnimation() {
   window.addEventListener("scroll", function () {
     var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    var direction = 1; // Направление анимации (1 - вниз, -1 - вверх)
+    var direction = 1;
     console.log(direction)
 
     params = {
