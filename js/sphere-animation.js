@@ -1,5 +1,6 @@
-let animateBottom = true;
-let animateTop = false;
+// const deskScrollBottom = document.getElementById("position-to-scroll-bottom");
+// const drskPositionToScrollTop = document.querySelector(".main_screen_wrap");
+
 const desktopSphereBox = document.querySelector("#sphereDesktop");
 const mobileSphareBox = document.querySelector("#sphereMobile");
 let currentDesktopAnimationState = 0;

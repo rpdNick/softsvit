@@ -812,7 +812,7 @@ body .swiper.vacancy-slider .swiper-slide .slide-content {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  min-height: 247px;
+  min-height: 192px;
 }
 body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap {
   display: flex;
