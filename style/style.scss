@@ -934,6 +934,9 @@ body {
                 color: $color-gray;
                 text-align: left;
               }
+              @media screen and (max-width: 1368px) {
+                margin-bottom: 32px;
+              }
             }
           }
 

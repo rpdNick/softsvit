@@ -857,6 +857,11 @@ body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap .info .descr
   color: rgba(255, 255, 255, 0.6);
   text-align: left;
 }
+@media screen and (max-width: 1368px) {
+  body .swiper.vacancy-slider .swiper-slide .slide-content .info-wrap .info {
+    margin-bottom: 32px;
+  }
+}
 body .swiper.vacancy-slider .swiper-slide .slide-content .buttons-wrap {
   margin-top: auto;
   display: flex;
