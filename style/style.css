@@ -32,7 +32,7 @@ body .sphere-box {
 }
 body .sphere-box .sphere {
   width: 100%;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 body .sphere-box#sphereMobile .sphere {
   transition: all 0.6s ease-out;

@@ -5,6 +5,8 @@ fileInputs.forEach(function (file) {
     if (this.value != "") {
       const activeFile = this.closest("label").querySelector(".file-button");
       activeFile.classList.add("active");
+      let fileName = file.files.item(0).name;
+      console.log(fileName)
     } else {
       activeFile.classList.remove("active");
     }
