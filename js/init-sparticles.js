@@ -1,6 +1,4 @@
-window.onload = function () {
-  initSparticles();
-};
+initSparticles();
 
 // shape of particles (any of; circle, square, triangle, diamond, line, image) or "random"
 function initSparticles() {
