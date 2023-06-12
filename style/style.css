@@ -1105,10 +1105,22 @@ body .form_container .attachment label {
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+body .form_container .attachment label .file_title {
+  position: absolute;
+  transition: 0.2s;
+}
 body .form_container .attachment label .file_items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+body .form_container .attachment label .file_items .file-name {
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: 0.2s;
 }
 body .form_container .attachment label .file_items .file-button {
   width: -moz-fit-content;
@@ -1118,14 +1130,33 @@ body .form_container .attachment label .file_items .file-button {
   font-weight: 700;
   font-size: 12px;
   text-align: center;
+  line-height: 20px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #ffffff;
   border-radius: 6px;
+  transition: 0.2s;
+  margin-left: 10px;
   cursor: pointer;
 }
-body .form_container .attachment label .file_items .file-button.active {
+body .form_container .attachment label .file_items .file-button:hover {
   background: rgba(255, 255, 255, 0.4);
   border-color: transparent;
+}
+body .form_container .attachment label .file_items .remove-file {
+  display: none;
+}
+body .form_container .attachment label.active .file_title {
+  font-size: 10px;
+  transform: translateY(-20px);
+}
+body .form_container .attachment label.active .file_items .file-name {
+  opacity: 1;
+}
+body .form_container .attachment label.active .file_items .remove-file {
+  display: block;
+}
+body .form_container .attachment label.active .file_items .no-file {
+  display: none;
 }
 body .form_container .form_agreement {
   margin-top: 35px;

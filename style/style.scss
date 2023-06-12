@@ -837,7 +837,7 @@ body {
       }
 
       @media screen and (max-width: $small) {
-       padding-right: 12px;
+        padding-right: 12px;
       }
     }
 
@@ -1227,10 +1227,24 @@ body {
         padding-bottom: 8px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
+        .file_title {
+          position: absolute;
+          transition: 0.2s;
+        }
+
         .file_items {
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          .file-name {
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            opacity: 0;
+            transition: 0.2s;
+          }
 
           .file-button {
             width: fit-content;
@@ -1239,14 +1253,42 @@ body {
             font-weight: 700;
             font-size: 12px;
             text-align: center;
+            line-height: 20px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid #ffffff;
             border-radius: 6px;
+            transition: 0.2s;
+            margin-left: 10px;
             cursor: pointer;
 
-            &.active {
+            &:hover {
               background: rgba(255, 255, 255, 0.4);
               border-color: transparent;
+            }
+          }
+
+          .remove-file {
+           display: none;
+          }
+        }
+
+        &.active {
+          .file_title {
+            font-size: 10px;
+            transform: translateY(-20px);
+          }
+
+          .file_items {
+            .file-name {
+              opacity: 1;
+            }
+
+            .remove-file {
+             display: block;
+            }
+
+            .no-file {
+              display: none;
             }
           }
         }

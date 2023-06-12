@@ -42,12 +42,13 @@
     <div class="sparticles-area">
       <div class="main_screen_wrap">
         <div class="sphere-box" id="sphereDesktop" data-animation="false">
-          <img class="sphere" src="./img/sphere.png" alt="sphere">
+          <img class="sphere" id="sphereDesktopImg" src="./img/sphere.png" alt="sphere">
         </div>
         <div class="sphere-box" id="sphereMobile" style="display: none;">
           <img class="sphere" src="./img/sphere.png" alt="sphere">
         </div>
         <div class="main_screen_content content-wrapper container">
+          <div  data-animation-trigger="true" id="trigger" data-ontop="true" style="position: absolute; z-index: -1; width: 100px; height: 100px;top: -60px;"></div>
           <div class="main_screen_title">
             <h1>
               <span class="green_txt">SoftSvit</span> - svit твоїх можливостей!
@@ -597,9 +598,11 @@
               <div class="form_item attachment">
                 <label for="file-cv">
                   <input class="form_control file-item" id="file-cv" type="file">
+                  <p class="file_title">Резюме</p>
                   <div class="file_items">
-                    <span>Резюме</span>
-                    <div class="file-button">Файл</div>
+                    <div class="file-name"></div>
+                    <div class="file-button no-file">Файл</div>
+                    <div class="file-button remove-file">Видалити</div>
                   </div>
                 </label>
               </div>
@@ -1025,6 +1028,7 @@
 <script src="./js/loader.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/file.js"></script>
-<script src="./js/sphere-animation.js"></script>
+<script src="./js/sphere-mobile.js"></script>
+<script src="./js/sphere-desktop.js"></script>
 
 </html>
