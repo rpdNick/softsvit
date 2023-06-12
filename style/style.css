@@ -1958,7 +1958,7 @@ body .modal {
   opacity: 0;
   visibility: hidden;
   height: 100%;
-  transition: 0.8s;
+  transition: 0.3s;
   z-index: 3;
 }
 body .modal .popup {
