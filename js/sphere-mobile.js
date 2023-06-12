@@ -44,7 +44,7 @@ function mobileAnimation() {
 }
 
 function runAnimationSphere() {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth >= 992) {
     desktopSphereAnimation();
   } else {
     mobileSphereAnimation();

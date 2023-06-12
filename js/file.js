@@ -1,20 +1,51 @@
-let fileInputs = document.querySelectorAll(".file-item");
-let removeFile = document.querySelectorAll(".remove-file");
+let addFileBtn = document.querySelectorAll(".add-file");
+let removeFileBtn = document.querySelectorAll(".remove-file");
 
-fileInputs.forEach(function (file) {
-  file.addEventListener("change", function () {
-    if (this.value != "") {
-      const activeFile = this.closest("label");
-      activeFile.classList.add("active");
-      let fileName = file.files.item(0).name;
-      console.log(fileName)
-      activeFile.querySelector('.file-name').innerText = fileName;
-    }
+addFileBtn.forEach(function (button) {
+  button.addEventListener("click", function () {
+    addFile(this);
   });
 });
 
-// removeFile.forEach(function (removeBtn) {
-//   removeBtn.addEventListener("click", function () {
-//     console.log(this)
-//   })
-// });
+removeFileBtn.forEach(function (button) {
+  button.addEventListener("click", function () {
+    removeFile(this);
+  });
+});
+
+function addFile(button) {
+  let fileInput = button.closest(".attachment").querySelector("input");
+  fileInput.click();
+  const activeFile = button.closest(".file_items");
+
+  fileInput.addEventListener("change", function () {
+    activeFile.classList.add("active");
+    let fileName = fileInput.files.item(0).name;
+    console.log(fileInput.value);
+    activeFile.querySelector(".file-name").innerText = fileName;
+  });
+}
+
+function removeFile(button) {
+  let fileInput = button.closest(".attachment").querySelector("input");
+  fileInput.value = "";
+  const fileItems = button.closest(".file_items");
+  fileItems.classList.remove("active");
+  console.log(fileInput.value);
+}
+
+// phone only numbers
+const phoneInputs = document.querySelectorAll(".phone");
+
+function onlyNumbers(items) {
+  items.forEach(function (item) {
+    item.addEventListener("keydown", function (e) {
+      var keyCode = e.keyCode || e.which;
+      if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122)) {
+        e.preventDefault();
+      }
+    });
+  });
+}
+
+onlyNumbers(phoneInputs);

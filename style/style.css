@@ -1099,22 +1099,26 @@ body .form_container .attachment {
 body .form_container .attachment input {
   display: none;
 }
-body .form_container .attachment label {
-  display: block;
-  position: relative;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-body .form_container .attachment label .file_title {
+body .form_container .attachment .file_title {
   position: absolute;
   transition: 0.2s;
 }
-body .form_container .attachment label .file_items {
+body .form_container .attachment .file_items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-body .form_container .attachment label .file_items .file-name {
+body .form_container .attachment .file_items .file_title {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+body .form_container .attachment .file_items .file-name {
   color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
@@ -1122,7 +1126,7 @@ body .form_container .attachment label .file_items .file-name {
   opacity: 0;
   transition: 0.2s;
 }
-body .form_container .attachment label .file_items .file-button {
+body .form_container .attachment .file_items .file-button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 2px 8px;
@@ -1138,24 +1142,24 @@ body .form_container .attachment label .file_items .file-button {
   margin-left: 10px;
   cursor: pointer;
 }
-body .form_container .attachment label .file_items .file-button:hover {
+body .form_container .attachment .file_items .file-button:hover {
   background: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-body .form_container .attachment label .file_items .remove-file {
+body .form_container .attachment .file_items .remove-file {
   display: none;
 }
-body .form_container .attachment label.active .file_title {
+body .form_container .attachment .file_items.active .file_title {
   font-size: 10px;
-  transform: translateY(-20px);
+  transform: translateY(-26px);
 }
-body .form_container .attachment label.active .file_items .file-name {
+body .form_container .attachment .file_items.active .file-name {
   opacity: 1;
 }
-body .form_container .attachment label.active .file_items .remove-file {
+body .form_container .attachment .file_items.active .remove-file {
   display: block;
 }
-body .form_container .attachment label.active .file_items .no-file {
+body .form_container .attachment .file_items.active .add-file {
   display: none;
 }
 body .form_container .form_agreement {
