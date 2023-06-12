@@ -1004,6 +1004,7 @@ body .checkbox_item > label .checkbox {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 4px;
   margin-right: 11px;
+  transition: 0.2s;
 }
 body .checkbox_item > label .checkbox::before {
   content: "";
@@ -1026,6 +1027,9 @@ body .checkbox_item > label input:checked ~ .checkbox {
 }
 body .checkbox_item > label input:checked ~ .checkbox:before {
   opacity: 1;
+}
+body .checkbox_item > label:hover .checkbox {
+  border-color: #ffffff;
 }
 body .form_container {
   width: 45%;

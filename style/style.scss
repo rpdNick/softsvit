@@ -1109,6 +1109,7 @@ body {
         border: 1px solid $color-gray;
         border-radius: 4px;
         margin-right: 11px;
+        transition: 0.2s;
 
         &::before {
           content: "";
@@ -1134,6 +1135,12 @@ body {
 
         &:before {
           opacity: 1;
+        }
+      }
+
+      &:hover {
+        .checkbox {
+          border-color: #ffffff;
         }
       }
     }
