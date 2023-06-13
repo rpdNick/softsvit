@@ -1,18 +1,3 @@
-const sliderLoader = document.getElementById("preloader");
-const sliderLoaderBody = document.querySelector("body");
-
-function runSliderPreloader() {
-  sliderLoader.classList.add("active");
-  sliderLoaderBody.classList.add("loading");
-}
-
-function offSliderPreloader() {
-  setTimeout(() => {
-    sliderLoader.classList.remove("active");
-    sliderLoaderBody.classList.remove("loading");
-  }, "1500");
-}
-
 function initSlider(sliderElement, sliderOptions) {
   let swiper = new Swiper(sliderElement, sliderOptions);
   return swiper;
@@ -221,13 +206,9 @@ tabsBlock.forEach((item) => {
     let curentTabs = this.children;
     let activeTab = e.target;
     let tabIndex = e.target.getAttribute("data-tab");
-    // let tabId = e.target.getAttribute("data-tab-id");
 
       // http query
 
-      // run preloader
-      runSliderPreloader();
-      
       const sliderCard = document
         .querySelector(".vacancy-slider .swiper-slide")
         .cloneNode(true);
@@ -256,10 +237,6 @@ tabsBlock.forEach((item) => {
           );
           swiperWrapper.innerHTML = cardsHTML;
           reDrawVacancySlider(swiperWrapper.getAttribute("id"));
-          // off preloader
-          console.log(activeTab);
-          activeTab.classList.add("loaded");
-          offSliderPreloader();
         });
 
       // http query
