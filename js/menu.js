@@ -19,7 +19,6 @@ function showMenu(el) {
 
  // check menu on page resize
  window.addEventListener("resize", () => {
-  console.log('123')
   if (window.innerWidth <= 768 && siteBody.classList.contains("menu_open")) {
     mobileMenu.classList.add("active");
   } else {
