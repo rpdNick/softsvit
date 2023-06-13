@@ -1,5 +1,5 @@
-const sliderLoader = document.getElementById('preloader');
-const sliderLoaderBody = document.querySelector('body');
+const sliderLoader = document.getElementById("preloader");
+const sliderLoaderBody = document.querySelector("body");
 
 function runSliderPreloader() {
   sliderLoader.classList.add("active");
@@ -32,7 +32,7 @@ const feedbackSliderOptions = {
   speed: 400,
   loop: true,
   loopedSlides: 2,
-  updateOnWindowResize:true,
+  updateOnWindowResize: true,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -48,7 +48,7 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize:true,
+      updateOnWindowResize: true,
     },
     575: {
       effect: "slide",
@@ -57,7 +57,7 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize:true,
+      updateOnWindowResize: true,
     },
     768: {
       effect: "coverflow",
@@ -73,7 +73,7 @@ const feedbackSliderOptions = {
       speed: 400,
       loop: true,
       loopedSlides: 2,
-      updateOnWindowResize:true,
+      updateOnWindowResize: true,
     },
   },
 
@@ -86,7 +86,6 @@ const feedbackSliderOptions = {
     prevEl: ".feedback-slider .slider-button-prev",
   },
 };
-
 
 const whySoftsvitSliderOptions = {
   slidesPerView: 3,
@@ -180,7 +179,7 @@ const vacancySliderOptions = {
 };
 
 let feedback = initSlider(".feedback-slider", feedbackSliderOptions);
-window.onresize = function() {
+window.onresize = function () {
   if (feedback) {
     // reInit slider
     feedback.destroy();
@@ -188,17 +187,19 @@ window.onresize = function() {
   }
 };
 
-
 let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 
 function reDrawVacancySlider(redrawId) {
-
-  vacancySlider.find(item => {
-    if(item.el.querySelector('.swiper-wrapper').getAttribute('id') === redrawId) {
-      return item;
-    }
-  }).destroy();
+  vacancySlider
+    .find((item) => {
+      if (
+        item.el.querySelector(".swiper-wrapper").getAttribute("id") === redrawId
+      ) {
+        return item;
+      }
+    })
+    .destroy();
 
   vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
   let popupButtons = document.querySelectorAll(
@@ -212,48 +213,56 @@ function reDrawVacancySlider(redrawId) {
   });
 }
 
-
-
 /** Switch Tabs logic*/
 
 const tabsBlock = document.querySelectorAll(".switch_tabs");
 tabsBlock.forEach((item) => {
   item.addEventListener("click", function (e) {
-    // run preloader
-    runSliderPreloader();
     let curentTabs = this.children;
     let activeTab = e.target;
     let tabIndex = e.target.getAttribute("data-tab");
-    let tabId = e.target.getAttribute("data-tab-id");
+    // let tabId = e.target.getAttribute("data-tab-id");
 
-    // http query
-    const sliderCard = document.querySelector('.vacancy-slider .swiper-slide').cloneNode(true);
-    fetch('./sliderData.json', {
-      method: 'GET',
-      headers: {
-          'Accept': 'application/json',
-      },
-    })
-    .then(resp => resp.text())
-    .then(dataText => {
-      const data = JSON.parse(dataText)
-      let cardsHTML = '';
+      // http query
 
-      // slider content
-      data.forEach(cardItem => {
-        sliderCard.querySelector('.title').innerHTML = cardItem.post_title;
-        sliderCard.querySelector('.description').innerHTML = cardItem.acf.details;
-        sliderCard.querySelector('.vacancy-badge span').innerHTML = cardItem.acf.level;
-        cardsHTML += `<div class="swiper-slide">${sliderCard.innerHTML}</div>`
+      // run preloader
+      runSliderPreloader();
+      
+      const sliderCard = document
+        .querySelector(".vacancy-slider .swiper-slide")
+        .cloneNode(true);
+      fetch("./sliderData.json", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
       })
-      const swiperWrapper = document.querySelector(`[data-tab="${tabIndex}"] .vacancy-slider .swiper-wrapper`);
-      swiperWrapper.innerHTML = cardsHTML;
-      reDrawVacancySlider(swiperWrapper.getAttribute('id'));
-      // off preloader
-      offSliderPreloader();
-    })
+        .then((resp) => resp.text())
+        .then((dataText) => {
+          const data = JSON.parse(dataText);
+          let cardsHTML = "";
 
-    // http query
+          // slider content
+          data.forEach((cardItem) => {
+            sliderCard.querySelector(".title").innerHTML = cardItem.post_title;
+            sliderCard.querySelector(".description").innerHTML =
+              cardItem.acf.details;
+            sliderCard.querySelector(".vacancy-badge span").innerHTML =
+              cardItem.acf.level;
+            cardsHTML += `<div class="swiper-slide">${sliderCard.innerHTML}</div>`;
+          });
+          const swiperWrapper = document.querySelector(
+            `[data-tab="${tabIndex}"] .vacancy-slider .swiper-wrapper`
+          );
+          swiperWrapper.innerHTML = cardsHTML;
+          reDrawVacancySlider(swiperWrapper.getAttribute("id"));
+          // off preloader
+          console.log(activeTab);
+          activeTab.classList.add("loaded");
+          offSliderPreloader();
+        });
+
+      // http query
 
     let tabContentBlocks = activeTab
       .closest(".tab-wrapper")
@@ -274,18 +283,18 @@ function setActiveTab(
   tabContentBlocks
 ) {
   for (let i = 0; i < tabsElements.length; i++) {
-    tabsElements[i].classList.remove("active");
     tabContentBlocks[i].classList.remove("active");
+    tabsElements[i].classList.remove("active");
   }
-  activeTab.classList.add("active");
   currentContentBlock.classList.add("active");
+  activeTab.classList.add("active");
 }
 
 //------- Modal logic
 
 const pageBody = document.querySelector("body");
 const popupOverlay = document.querySelector(".overlay");
-const popupLoader = document.getElementById('preloader');
+const popupLoader = document.getElementById("preloader");
 
 let closeButton = document.querySelectorAll(".close-modal");
 let popupButtons = document.querySelectorAll(
@@ -318,26 +327,26 @@ function showModal(button) {
   }
   showOverlay();
   modal.classList.add("active");
-    // run query
+  // run query
   const id = button.getAttribute("data-post-id");
   fetch(`./data.json`, {
-    method: 'GET',
+    method: "GET",
     headers: {
-        'Accept': 'application/json',
+      Accept: "application/json",
     },
   })
-  // fetch(`/wp-json/wp/v2/posts/${id}`)
-    .then(response => response.text())
-    .then(dataText => {
+    // fetch(`/wp-json/wp/v2/posts/${id}`)
+    .then((response) => response.text())
+    .then((dataText) => {
       const data = JSON.parse(dataText);
       const htmlTitle = data.title.rendered;
       const htmlDescription = data.content.rendered;
-      modal.querySelector('.description_content').innerHTML = htmlDescription;
-      modal.querySelector('.title').innerHTML = htmlTitle;
-      modal.querySelector('.title-value').value = htmlTitle;
+      modal.querySelector(".description_content").innerHTML = htmlDescription;
+      modal.querySelector(".title").innerHTML = htmlTitle;
+      modal.querySelector(".title-value").value = htmlTitle;
     })
-    .catch(error => {
-      console.log(error)
+    .catch((error) => {
+      console.log(error);
     });
 }
 
