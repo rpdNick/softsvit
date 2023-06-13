@@ -1087,6 +1087,7 @@ body {
   }
 
   .checkbox_item {
+
     > label {
       display: flex;
       justify-content: flex-start;
@@ -1165,8 +1166,12 @@ body {
     }
 
     .form_item {
-      margin-bottom: 44px;
+      margin-bottom: 46px;
       position: relative;
+
+      &:nth-of-type(5) {
+        margin-bottom: 0;
+      }
 
       label {
         position: absolute;
@@ -1174,6 +1179,7 @@ body {
         top: 0;
         font-weight: 700;
         font-size: 14px;
+        line-height: 20px;
         color: $color-gray;
         transition: 0.3s;
       }
@@ -1197,6 +1203,7 @@ body {
         border-bottom: 1px solid #ffffff66;
         font-weight: 700;
         font-size: 14px;
+        line-height: 20px;
         padding-bottom: 8px;
         color: #ffffff;
         transition: 0.2s;
@@ -1222,7 +1229,6 @@ body {
     }
 
     .attachment {
-      margin: 0;
 
       input {
         display: none;
@@ -1305,11 +1311,11 @@ body {
     }
 
     .form_agreement {
-      margin-top: 35px;
+      margin-top: 34px;
     }
 
     .submit_wrap {
-      margin-top: 26px;
+      margin-top: 27px;
     }
 
     @media screen and (max-width: 940px) {
@@ -2008,6 +2014,7 @@ body {
       .contacts_cards_block {
         width: 55%;
         max-width: 648px;
+
         .cards_wrap {
           .contact_card {
             margin-bottom: 24px;
@@ -2156,7 +2163,7 @@ body {
         .socials {
           display: flex;
           justify-content: space-between;
-          margin-top: 24px;
+          margin-top: 26px;
 
           .social_block {
             display: flex;

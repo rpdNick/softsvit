@@ -1048,8 +1048,11 @@ body .form_container .form_title {
   margin-bottom: 40px;
 }
 body .form_container .form_item {
-  margin-bottom: 44px;
+  margin-bottom: 46px;
   position: relative;
+}
+body .form_container .form_item:nth-of-type(5) {
+  margin-bottom: 0;
 }
 body .form_container .form_item label {
   position: absolute;
@@ -1057,6 +1060,7 @@ body .form_container .form_item label {
   top: 0;
   font-weight: 700;
   font-size: 14px;
+  line-height: 20px;
   color: rgba(255, 255, 255, 0.6);
   transition: 0.3s;
 }
@@ -1078,6 +1082,7 @@ body .form_container .form_item .form_control {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   font-weight: 700;
   font-size: 14px;
+  line-height: 20px;
   padding-bottom: 8px;
   color: #ffffff;
   transition: 0.2s;
@@ -1096,9 +1101,6 @@ body .form_container .form_item .form_control:-webkit-autofill + label {
   font-size: 10px;
   transform: translateY(-20px);
   opacity: 1;
-}
-body .form_container .attachment {
-  margin: 0;
 }
 body .form_container .attachment input {
   display: none;
@@ -1167,10 +1169,10 @@ body .form_container .attachment .file_items.active .add-file {
   display: none;
 }
 body .form_container .form_agreement {
-  margin-top: 35px;
+  margin-top: 34px;
 }
 body .form_container .submit_wrap {
-  margin-top: 26px;
+  margin-top: 27px;
 }
 @media screen and (max-width: 940px) {
   body .form_container {
@@ -1919,7 +1921,7 @@ body .contacts .contacts_info-wrapper .contacts_cards_block .contact_data .conta
 body .contacts .contacts_info-wrapper .contacts_cards_block .socials {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 26px;
 }
 body .contacts .contacts_info-wrapper .contacts_cards_block .socials .social_block {
   display: flex;
