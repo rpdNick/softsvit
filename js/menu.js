@@ -17,6 +17,21 @@ function showMenu(el) {
   el.classList.toggle("active");
 }
 
+ // check menu on page resize
+ window.addEventListener("resize", () => {
+  console.log('123')
+  if (window.innerWidth <= 768 && siteBody.classList.contains("menu_open")) {
+    mobileMenu.classList.add("active");
+  } else {
+    mobileMenu.classList.remove("active");
+  }
+  if (window.innerWidth > 768 && siteBody.classList.contains("menu_open")) {
+    menuButton.classList.add("active");
+  } else {
+    menuButton.classList.remove("active");
+  }
+});
+
 // Menu scroll
 const smoothScroll = function (targetEl, duration) {
   const headerElHeight =
