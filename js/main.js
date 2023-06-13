@@ -173,18 +173,11 @@ window.onresize = function () {
 };
 
 let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
+
 initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 
-function reDrawVacancySlider(redrawId) {
-  vacancySlider
-    .find((item) => {
-      if (
-        item.el.querySelector(".swiper-wrapper").getAttribute("id") === redrawId
-      ) {
-        return item;
-      }
-    })
-    .destroy();
+function reDrawVacancySlider() {
+  vacancySlider.destroy();
 
   vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
   let popupButtons = document.querySelectorAll(
@@ -200,15 +193,19 @@ function reDrawVacancySlider(redrawId) {
 
 /** Switch Tabs logic*/
 
-const tabsBlock = document.querySelectorAll(".switch_tabs");
-tabsBlock.forEach((item) => {
-  item.addEventListener("click", function (e) {
-    let curentTabs = this.children;
+const tabs = document.querySelectorAll(".switch_tabs .s-tab");
+tabs.forEach((tab) => {
+  tab.addEventListener("click", function (e) {
+    tabs.forEach((item) => {
+      item.classList.remove("active-cat");
+    });
     let activeTab = e.target;
-    let tabIndex = e.target.getAttribute("data-tab");
+    activeTab.classList.add("active-cat");
 
-      // http query
+    let tabId = e.target.getAttribute("data-category");
 
+    // http query
+    if (tabId) {
       const sliderCard = document
         .querySelector(".vacancy-slider .swiper-slide")
         .cloneNode(true);
@@ -225,47 +222,35 @@ tabsBlock.forEach((item) => {
 
           // slider content
           data.forEach((cardItem) => {
-            sliderCard.querySelector(".title").innerHTML = cardItem.post_title;
-            sliderCard.querySelector(".description").innerHTML =
-              cardItem.acf.details;
-            sliderCard.querySelector(".vacancy-badge span").innerHTML =
-              cardItem.acf.level;
-            cardsHTML += `<div class="swiper-slide">${sliderCard.innerHTML}</div>`;
+            cardsHTML += `<div class="swiper-slide">
+                <div class="slide-content">
+                <div class="info-wrap">
+                  <div class="info">
+                    <div class="title">${cardItem.post_title}</div>
+                    <div class="description">${cardItem.acf.details}</div>
+                  </div>
+                  <div class="vacancy-badge">
+                    <span>${cardItem.acf.level}</span>
+                  </div>
+                </div>
+                <div class="buttons-wrap">
+                  <button class="button transparrent green_border" data-popup="friend-cv">Порадити фахівця</button>
+                  <button class="button filling_bg" data-popup="my-cv">подати заявку</button>
+                </div>
+              </div>
+            </div>`;
           });
           const swiperWrapper = document.querySelector(
-            `[data-tab="${tabIndex}"] .vacancy-slider .swiper-wrapper`
+            ".vacancy-slider .swiper-wrapper"
           );
           swiperWrapper.innerHTML = cardsHTML;
-          reDrawVacancySlider(swiperWrapper.getAttribute("id"));
+          reDrawVacancySlider();
         });
 
       // http query
-
-    let tabContentBlocks = activeTab
-      .closest(".tab-wrapper")
-      .querySelectorAll(".tab_content");
-
-    tabContentBlocks.forEach((contentBlock) => {
-      if (contentBlock.getAttribute("data-tab") == tabIndex) {
-        setActiveTab(activeTab, curentTabs, contentBlock, tabContentBlocks);
-      }
-    });
+    }
   });
 });
-
-function setActiveTab(
-  activeTab,
-  tabsElements,
-  currentContentBlock,
-  tabContentBlocks
-) {
-  for (let i = 0; i < tabsElements.length; i++) {
-    tabContentBlocks[i].classList.remove("active");
-    tabsElements[i].classList.remove("active");
-  }
-  currentContentBlock.classList.add("active");
-  activeTab.classList.add("active");
-}
 
 //------- Modal logic
 
@@ -318,8 +303,8 @@ function showModal(button) {
       const data = JSON.parse(dataText);
       const htmlTitle = data.title.rendered;
       const htmlDescription = data.content.rendered;
-      modal.querySelector(".description_content").innerHTML = htmlDescription;
       modal.querySelector(".title").innerHTML = htmlTitle;
+      modal.querySelector(".description_content").innerHTML = htmlDescription;
       modal.querySelector(".title-value").value = htmlTitle;
     })
     .catch((error) => {

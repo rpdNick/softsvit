@@ -661,7 +661,7 @@ body {
       cursor: pointer;
       letter-spacing: 0.01em;
 
-      &.active {
+      &.active-cat {
         color: $color-main-green;
         background: #000000;
         border-radius: 6px;
@@ -672,7 +672,6 @@ body {
 
   .tab_content {
     min-height: 466px;
-    display: none;
 
     &.active {
       display: block;
