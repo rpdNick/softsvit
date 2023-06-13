@@ -1925,13 +1925,11 @@ body {
       }
     }
 
-    .tab-wrapper {
-      .switch_tabs {
-        width: fit-content;
+    .switch_tabs {
+      width: fit-content;
 
-        @media screen and (max-width: $small) {
-          width: 100%;
-        }
+      @media screen and (max-width: $small) {
+        width: 100%;
       }
     }
   }
@@ -2226,7 +2224,6 @@ body {
     opacity: 0;
     visibility: hidden;
     height: 100%;
-    transition: 0.3s;
     z-index: 3;
 
     .popup {

@@ -240,9 +240,7 @@ tabs.forEach((tab) => {
               </div>
             </div>`;
           });
-          const swiperWrapper = document.querySelector(
-            ".vacancy-slider .swiper-wrapper"
-          );
+          const swiperWrapper = document.querySelector(".vacancy-slider .swiper-wrapper");
           swiperWrapper.innerHTML = cardsHTML;
           reDrawVacancySlider();
         });

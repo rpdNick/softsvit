@@ -1719,12 +1719,12 @@ body .vacancy {
     margin: 0 0 0 12px;
   }
 }
-body .vacancy .tab-wrapper .switch_tabs {
+body .vacancy .switch_tabs {
   width: -moz-fit-content;
   width: fit-content;
 }
 @media screen and (max-width: 575px) {
-  body .vacancy .tab-wrapper .switch_tabs {
+  body .vacancy .switch_tabs {
     width: 100%;
   }
 }
@@ -1980,7 +1980,6 @@ body .modal {
   opacity: 0;
   visibility: hidden;
   height: 100%;
-  transition: 0.3s;
   z-index: 3;
 }
 body .modal .popup {
