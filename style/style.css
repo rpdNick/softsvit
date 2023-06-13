@@ -1112,6 +1112,11 @@ body .form_container .form_item.error .checkbox {
 body .form_container .form_item.error .checkbox_txt {
   color: #dc3c6c;
 }
+@media screen and (max-width: 575px) {
+  body .form_container .form_item {
+    margin-bottom: 32px;
+  }
+}
 body .form_container .attachment input {
   display: none;
 }
@@ -1181,6 +1186,11 @@ body .form_container .attachment .file_items.active .add-file {
 body .form_container .form_agreement {
   margin-top: 32px;
   min-height: 20px;
+}
+@media screen and (max-width: 391px) {
+  body .form_container .form_agreement {
+    min-height: 40px;
+  }
 }
 body .form_container .submit_wrap {
   margin-top: 27px;

@@ -1241,6 +1241,10 @@ body {
           color: $color-main-red;
         }
       }
+
+      @media screen and (max-width: $small) {
+        margin-bottom: 32px;
+      }
     }
 
     .attachment {
@@ -1327,6 +1331,10 @@ body {
     .form_agreement {
       margin-top: 32px;
       min-height: 20px;
+
+      @media screen and (max-width: 391px) {
+        min-height: 40px;
+      }
     }
 
     .submit_wrap {
