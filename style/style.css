@@ -1051,7 +1051,7 @@ body .form_container .form_item {
   margin-bottom: 46px;
   position: relative;
 }
-body .form_container .form_item:nth-of-type(5) {
+body .form_container .form_item:nth-of-type(5), body .form_container .form_item:nth-of-type(6) {
   margin-bottom: 0;
 }
 body .form_container .form_item label {
@@ -1087,9 +1087,6 @@ body .form_container .form_item .form_control {
   color: #ffffff;
   transition: 0.2s;
 }
-body .form_container .form_item .form_control.error {
-  border-color: #dc3c6c;
-}
 body .form_container .form_item .form_control:focus,
 body .form_container .form_item .form_control:not(:placeholder-shown),
 body .form_container .form_item .form_control:-webkit-autofill {
@@ -1101,6 +1098,19 @@ body .form_container .form_item .form_control:-webkit-autofill + label {
   font-size: 10px;
   transform: translateY(-20px);
   opacity: 1;
+}
+body .form_container .form_item.error .form_control,
+body .form_container .form_item.error .file_items {
+  border-color: #dc3c6c;
+}
+body .form_container .form_item.error .error_txt {
+  display: block;
+}
+body .form_container .form_item.error .checkbox {
+  border-color: #dc3c6c;
+}
+body .form_container .form_item.error .checkbox_txt {
+  color: #dc3c6c;
 }
 body .form_container .attachment input {
   display: none;
@@ -1169,7 +1179,8 @@ body .form_container .attachment .file_items.active .add-file {
   display: none;
 }
 body .form_container .form_agreement {
-  margin-top: 34px;
+  margin-top: 32px;
+  min-height: 20px;
 }
 body .form_container .submit_wrap {
   margin-top: 27px;

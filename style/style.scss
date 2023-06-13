@@ -1087,7 +1087,6 @@ body {
   }
 
   .checkbox_item {
-
     > label {
       display: flex;
       justify-content: flex-start;
@@ -1169,7 +1168,8 @@ body {
       margin-bottom: 46px;
       position: relative;
 
-      &:nth-of-type(5) {
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
         margin-bottom: 0;
       }
 
@@ -1207,10 +1207,6 @@ body {
         padding-bottom: 8px;
         color: #ffffff;
         transition: 0.2s;
-
-        &.error {
-          border-color: $color-main-red;
-        }
       }
 
       .form_control:focus,
@@ -1226,10 +1222,28 @@ body {
         transform: translateY(-20px);
         opacity: 1;
       }
+
+      &.error {
+        .form_control,
+        .file_items {
+          border-color: $color-main-red;
+        }
+
+        .error_txt {
+          display: block;
+        }
+
+        .checkbox {
+          border-color: $color-main-red;
+        }
+
+        .checkbox_txt {
+          color: $color-main-red;
+        }
+      }
     }
 
     .attachment {
-
       input {
         display: none;
       }
@@ -1311,7 +1325,8 @@ body {
     }
 
     .form_agreement {
-      margin-top: 34px;
+      margin-top: 32px;
+      min-height: 20px;
     }
 
     .submit_wrap {
