@@ -715,9 +715,10 @@ body {
         opacity: 0;
         bottom: 20px;
         transition: all 0.3s ease;
-        min-width: 316px;
+        min-width: 300px;
+        max-width: 384px;
 
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: 992px) {
           bottom: 0;
           opacity: 1;
           transition: none;
@@ -776,6 +777,7 @@ body {
           }
           .feedback_block {
             position: relative;
+            min-height: 190px;
             border-radius: 16px;
             padding: 24px;
             background-image: url(../img/sliders/slide-description-bg.jpg);
@@ -805,7 +807,7 @@ body {
         &.swiper-slide-next {
           opacity: 0.3;
 
-          @media screen and (max-width: $tablet) {
+          @media screen and (max-width: 992px) {
             opacity: 1;
           }
         }

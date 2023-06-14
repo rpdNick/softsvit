@@ -660,9 +660,10 @@ body .swiper.feedback-slider .swiper-slide {
   opacity: 0;
   bottom: 20px;
   transition: all 0.3s ease;
-  min-width: 316px;
+  min-width: 300px;
+  max-width: 384px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   body .swiper.feedback-slider .swiper-slide {
     bottom: 0;
     opacity: 1;
@@ -719,6 +720,7 @@ body .swiper.feedback-slider .swiper-slide .slide_content .img_box svg .slide-ci
 }
 body .swiper.feedback-slider .swiper-slide .slide_content .feedback_block {
   position: relative;
+  min-height: 190px;
   border-radius: 16px;
   padding: 24px;
   background-image: url(../img/sliders/slide-description-bg.jpg);
@@ -743,7 +745,7 @@ body .swiper.feedback-slider .swiper-slide .slide_content .feedback_block .feedb
 body .swiper.feedback-slider .swiper-slide.swiper-slide-prev, body .swiper.feedback-slider .swiper-slide.swiper-slide-next {
   opacity: 0.3;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   body .swiper.feedback-slider .swiper-slide.swiper-slide-prev, body .swiper.feedback-slider .swiper-slide.swiper-slide-next {
     opacity: 1;
   }

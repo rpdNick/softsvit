@@ -28,14 +28,45 @@ const feedbackSliderOptions = {
   breakpoints: {
     320: {
       effect: "slide",
-      slidesPerView: 1.07,
+      slidesPerView: 1.06,
       spaceBetween: 12,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
       updateOnWindowResize: true,
     },
+
+    432: {
+      effect: "slide",
+      slidesPerView: 1.3,
+      spaceBetween: 12,
+      centeredSlides: false,
+      slideShadows: false,
+      loop: false,
+      updateOnWindowResize: true,
+    },
+
     575: {
+      effect: "slide",
+      slidesPerView: 1.5,
+      spaceBetween: 24,
+      centeredSlides: false,
+      slideShadows: false,
+      loop: false,
+      updateOnWindowResize: true,
+    },
+
+    640: {
+      effect: "slide",
+      slidesPerView: 1.8,
+      spaceBetween: 24,
+      centeredSlides: false,
+      slideShadows: false,
+      loop: false,
+      updateOnWindowResize: true,
+    },
+
+    780: {
       effect: "slide",
       slidesPerView: 2,
       spaceBetween: 24,
@@ -44,7 +75,18 @@ const feedbackSliderOptions = {
       loop: false,
       updateOnWindowResize: true,
     },
-    768: {
+
+    919: {
+      effect: "slide",
+      slidesPerView: 2,
+      spaceBetween: 40,
+      centeredSlides: false,
+      slideShadows: false,
+      loop: false,
+      updateOnWindowResize: true,
+    },
+
+    992: {
       effect: "coverflow",
       centeredSlides: true,
       slidesPerView: "auto",
@@ -87,6 +129,7 @@ const whySoftsvitSliderOptions = {
       },
       spaceBetween: 12,
     },
+
     575: {
       slidesPerView: 2,
       grid: {
@@ -94,6 +137,7 @@ const whySoftsvitSliderOptions = {
       },
       spaceBetween: 24,
     },
+
     768: {
       slidesPerView: 3,
       grid: {
@@ -136,6 +180,7 @@ const vacancySliderOptions = {
       },
       spaceBetween: 24,
     },
+
     768: {
       slidesPerView: 2,
       grid: {
@@ -143,7 +188,7 @@ const vacancySliderOptions = {
       },
       spaceBetween: 24,
     },
-
+    
     1109: {
       slidesPerView: 3,
       grid: {
@@ -170,7 +215,7 @@ window.onresize = function () {
     feedback.destroy();
     feedback = initSlider(".feedback-slider", feedbackSliderOptions);
 
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 992) {
       feedbackSliderAnimation(feedback);
     } else {
       return;
@@ -195,7 +240,9 @@ function feedbackSliderAnimation(slider) {
   });
 }
 
-feedbackSliderAnimation(feedback);
+if(window.innerWidth >= 992) {
+  feedbackSliderAnimation(feedback);
+}
 
 let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 
