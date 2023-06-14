@@ -174,10 +174,8 @@ window.onresize = function () {
 
 // Feedback slider animation on change
 
-feedback.on("slideChange", function (event) {
-  console.log("123");
+feedback.on("slideChange", () => {
   var activeSlide = this.slides[this.activeIndex];
-  console.log('Current Centered Slide:', activeSlide);
   const slides = document.querySelectorAll(".feedback-slider .swiper-slide");
   slides.forEach((slide) => {
     slide.classList.remove("play-animation");
