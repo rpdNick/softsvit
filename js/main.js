@@ -202,12 +202,14 @@ let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 
 function reDrawVacancySlider() {
-  vacancySlider.destroy();
+  vacancySlider.update();
+  vacancySlider.updateSlides()
+  // vacancySlider.destroy();
 
-  vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
-  let popupButtons = document.querySelectorAll(
-    ".vacancy-slider .buttons-wrap .button"
-  );
+  // vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
+  // let popupButtons = document.querySelectorAll(
+  //   ".vacancy-slider .buttons-wrap .button"
+  // );
 
   popupButtons.forEach(function (button) {
     button.addEventListener("click", function () {
