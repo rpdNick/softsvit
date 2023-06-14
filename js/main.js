@@ -174,7 +174,7 @@ window.onresize = function () {
 
 // Feedback slider animation on change
 
-feedback.on("slideChange", () => {
+feedback.on("slideChange", function (event) {
   var activeSlide = this.slides[this.activeIndex];
   const slides = document.querySelectorAll(".feedback-slider .swiper-slide");
   slides.forEach((slide) => {
