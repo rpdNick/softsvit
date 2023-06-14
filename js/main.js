@@ -203,9 +203,10 @@ initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 
 function reDrawVacancySlider() {
   vacancySlider.update();
-  vacancySlider.updateSlides()
-  // vacancySlider.destroy();
+  vacancySlider.updateSlides();
 
+  /**If you need to destroy this slider */
+  // vacancySlider.destroy();
   // vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
   // let popupButtons = document.querySelectorAll(
   //   ".vacancy-slider .buttons-wrap .button"
