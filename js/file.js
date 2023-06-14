@@ -21,7 +21,6 @@ function addFile(button) {
   fileInput.addEventListener("change", function () {
     activeFile.classList.add("active");
     let fileName = fileInput.files.item(0).name;
-    console.log(fileInput.value);
     activeFile.querySelector(".file-name").innerText = fileName;
   });
 }
@@ -31,7 +30,6 @@ function removeFile(button) {
   fileInput.value = "";
   const fileItems = button.closest(".file_items");
   fileItems.classList.remove("active");
-  console.log(fileInput.value);
 }
 
 // phone only numbers
