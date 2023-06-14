@@ -637,6 +637,10 @@ body .tab_content.active {
     min-height: 100%;
   }
 }
+body .swiper-slide-shadow-left,
+body .swiper-slide-shadow-right {
+  background-image: none !important;
+}
 body .swiper.feedback-slider {
   width: 100%;
   padding-top: 50px;

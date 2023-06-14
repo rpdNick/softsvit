@@ -688,6 +688,12 @@ body {
   }
 
   /* Sliders */
+
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right {
+    background-image: none !important;
+  }
+
   .swiper {
     &.feedback-slider {
       width: 100%;
