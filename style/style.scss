@@ -677,6 +677,7 @@ body {
 
   .tab_content {
     min-height: 466px;
+    padding: 28px 0 30px;
 
     &.active {
       display: block;
@@ -895,7 +896,7 @@ body {
     &.vacancy-slider {
       width: 100%;
       height: 100%;
-      padding: 28px 0 30px;
+      padding: 0;
 
       .swiper-slide {
         position: relative;

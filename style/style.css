@@ -628,6 +628,7 @@ body .switch_tabs .s-tab.active-cat {
 }
 body .tab_content {
   min-height: 466px;
+  padding: 28px 0 30px;
 }
 body .tab_content.active {
   display: block;
@@ -815,7 +816,7 @@ body .swiper.why_softsvit_slider .slider-control {
 body .swiper.vacancy-slider {
   width: 100%;
   height: 100%;
-  padding: 28px 0 30px;
+  padding: 0;
 }
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;

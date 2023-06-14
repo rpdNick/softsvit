@@ -169,23 +169,33 @@ window.onresize = function () {
     // reInit slider
     feedback.destroy();
     feedback = initSlider(".feedback-slider", feedbackSliderOptions);
+
+    if (window.innerWidth >= 768) {
+      feedbackSliderAnimation(feedback);
+    } else {
+      return;
+    }
   }
 };
 
 // Feedback slider animation on change
 
-feedback.on("slideChange", function (event) {
-  var activeSlide = this.slides[this.activeIndex];
-  const slides = document.querySelectorAll(".feedback-slider .swiper-slide");
-  slides.forEach((slide) => {
-    slide.classList.remove("play-animation");
+function feedbackSliderAnimation(slider) {
+  slider.on("slideChange", function (event) {
+    var activeSlide = this.slides[this.activeIndex];
+    const slides = document.querySelectorAll(".feedback-slider .swiper-slide");
+    slides.forEach((slide) => {
+      slide.classList.remove("play-animation");
+    });
+    activeSlide.classList.add("play-animation");
+  
+    setTimeout(() => {
+      activeSlide.classList.remove("play-animation");
+    }, 1100);
   });
-  activeSlide.classList.add("play-animation");
+}
 
-  setTimeout(() => {
-    activeSlide.classList.remove("play-animation");
-  }, 800);
-});
+feedbackSliderAnimation(feedback);
 
 let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 
