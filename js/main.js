@@ -188,7 +188,7 @@ const vacancySliderOptions = {
       },
       spaceBetween: 24,
     },
-    
+
     1109: {
       slidesPerView: 3,
       grid: {
@@ -255,10 +255,8 @@ function reDrawVacancySlider() {
   /**If you need to destroy this slider */
   // vacancySlider.destroy();
   // vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
-  // let popupButtons = document.querySelectorAll(
-  //   ".vacancy-slider .buttons-wrap .button"
-  // );
 
+  let popupButtons = document.querySelectorAll(".vacancy-slider .buttons-wrap .button");
   popupButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       showModal(button);
