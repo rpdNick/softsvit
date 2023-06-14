@@ -1968,7 +1968,7 @@ body {
 
       @media screen and (max-width: $small) {
         width: 100%;
-        padding-left: 12px;
+        padding: 0 12px;
       }
     }
   }
@@ -2315,6 +2315,11 @@ body {
         background-size: contain;
         background-repeat: no-repeat;
         margin-left: 16px;
+
+        @media screen and (max-width: $small) {
+          width: 5px;
+          height: 12px;
+        }
       }
 
       &::before {
@@ -2330,6 +2335,8 @@ body {
 
         @media screen and (max-width: $small) {
           display: inline-block;
+          width: 5px;
+          height: 12px;
         }
       }
     }

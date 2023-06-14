@@ -1756,7 +1756,7 @@ body .vacancy .switch_tabs {
 @media screen and (max-width: 575px) {
   body .vacancy .switch_tabs {
     width: 100%;
-    padding-left: 12px;
+    padding: 0 12px;
   }
 }
 body .vacancy_modal .modal-content {
@@ -2062,6 +2062,12 @@ body .modal .title::after {
   background-repeat: no-repeat;
   margin-left: 16px;
 }
+@media screen and (max-width: 575px) {
+  body .modal .title::after {
+    width: 5px;
+    height: 12px;
+  }
+}
 body .modal .title::before {
   content: "";
   display: none;
@@ -2076,6 +2082,8 @@ body .modal .title::before {
 @media screen and (max-width: 575px) {
   body .modal .title::before {
     display: inline-block;
+    width: 5px;
+    height: 12px;
   }
 }
 body .modal.active {
