@@ -377,7 +377,12 @@ body .language-mode-switch .language_switch span.active:hover {
   color: #000000;
 }
 body .language-mode-switch .language_switch:hover {
-  box-shadow: 0px 0px 10px #00ffc2;
+  box-shadow: 0px 0px 8px #00ffc2;
+}
+@media screen and (max-width: 575px) {
+  body .language-mode-switch .language_switch:hover {
+    box-shadow: none;
+  }
 }
 body .language-mode-switch input {
   display: none;
@@ -429,9 +434,10 @@ body .main_menu {
   top: 242px;
   left: 100px;
   right: 100px;
+  padding-left: 8px;
   max-width: 1200px;
   height: calc(100% - 165px);
-  overflow: auto;
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: 0.1s;
@@ -598,11 +604,12 @@ body .main_menu .contacts_block .social_block {
   body .main_menu {
     left: 12px;
     right: 12px;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 724px) {
   body .main_menu {
-    top: 136px;
+    top: 110px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -628,7 +635,6 @@ body .switch_tabs .s-tab.active-cat {
 }
 body .tab_content {
   min-height: 466px;
-  padding: 28px 0 30px;
 }
 body .tab_content.active {
   display: block;
@@ -816,7 +822,7 @@ body .swiper.why_softsvit_slider .slider-control {
 body .swiper.vacancy-slider {
   width: 100%;
   height: 100%;
-  padding: 0;
+  padding: 28px 0 30px;
 }
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
