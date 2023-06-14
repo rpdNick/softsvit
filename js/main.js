@@ -172,6 +172,23 @@ window.onresize = function () {
   }
 };
 
+// Feedback slider animation on change
+
+feedback.on("slideChange", function (event) {
+  console.log("123");
+  var activeSlide = this.slides[this.activeIndex];
+  console.log('Current Centered Slide:', activeSlide);
+  const slides = document.querySelectorAll(".feedback-slider .swiper-slide");
+  slides.forEach((slide) => {
+    slide.classList.remove("play-animation");
+  });
+  activeSlide.classList.add("play-animation");
+
+  setTimeout(() => {
+    activeSlide.classList.remove("play-animation");
+  }, 800);
+});
+
 let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 
 initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
@@ -240,7 +257,9 @@ tabs.forEach((tab) => {
               </div>
             </div>`;
           });
-          const swiperWrapper = document.querySelector(".vacancy-slider .swiper-wrapper");
+          const swiperWrapper = document.querySelector(
+            ".vacancy-slider .swiper-wrapper"
+          );
           swiperWrapper.innerHTML = cardsHTML;
           reDrawVacancySlider();
         });

@@ -655,11 +655,11 @@ body .swiper.feedback-slider .swiper-slide {
   body .swiper.feedback-slider .swiper-slide {
     bottom: 0;
     opacity: 1;
+    transition: none;
   }
 }
 body .swiper.feedback-slider .swiper-slide .slide_content {
   width: 100%;
-  overflow: hidden;
 }
 body .swiper.feedback-slider .swiper-slide .slide_content .img_box {
   position: relative;
@@ -751,6 +751,18 @@ body .swiper.feedback-slider .swiper-slide:hover svg {
   top: 60px;
 }
 body .swiper.feedback-slider .swiper-slide:hover svg .slide-circle {
+  r: 123.5;
+}
+body .swiper.feedback-slider .swiper-slide.play-animation .slide-hover-arrows {
+  opacity: 1 !important;
+}
+body .swiper.feedback-slider .swiper-slide.play-animation .slide-hover-diamonds {
+  top: 0 !important;
+}
+body .swiper.feedback-slider .swiper-slide.play-animation svg {
+  top: 60px;
+}
+body .swiper.feedback-slider .swiper-slide.play-animation svg .slide-circle {
   r: 123.5;
 }
 @media screen and (max-width: 575px) {
