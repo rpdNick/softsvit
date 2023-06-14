@@ -99,6 +99,7 @@ body {
   &.modal_open,
   &.menu_open {
     overflow: hidden;
+    padding-right: 4px;
 
     .overlay {
       opacity: 1;

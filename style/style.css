@@ -89,6 +89,7 @@ body .overlay {
 }
 body.modal_open, body.menu_open {
   overflow: hidden;
+  padding-right: 4px;
 }
 body.modal_open .overlay, body.menu_open .overlay {
   opacity: 1;
