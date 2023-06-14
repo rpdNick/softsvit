@@ -733,7 +733,7 @@ body {
             .photo {
               display: block;
               margin: 0 auto;
-              height: 188px;
+              max-width: 173px;
               position: relative;
               z-index: 1;
             }
