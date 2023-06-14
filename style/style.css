@@ -95,6 +95,11 @@ body.modal_open .overlay, body.menu_open .overlay {
   opacity: 1;
   visibility: visible;
 }
+@media screen and (max-width: 768px) {
+  body.modal_open, body.menu_open {
+    padding-right: 0px;
+  }
+}
 body.modal_open header {
   display: none;
 }

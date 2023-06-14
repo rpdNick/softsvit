@@ -105,6 +105,11 @@ body {
       opacity: 1;
       visibility: visible;
     }
+
+    @media screen and (max-width: $tablet) {
+      padding-right: 0px;
+
+    }
   }
 
   &.modal_open {
