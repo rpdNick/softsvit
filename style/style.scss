@@ -873,7 +873,7 @@ body {
       }
 
       @media screen and (max-width: $small) {
-        padding-right: 12px;
+        padding: 0 12px;
       }
     }
 
@@ -883,8 +883,7 @@ body {
       }
 
       @media screen and (max-width: $small) {
-        padding-bottom: 0;
-        padding-right: 12px;
+        padding: 0 12px;
       }
 
       .slider-control {
@@ -1029,7 +1028,7 @@ body {
       }
 
       @media screen and (max-width: $small) {
-        padding: 28px 12px 30px 0px;
+        padding: 28px 12px 30px 12px;
       }
     }
 
@@ -1818,7 +1817,7 @@ body {
 
     .content-wrapper {
       @media screen and (max-width: $small) {
-        margin: 0 0 0 12px;
+        margin: 0;
       }
     }
 
@@ -1948,7 +1947,7 @@ body {
 
     .content-wrapper {
       @media screen and (max-width: $small) {
-        margin: 0 0 0 12px;
+        margin: 0;
       }
     }
   }
@@ -1958,7 +1957,7 @@ body {
 
     .content-wrapper {
       @media screen and (max-width: $small) {
-        margin: 0 0 0 12px;
+        margin: 0;
       }
     }
 
@@ -1967,6 +1966,7 @@ body {
 
       @media screen and (max-width: $small) {
         width: 100%;
+        padding-left: 12px;
       }
     }
   }

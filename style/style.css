@@ -792,7 +792,7 @@ body .swiper.feedback-slider .swiper-slide.play-animation svg .slide-circle {
 }
 @media screen and (max-width: 575px) {
   body .swiper.feedback-slider {
-    padding-right: 12px;
+    padding: 0 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -802,8 +802,7 @@ body .swiper.feedback-slider .swiper-slide.play-animation svg .slide-circle {
 }
 @media screen and (max-width: 575px) {
   body .swiper.why_softsvit_slider {
-    padding-bottom: 0;
-    padding-right: 12px;
+    padding: 0 12px;
   }
 }
 body .swiper.why_softsvit_slider .slider-control {
@@ -934,7 +933,7 @@ body .swiper.vacancy-slider .swiper-slide .slide-content .vacancy-badge {
 }
 @media screen and (max-width: 575px) {
   body .swiper.vacancy-slider {
-    padding: 28px 12px 30px 0px;
+    padding: 28px 12px 30px 12px;
   }
 }
 body .swiper .slider-control {
@@ -1620,7 +1619,7 @@ body .why_softsvit {
 }
 @media screen and (max-width: 575px) {
   body .why_softsvit .content-wrapper {
-    margin: 0 0 0 12px;
+    margin: 0;
   }
 }
 body .why_softsvit .cards_wrapper {
@@ -1737,7 +1736,7 @@ body .cool_with_us {
 }
 @media screen and (max-width: 575px) {
   body .cool_with_us .content-wrapper {
-    margin: 0 0 0 12px;
+    margin: 0;
   }
 }
 body .vacancy {
@@ -1745,7 +1744,7 @@ body .vacancy {
 }
 @media screen and (max-width: 575px) {
   body .vacancy .content-wrapper {
-    margin: 0 0 0 12px;
+    margin: 0;
   }
 }
 body .vacancy .switch_tabs {
@@ -1755,6 +1754,7 @@ body .vacancy .switch_tabs {
 @media screen and (max-width: 575px) {
   body .vacancy .switch_tabs {
     width: 100%;
+    padding-left: 12px;
   }
 }
 body .vacancy_modal .modal-content {
