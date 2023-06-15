@@ -1,3 +1,19 @@
+let scrollStartValue = 0;
+function scrollDirection() {
+
+  scrollCurrentValue = window.pageYOffset;
+  let directionUp;
+
+  if (scrollStartValue - scrollCurrentValue < 0) {
+    directionUp = false;
+  } else if (scrollStartValue - scrollCurrentValue > 0) {
+    directionUp = true;
+  }
+
+  scrollStartValue = scrollCurrentValue;
+  return directionUp;
+}
+
 window.addEventListener("scroll", handleScroll);
 function isElementOnScreen(elementId) {
   var element = document.getElementById(elementId);
@@ -37,29 +53,37 @@ let rotation = document
     {
       fill: "forwards",
       iterations: Infinity,
-      duration: 5000,
+      duration: 4000,
     }
   );
 rotation.pause();
 let onTop;
 function handleScroll() {
+  let scrollUp = scrollDirection();
   let start = document
     .querySelector("[data-animation]")
     .getAttribute("data-animation");
   let onScreen = isElementOnScreen("trigger");
   let earthOnScreen = isElementOnScreen("sphereDesktop");
-  if (!onScreen && !earthOnScreen && onTop && start == "false") {
+  let bottomTriggerOnScreen = isElementOnScreen("bottom-trigger");
+  // console.log(bottomTriggerOnScreen);
+
+  if (!onScreen && !earthOnScreen && onTop && start == "false" && !scrollUp) {
     rotation.play();
     earth.play();
     onTop = false;
     document
       .querySelector("[data-animation]")
       .setAttribute("data-animation", true);
-  } else if (!onScreen && !earthOnScreen && onTop) {
+  } else if (!onScreen && !earthOnScreen && onTop && !scrollUp) {
     rotation.play();
     earth.reverse();
     onTop = false;
-  } else if (onScreen && !earthOnScreen && !onTop) {
+  } else if (onScreen && !earthOnScreen && !onTop && !scrollUp) {
+    rotation.play();
+    earth.reverse();
+    onTop = true;
+  } else if (!onScreen && !earthOnScreen && !onTop && bottomTriggerOnScreen && scrollUp) {
     rotation.play();
     earth.reverse();
     onTop = true;
@@ -71,6 +95,10 @@ window.onload = function () {
     .getElementById("trigger")
     .setAttribute("data-ontop", isElementOnScreen("trigger"));
   onTop = document.getElementById("trigger").getAttribute("data-ontop");
+
+  document
+    .getElementById("bottom-trigger")
+    .setAttribute("data-onbottom", isElementOnScreen("trigger"));
 };
 earth.addEventListener("finish", function () {
   rotation.pause();
