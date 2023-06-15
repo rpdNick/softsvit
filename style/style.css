@@ -84,7 +84,7 @@ body .overlay {
           backdrop-filter: blur(20px);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: 0.1s;
   z-index: 2;
 }
 body.modal_open, body.menu_open {
@@ -432,7 +432,7 @@ body section .section_title.arrowed::after {
 body .main_menu {
   position: fixed;
   top: 242px;
-  left: 100px;
+  left: 92px;
   right: 100px;
   padding-left: 8px;
   max-width: 1200px;
@@ -590,19 +590,19 @@ body .main_menu .contacts_block .social_block {
 }
 @media screen and (max-width: 1200px) {
   body .main_menu {
-    left: 60px;
+    left: 58px;
     right: 60px;
   }
 }
 @media screen and (max-width: 768px) {
   body .main_menu {
-    left: 24px;
+    left: 16px;
     right: 24px;
   }
 }
 @media screen and (max-width: 575px) {
   body .main_menu {
-    left: 12px;
+    left: 4px;
     right: 12px;
     padding-left: 0;
   }
