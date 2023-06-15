@@ -602,7 +602,7 @@ body .main_menu .contacts_block .social_block {
 }
 @media screen and (max-width: 575px) {
   body .main_menu {
-    left: 4px;
+    left: 12px;
     right: 12px;
     padding-left: 0;
   }
