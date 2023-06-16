@@ -270,7 +270,6 @@ const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
     let loader = document.querySelector(".slider-loader");
-    loader.style.display = "block";
     tabs.forEach((item) => {
       item.classList.remove("active-cat");
     });
@@ -280,6 +279,10 @@ tabs.forEach((tab) => {
 
     // http query
     if (tabId) {
+      const swiperWrapper = document.querySelector(
+        ".vacancy-slider .swiper-wrapper"
+      );
+      swiperWrapper.classList.add("loading");
       const sliderCard = document
         .querySelector(".vacancy-slider .swiper-slide")
         .cloneNode(true);
@@ -314,15 +317,12 @@ tabs.forEach((tab) => {
               </div>
             </div>`;
           });
-          const swiperWrapper = document.querySelector(
-            ".vacancy-slider .swiper-wrapper"
-          );
           swiperWrapper.innerHTML = cardsHTML;
           reDrawVacancySlider();
           setTimeout(()=> {
             activeTab.classList.add("active-cat");
-            loader.style.display = "none";
-          }, 500);
+            swiperWrapper.classList.remove("loading");
+          }, 1000);
         });
 
       // http query

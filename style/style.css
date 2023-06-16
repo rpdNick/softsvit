@@ -628,6 +628,7 @@ body .switch_tabs .s-tab {
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
+  border: 1px solid transparent;
   padding: 4px 12px;
   cursor: pointer;
   letter-spacing: 0.01em;
@@ -679,6 +680,7 @@ body .swiper.feedback-slider .swiper-slide {
 }
 body .swiper.feedback-slider .swiper-slide .slide_content {
   width: 100%;
+  overflow: hidden;
 }
 body .swiper.feedback-slider .swiper-slide .slide_content .img_box {
   position: relative;
@@ -687,7 +689,8 @@ body .swiper.feedback-slider .swiper-slide .slide_content .img_box {
 body .swiper.feedback-slider .swiper-slide .slide_content .img_box .photo {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 195px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -832,6 +835,12 @@ body .swiper.vacancy-slider {
   height: 100%;
   padding: 28px 0 30px;
 }
+body .swiper.vacancy-slider .swiper-wrapper {
+  min-height: 408px;
+}
+body .swiper.vacancy-slider .swiper-wrapper.loading .swiper-slide {
+  scale: 0;
+}
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
   text-align: center;
@@ -841,6 +850,7 @@ body .swiper.vacancy-slider .swiper-slide {
   border-radius: 16px;
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
+  transition: 0.3s;
 }
 body .swiper.vacancy-slider .swiper-slide::before {
   content: "";
@@ -1587,6 +1597,13 @@ body .main_screen_content .main_screen_footer .language-mode-switch {
 body .about_us {
   margin-top: 300px;
   padding-bottom: 196px;
+  position: relative;
+}
+body .about_us #mob-end-animation-scroll {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  z-index: -1;
 }
 body .about_us .about_us_categories {
   display: grid;

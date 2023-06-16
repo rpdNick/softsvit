@@ -675,6 +675,7 @@ body {
       font-size: 14px;
       color: #ffffff;
       text-transform: uppercase;
+      border: 1px solid transparent;
       padding: 4px 12px;
       cursor: pointer;
       letter-spacing: 0.01em;
@@ -733,6 +734,7 @@ body {
 
         .slide_content {
           width: 100%;
+          overflow: hidden;
 
           .img_box {
             position: relative;
@@ -741,7 +743,8 @@ body {
             .photo {
               display: block;
               margin: 0 auto;
-              max-width: 100%;
+              max-width: 195px;
+              width: 100%;
               position: relative;
               z-index: 1;
             }
@@ -913,6 +916,16 @@ body {
       height: 100%;
       padding: 28px 0 30px;
 
+      .swiper-wrapper {
+        min-height: 408px;
+
+        &.loading {
+          .swiper-slide {
+            scale: 0;
+          }
+        }
+      }
+
       .swiper-slide {
         position: relative;
         text-align: center;
@@ -921,6 +934,7 @@ body {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         backdrop-filter: blur(50px);
+        transition: 0.3s;
 
         &::before {
           content: "";
@@ -1782,6 +1796,14 @@ body {
   .about_us {
     margin-top: 300px;
     padding-bottom: 196px;
+    position: relative;
+
+    #mob-end-animation-scroll {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-40%);
+      z-index: -1;
+    }
 
     .about_us_categories {
       display: grid;
