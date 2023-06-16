@@ -916,10 +916,9 @@ body {
       padding: 28px 0 30px;
 
       .swiper-wrapper {
-
         &.loading {
           .swiper-slide {
-            opacity: 0.5;
+            transform: rotateY(360deg);
           }
         }
       }
@@ -932,6 +931,9 @@ body {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         backdrop-filter: blur(50px);
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
 
         &::before {
           content: "";
@@ -946,7 +948,7 @@ body {
           background-size: 100% 100%;
           background-repeat: no-repeat;
           opacity: 0;
-          transition: 0.3s;
+          transition: 0.6s;
           z-index: -1;
         }
 
