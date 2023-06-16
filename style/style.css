@@ -834,9 +834,6 @@ body .swiper.vacancy-slider {
   height: 100%;
   padding: 28px 0 30px;
 }
-body .swiper.vacancy-slider .swiper-wrapper.loading .swiper-slide {
-  transform: rotateY(360deg);
-}
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
   text-align: center;
@@ -846,8 +843,6 @@ body .swiper.vacancy-slider .swiper-slide {
   border-radius: 16px;
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
-  transition: transform 0.8s;
-  transform: rotateY(0deg);
 }
 body .swiper.vacancy-slider .swiper-slide::before {
   content: "";

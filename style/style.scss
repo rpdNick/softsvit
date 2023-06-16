@@ -917,9 +917,7 @@ body {
 
       .swiper-wrapper {
         &.loading {
-          .swiper-slide {
-            transform: rotateY(360deg);
-          }
+          
         }
       }
 
@@ -931,9 +929,7 @@ body {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         backdrop-filter: blur(50px);
-        transition: transform 0.8s;
-        transform: rotateY(0deg);
-
+        
         &::before {
           content: "";
           position: absolute;
