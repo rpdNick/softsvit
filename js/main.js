@@ -251,6 +251,7 @@ initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 function reDrawVacancySlider() {
   vacancySlider.update();
   vacancySlider.updateSlides();
+  vacancySlider.updateSize();
 
   /**If you need to destroy this slider */
   // vacancySlider.destroy();
@@ -318,11 +319,11 @@ tabs.forEach((tab) => {
             </div>`;
           });
           swiperWrapper.innerHTML = cardsHTML;
-          reDrawVacancySlider();
           setTimeout(()=> {
             activeTab.classList.add("active-cat");
             swiperWrapper.classList.remove("loading");
           }, 1000);
+          reDrawVacancySlider();
         });
 
       // http query
