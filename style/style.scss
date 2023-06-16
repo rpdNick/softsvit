@@ -932,7 +932,6 @@ body {
         border-radius: 16px;
         backdrop-filter: blur(50px);
         transition: transform 0.8s;
-        transform-style: preserve-3d;
         transform: rotateY(0deg);
 
         &::before {

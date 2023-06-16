@@ -847,7 +847,6 @@ body .swiper.vacancy-slider .swiper-slide {
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   transition: transform 0.8s;
-  transform-style: preserve-3d;
   transform: rotateY(0deg);
 }
 body .swiper.vacancy-slider .swiper-slide::before {
