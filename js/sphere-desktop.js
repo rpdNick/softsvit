@@ -75,18 +75,17 @@ function handleScroll() {
     document
       .querySelector("[data-animation]")
       .setAttribute("data-animation", true);
+      console.log("1")
   } else if (!onScreen && !earthOnScreen && onTop && !scrollUp) {
     rotation.play();
     earth.reverse();
     onTop = false;
-  } else if (onScreen && !earthOnScreen && !onTop && !scrollUp) {
-    rotation.play();
-    earth.reverse();
-    onTop = true;
+    console.log("2")
   } else if (!onScreen && !earthOnScreen && !onTop && bottomTriggerOnScreen && scrollUp) {
     rotation.play();
     earth.reverse();
     onTop = true;
+    console.log("3")
   }
 }
 
