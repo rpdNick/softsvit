@@ -1593,8 +1593,8 @@ body .about_us {
 }
 body .about_us #mob-end-animation-scroll {
   position: absolute;
-  top: 40%;
-  transform: translateY(-40%);
+  top: 36%;
+  transform: translateY(-36%);
   z-index: -1;
 }
 body .about_us .about_us_categories {
