@@ -257,7 +257,6 @@
     bottom: 0;
     top: 28px;
     background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(20px);
     z-index: 1;
     display: none;
   }
