@@ -269,12 +269,13 @@ function reDrawVacancySlider() {
 const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
+    let loader = document.querySelector(".slider-loader");
+    loader.style.display = "block";
     tabs.forEach((item) => {
       item.classList.remove("active-cat");
     });
-    let activeTab = e.target;
-    activeTab.classList.add("active-cat");
 
+    let activeTab = e.target;
     let tabId = e.target.getAttribute("data-category");
 
     // http query
@@ -318,13 +319,16 @@ tabs.forEach((tab) => {
           );
           swiperWrapper.innerHTML = cardsHTML;
           reDrawVacancySlider();
+          setTimeout(()=> {
+            activeTab.classList.add("active-cat");
+            loader.style.display = "none";
+          }, 500);
         });
 
       // http query
     }
   });
 });
-
 //------- Modal logic
 
 const pageBody = document.querySelector("body");

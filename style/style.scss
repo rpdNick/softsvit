@@ -690,6 +690,8 @@ body {
 
   .tab_content {
     min-height: 466px;
+    position: relative;
+    overflow: hidden;
 
     &.active {
       display: block;

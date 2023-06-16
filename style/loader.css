@@ -247,3 +247,30 @@
       display: none;
     }
   }
+
+  /* Slider loader */
+
+  .slider-loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 28px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    z-index: 1;
+    display: none;
+  }
+
+  .slider-loader .preloader_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .slider-loader .content-wrapper, .slider-loader .preloader {
+    margin: 0;
+  }
