@@ -270,7 +270,7 @@ function reDrawVacancySlider() {
 const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
-    let contentWrap = document.querySelector('.vacancy .tab_content');
+    // let contentWrap = document.querySelector('.vacancy .tab_content');
     // let contentHeight = contentWrap.offsetHeight;
     // console.log(contentHeight)
     tabs.forEach((item) => {
@@ -286,7 +286,7 @@ tabs.forEach((tab) => {
         ".vacancy-slider .swiper-wrapper"
       );
       swiperWrapper.classList.add("loading");
-      contentWrap.style.maxHeight = contentHeight + "px";
+      // contentWrap.style.maxHeight = contentHeight + "px";
       const sliderCard = document
         .querySelector(".vacancy-slider .swiper-slide")
         .cloneNode(true);
