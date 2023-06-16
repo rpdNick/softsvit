@@ -690,7 +690,6 @@ body .swiper.feedback-slider .swiper-slide .slide_content .img_box .photo {
   display: block;
   margin: 0 auto;
   max-width: 195px;
-  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -834,9 +833,6 @@ body .swiper.vacancy-slider {
   width: 100%;
   height: 100%;
   padding: 28px 0 30px;
-}
-body .swiper.vacancy-slider .swiper-wrapper {
-  min-height: 408px;
 }
 body .swiper.vacancy-slider .swiper-wrapper.loading .swiper-slide {
   scale: 0;

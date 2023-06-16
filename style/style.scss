@@ -744,7 +744,6 @@ body {
               display: block;
               margin: 0 auto;
               max-width: 195px;
-              width: 100%;
               position: relative;
               z-index: 1;
             }
@@ -917,7 +916,6 @@ body {
       padding: 28px 0 30px;
 
       .swiper-wrapper {
-        min-height: 408px;
 
         &.loading {
           .swiper-slide {
