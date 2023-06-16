@@ -37,7 +37,7 @@ let earth = document.getElementById("sphereDesktop").animate(
   ],
   {
     fill: "forwards",
-    duration: 2000,
+    duration: 1500,
     easing: "cubic-bezier(0.9,0.9,0.5,0.5)",
   }
 );
@@ -66,7 +66,6 @@ function handleScroll() {
   let onScreen = isElementOnScreen("trigger");
   let earthOnScreen = isElementOnScreen("sphereDesktop");
   let bottomTriggerOnScreen = isElementOnScreen("bottom-trigger");
-  // console.log(bottomTriggerOnScreen);
 
   if (!onScreen && !earthOnScreen && onTop && start == "false" && !scrollUp) {
     rotation.play();
@@ -75,17 +74,14 @@ function handleScroll() {
     document
       .querySelector("[data-animation]")
       .setAttribute("data-animation", true);
-      console.log("1")
   } else if (!onScreen && !earthOnScreen && onTop && !scrollUp) {
     rotation.play();
     earth.reverse();
     onTop = false;
-    console.log("2")
   } else if (!onScreen && !earthOnScreen && !onTop && bottomTriggerOnScreen && scrollUp) {
     rotation.play();
     earth.reverse();
     onTop = true;
-    console.log("3")
   }
 }
 
