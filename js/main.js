@@ -271,7 +271,7 @@ const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
     let contentWrap = document.querySelector('.vacancy .tab_content');
-    let contentHeight = contentWrap.offsetHeight;
+    // let contentHeight = contentWrap.offsetHeight;
     // console.log(contentHeight)
     tabs.forEach((item) => {
       item.classList.remove("active-cat");
@@ -321,7 +321,7 @@ tabs.forEach((tab) => {
               </div>
             </div>`;
           });
-          
+
           swiperWrapper.innerHTML = cardsHTML;
           setTimeout(()=> {
             activeTab.classList.add("active-cat");
