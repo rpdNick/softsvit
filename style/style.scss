@@ -691,7 +691,6 @@ body {
 
   .tab_content {
     min-height: 466px;
-    max-height: 466px;
     position: relative;
     overflow: hidden;
 
@@ -920,7 +919,7 @@ body {
 
         &.loading {
           .swiper-slide {
-            scale: 0;
+            opacity: 0.5;
           }
         }
       }
@@ -933,7 +932,6 @@ body {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 16px;
         backdrop-filter: blur(50px);
-        transition: 0.3s;
 
         &::before {
           content: "";

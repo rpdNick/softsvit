@@ -641,7 +641,6 @@ body .switch_tabs .s-tab.active-cat {
 }
 body .tab_content {
   min-height: 466px;
-  max-height: 466px;
   position: relative;
   overflow: hidden;
 }
@@ -836,7 +835,7 @@ body .swiper.vacancy-slider {
   padding: 28px 0 30px;
 }
 body .swiper.vacancy-slider .swiper-wrapper.loading .swiper-slide {
-  scale: 0;
+  opacity: 0.5;
 }
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
@@ -847,7 +846,6 @@ body .swiper.vacancy-slider .swiper-slide {
   border-radius: 16px;
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
-  transition: 0.3s;
 }
 body .swiper.vacancy-slider .swiper-slide::before {
   content: "";

@@ -270,7 +270,9 @@ function reDrawVacancySlider() {
 const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
-    let loader = document.querySelector(".slider-loader");
+    let contentWrap = document.querySelector('.vacancy .tab_content');
+    let contentHeight = contentWrap.offsetHeight;
+    console.log(contentHeight)
     tabs.forEach((item) => {
       item.classList.remove("active-cat");
     });
@@ -284,6 +286,7 @@ tabs.forEach((tab) => {
         ".vacancy-slider .swiper-wrapper"
       );
       swiperWrapper.classList.add("loading");
+      contentWrap.style.maxHeight = contentHeight + "px";
       const sliderCard = document
         .querySelector(".vacancy-slider .swiper-slide")
         .cloneNode(true);
@@ -324,6 +327,7 @@ tabs.forEach((tab) => {
             swiperWrapper.classList.remove("loading");
           }, 1000);
           reDrawVacancySlider();
+          contentWrap.style.maxHeight = "auto";
         });
 
       // http query
