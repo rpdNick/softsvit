@@ -636,7 +636,9 @@ body {
     }
 
     @media screen and (max-height: 750px) {
-      top: 160px;
+      top: 97px;
+      padding-top: 40px;
+      height: calc(100% - 120px);
     }
 
     @media screen and (max-width: $x-large) {

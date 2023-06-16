@@ -586,7 +586,9 @@ body .main_menu .contacts_block .social_block {
 }
 @media screen and (max-height: 750px) {
   body .main_menu {
-    top: 160px;
+    top: 97px;
+    padding-top: 40px;
+    height: calc(100% - 120px);
   }
 }
 @media screen and (max-width: 1200px) {
