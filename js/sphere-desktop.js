@@ -37,7 +37,7 @@ let earth = document.getElementById("sphereDesktop").animate(
   ],
   {
     fill: "forwards",
-    duration: 1500,
+    duration: 1600,
     easing: "cubic-bezier(0.9,0.9,0.5,0.5)",
   }
 );
