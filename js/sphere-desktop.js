@@ -85,6 +85,8 @@ function handleScroll() {
     rotation.play();
     earth.play();
     onTop = false;
+    console.log("1")
+    console.log(rotation.play())
     document
       .querySelector("[data-animation]")
       .setAttribute("data-animation", true);
@@ -109,6 +111,7 @@ window.onload = function () {
     .getElementById("bottom-trigger")
     .setAttribute("data-onbottom", isElementOnScreen("trigger"));
 };
+
 earth.addEventListener("finish", function () {
   rotation.pause();
 });
