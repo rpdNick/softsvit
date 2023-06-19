@@ -167,6 +167,7 @@ const vacancySliderOptions = {
   breakpoints: {
     320: {
       slidesPerView: 1.1,
+      updateOnWindowResize: true,
       grid: {
         rows: 1,
       },
@@ -175,6 +176,7 @@ const vacancySliderOptions = {
 
     617: {
       slidesPerView: 1.8,
+      updateOnWindowResize: true,
       grid: {
         rows: 1,
       },
@@ -183,6 +185,7 @@ const vacancySliderOptions = {
 
     768: {
       slidesPerView: 2,
+      updateOnWindowResize: true,
       grid: {
         rows: 1,
       },
