@@ -1,9 +1,9 @@
 let scrollStartValue = 0;
-let directionUp;
+
 function scrollDirection() {
 
   scrollCurrentValue = window.scrollY;
-
+  let directionUp;
 
   if (scrollStartValue - scrollCurrentValue < 0) {
     directionUp = false;
