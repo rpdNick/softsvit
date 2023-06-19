@@ -30,6 +30,7 @@ const feedbackSliderOptions = {
       effect: "slide",
       slidesPerView: 1.06,
       spaceBetween: 12,
+      speed: 200,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
@@ -40,6 +41,7 @@ const feedbackSliderOptions = {
       effect: "slide",
       slidesPerView: 1.3,
       spaceBetween: 12,
+      speed: 200,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
@@ -50,6 +52,7 @@ const feedbackSliderOptions = {
       effect: "slide",
       slidesPerView: 1.5,
       spaceBetween: 24,
+      speed: 200,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
@@ -60,6 +63,7 @@ const feedbackSliderOptions = {
       effect: "slide",
       slidesPerView: 1.8,
       spaceBetween: 24,
+      speed: 200,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
@@ -70,6 +74,7 @@ const feedbackSliderOptions = {
       effect: "slide",
       slidesPerView: 2,
       spaceBetween: 24,
+      speed: 200,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
@@ -80,6 +85,7 @@ const feedbackSliderOptions = {
       effect: "slide",
       slidesPerView: 2,
       spaceBetween: 40,
+      speed: 200,
       centeredSlides: false,
       slideShadows: false,
       loop: false,
@@ -252,9 +258,10 @@ let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 initSlider(".why_softsvit_slider", whySoftsvitSliderOptions);
 
 function reDrawVacancySlider() {
-  vacancySlider.update();
   vacancySlider.updateSlides();
+  vacancySlider.updateSlidesClasses();
   vacancySlider.updateSize();
+  vacancySlider.update();
 
   /**If you need to destroy this slider */
   // vacancySlider.destroy();
