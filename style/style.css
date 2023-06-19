@@ -281,7 +281,7 @@ body .button {
   cursor: pointer;
   outline: none;
   border: none;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 body .button.transparrent {
   background: transparent;
@@ -389,7 +389,7 @@ body .language-mode-switch input {
   display: none;
   opacity: 0;
 }
-body section .section_title {
+body .section_title {
   font-weight: 700;
   font-size: 48px;
   line-height: 64px;
@@ -397,13 +397,13 @@ body section .section_title {
   text-transform: uppercase;
   color: #ffffff;
 }
-body section .section_title.arrowed {
+body .section_title.arrowed {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body section .section_title.arrowed::before {
+body .section_title.arrowed::before {
   content: "";
   display: inline-block;
   width: 10px;
@@ -414,7 +414,7 @@ body section .section_title.arrowed::before {
   background-repeat: no-repeat;
   margin-right: 16px;
 }
-body section .section_title.arrowed::after {
+body .section_title.arrowed::after {
   content: "";
   display: inline-block;
   width: 10px;
@@ -426,7 +426,7 @@ body section .section_title.arrowed::after {
   margin-left: 16px;
 }
 @media screen and (max-width: 768px) {
-  body section .section_title {
+  body .section_title {
     font-size: 32px;
   }
 }
@@ -469,6 +469,7 @@ body .main_menu .menu_list .menu_list_item {
   font-weight: 700;
   font-size: 48px;
   line-height: 64px;
+  padding-right: 4px;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 24px;
@@ -480,7 +481,7 @@ body .main_menu .menu_list .menu_list_item::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: -26px;
+  right: -22px;
   transform: translateY(-50%);
   width: 10px;
   height: 24px;
@@ -1849,6 +1850,36 @@ body .vacancy_modal::-webkit-scrollbar {
 body .vacancy_modal::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: #00ffc2;
+}
+body .success_modal .popup .content_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+body .success_modal .popup .content_wrap .status-icon {
+  width: 80px;
+  height: 80px;
+}
+body .success_modal .popup .content_wrap .status-icon > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .success_modal .popup .content_wrap .status_txt {
+  margin-top: 24px;
+}
+body .success_modal .popup .content_wrap .popup_txt_wrap {
+  margin-top: 24px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  background: #000000;
+  border-radius: 12px;
+  padding: 16px;
 }
 body .contacts {
   margin-top: 47px;
