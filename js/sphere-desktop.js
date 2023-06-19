@@ -99,6 +99,11 @@ function handleScroll() {
     rotation.play();
     earth.reverse();
     onTop = true;
+  } else if (!onTop && window.scrollY == 0) {
+    console.log("4")
+    rotation.play();
+    earth.reverse();
+    onTop = true;
   }
 }
 
