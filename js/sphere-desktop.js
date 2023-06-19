@@ -1,8 +1,9 @@
 let scrollStartValue = 0;
+let directionUp;
 function scrollDirection() {
 
-  scrollCurrentValue = window.pageYOffset;
-  let directionUp;
+  scrollCurrentValue = window.scrollY;
+
 
   if (scrollStartValue - scrollCurrentValue < 0) {
     directionUp = false;
@@ -11,8 +12,19 @@ function scrollDirection() {
   }
 
   scrollStartValue = scrollCurrentValue;
+  console.log(directionUp)
   return directionUp;
 }
+
+// function throttle(fn, wait) {
+//   let time = Date.now();
+//   return function() {
+//     if ((time + wait - Date.now()) < 0) {
+//       fn();
+//       time = Date.now();
+//     }
+//   }
+// }
 
 window.addEventListener("scroll", handleScroll);
 function isElementOnScreen(elementId) {
@@ -59,6 +71,8 @@ let rotation = document
 rotation.pause();
 let onTop;
 function handleScroll() {
+  
+  // throttle(scrollDirection, 1000);
   let scrollUp = scrollDirection();
   let start = document
     .querySelector("[data-animation]")
