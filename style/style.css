@@ -1877,7 +1877,7 @@ body .success_modal .popup .content_wrap .popup_txt_wrap {
   font-size: 14px;
   line-height: 28px;
   font-weight: 400;
-  background: #000000;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 16px;
 }
