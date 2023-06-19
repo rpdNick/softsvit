@@ -1270,6 +1270,7 @@ body {
       .form_control:not(:placeholder-shown),
       .form_control:-webkit-autofill {
         border-color: $color-main-green;
+        -webkit-background-clip: text;
       }
 
       .form_control:focus + label,
@@ -1278,6 +1279,10 @@ body {
         font-size: 10px;
         transform: translateY(-20px);
         opacity: 1;
+      }
+
+      input[data-autocompleted] {
+        background-color: transparent !important;
       }
 
       &.error {

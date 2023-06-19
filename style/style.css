@@ -1130,6 +1130,7 @@ body .form_container .form_item .form_control:focus,
 body .form_container .form_item .form_control:not(:placeholder-shown),
 body .form_container .form_item .form_control:-webkit-autofill {
   border-color: #00ffb2;
+  -webkit-background-clip: text;
 }
 body .form_container .form_item .form_control:focus + label,
 body .form_container .form_item .form_control:not(:placeholder-shown) + label,
@@ -1137,6 +1138,9 @@ body .form_container .form_item .form_control:-webkit-autofill + label {
   font-size: 10px;
   transform: translateY(-20px);
   opacity: 1;
+}
+body .form_container .form_item input[data-autocompleted] {
+  background-color: transparent !important;
 }
 body .form_container .form_item.error .form_control,
 body .form_container .form_item.error .file_items {
