@@ -328,7 +328,7 @@ tabs.forEach((tab) => {
             swiperWrapper.classList.remove("loading");
           }, 1000);
           reDrawVacancySlider();
-          contentWrap.style.maxHeight = "auto";
+          // contentWrap.style.maxHeight = "auto";
         });
 
       // http query
