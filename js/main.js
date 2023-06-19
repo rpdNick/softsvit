@@ -307,12 +307,13 @@ tabs.forEach((tab) => {
       })
         .then((resp) => resp.text())
         .then((dataText) => {
-          const data = JSON.parse(dataText);
-          let cardsHTML = "";
+          setTimeout(() => {
+            const data = JSON.parse(dataText);
+            let cardsHTML = "";
 
-          // slider content
-          data.forEach((cardItem) => {
-            cardsHTML += `<div class="swiper-slide">
+            // slider content
+            data.forEach((cardItem) => {
+              cardsHTML += `<div class="swiper-slide">
                 <div class="slide-content">
                 <div class="info-wrap">
                   <div class="info">
@@ -329,19 +330,19 @@ tabs.forEach((tab) => {
                 </div>
               </div>
             </div>`;
-          });
+            });
 
-          swiperWrapper.innerHTML = cardsHTML;
-          setTimeout(() => {
+            swiperWrapper.innerHTML = cardsHTML;
+
             tabs.forEach((item) => {
               item.classList.remove("active-cat");
             });
             activeTab.classList.add("active-cat");
             e.preventDefault;
             swiperWrapper.classList.remove("loading");
+            reDrawVacancySlider();
+            // contentWrap.style.maxHeight = "auto";
           }, 1000);
-          reDrawVacancySlider();
-          // contentWrap.style.maxHeight = "auto";
         });
 
       // http query
