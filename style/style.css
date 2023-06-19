@@ -661,7 +661,6 @@ body .swiper.feedback-slider {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  max-width: 1200px;
 }
 body .swiper.feedback-slider .swiper-slide {
   width: 384px;
