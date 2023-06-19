@@ -1881,6 +1881,11 @@ body .success_modal .popup .content_wrap .popup_txt_wrap {
   border-radius: 12px;
   padding: 16px;
 }
+@media screen and (max-width: 768px) {
+  body .success_modal .popup .content_wrap {
+    padding-top: 40px;
+  }
+}
 body .contacts {
   margin-top: 47px;
   padding-bottom: 47px;
