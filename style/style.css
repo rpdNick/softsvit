@@ -660,13 +660,15 @@ body .swiper-slide-shadow-right {
 body .swiper.feedback-slider {
   width: 100%;
   padding: 50px 0;
+  max-width: 1200px;
 }
 body .swiper.feedback-slider .swiper-slide {
+  width: 384px;
   height: auto;
   opacity: 0;
   bottom: 20px;
   transition: 0.3s;
-  max-width: 384px;
+  min-width: 300px;
 }
 @media screen and (max-width: 992px) {
   body .swiper.feedback-slider .swiper-slide {
