@@ -834,10 +834,15 @@ body .swiper.vacancy-slider {
   height: 100%;
   padding: 28px 0 30px;
 }
+body .swiper.vacancy-slider .swiper-wrapper.loading .swiper-slide .slide-content {
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
   text-align: center;
   font-size: 18px;
+  max-width: 384px;
   height: calc((100% - 24px) / 2) !important;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
