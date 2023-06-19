@@ -233,14 +233,14 @@ function feedbackSliderAnimation(slider) {
       slide.classList.remove("play-animation");
     });
     activeSlide.classList.add("play-animation");
-  
+
     setTimeout(() => {
       activeSlide.classList.remove("play-animation");
     }, 1100);
   });
 }
 
-if(window.innerWidth >= 992) {
+if (window.innerWidth >= 992) {
   feedbackSliderAnimation(feedback);
 }
 
@@ -257,7 +257,9 @@ function reDrawVacancySlider() {
   // vacancySlider.destroy();
   // vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 
-  let popupButtons = document.querySelectorAll(".vacancy-slider .buttons-wrap .button");
+  let popupButtons = document.querySelectorAll(
+    ".vacancy-slider .buttons-wrap .button"
+  );
   popupButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       showModal(button);
@@ -273,9 +275,6 @@ tabs.forEach((tab) => {
     // let contentWrap = document.querySelector('.vacancy .tab_content');
     // let contentHeight = contentWrap.offsetHeight;
     // console.log(contentHeight)
-    tabs.forEach((item) => {
-      item.classList.remove("active-cat");
-    });
 
     let activeTab = e.target;
     let tabId = e.target.getAttribute("data-category");
@@ -323,8 +322,12 @@ tabs.forEach((tab) => {
           });
 
           swiperWrapper.innerHTML = cardsHTML;
-          setTimeout(()=> {
+          setTimeout(() => {
+            tabs.forEach((item) => {
+              item.classList.remove("active-cat");
+            });
             activeTab.classList.add("active-cat");
+            e.preventDefault;
             swiperWrapper.classList.remove("loading");
           }, 1000);
           reDrawVacancySlider();
