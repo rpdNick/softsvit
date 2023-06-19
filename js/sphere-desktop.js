@@ -82,19 +82,20 @@ function handleScroll() {
   let bottomTriggerOnScreen = isElementOnScreen("bottom-trigger");
 
   if (!onScreen && !earthOnScreen && onTop && start == "false" && !scrollUp) {
+    console.log("1")
     rotation.play();
     earth.play();
     onTop = false;
-    console.log("1")
-    console.log(rotation.play())
     document
       .querySelector("[data-animation]")
       .setAttribute("data-animation", true);
   } else if (!onScreen && !earthOnScreen && onTop && !scrollUp) {
+    console.log("2")
     rotation.play();
     earth.reverse();
     onTop = false;
   } else if (!onScreen && !earthOnScreen && !onTop && bottomTriggerOnScreen && scrollUp) {
+    console.log("3")
     rotation.play();
     earth.reverse();
     onTop = true;
