@@ -26,7 +26,7 @@ function scrollDirection() {
 //   }
 // }
 
-window.addEventListener("scroll", animete);
+window.addEventListener("scroll", animeteEarth);
 function isElementOnScreen(elementId) {
   var element = document.getElementById(elementId);
   if (!element) {
@@ -109,9 +109,9 @@ function handleScroll() {
   }
 }
 
-function animete() {
-  handleScroll();
-  requestAnimationFrame(animate);
+function animeteEarth() {
+  // handleScroll();
+  requestAnimationFrame(handleScroll);
 }
 
 window.onload = function () {
@@ -123,6 +123,7 @@ window.onload = function () {
   document
     .getElementById("bottom-trigger")
     .setAttribute("data-onbottom", isElementOnScreen("trigger"));
+    animeteEarth();
 };
 
 earth.addEventListener("finish", function () {
