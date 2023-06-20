@@ -207,7 +207,7 @@ body .ellipse.main_screen_ellipse-right {
 }
 @media screen and (min-width: 2000px) {
   body .ellipse.main_screen_ellipse-right {
-    right: 270px;
+    right: 288.5px;
   }
 }
 @media screen and (max-width: 1400px) {

@@ -223,7 +223,7 @@ body {
       filter: blur(130px);
 
       @media screen and (min-width: 2000px) {
-        right: calc(0px + 270px);
+        right: calc(577px / 2);
       }
 
       @media screen and (max-width: $xx-large) {
