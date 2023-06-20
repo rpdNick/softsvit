@@ -749,7 +749,7 @@ body .swiper.feedback-slider .swiper-slide .slide_content .feedback_block .feedb
   color: rgba(255, 255, 255, 0.6);
 }
 body .swiper.feedback-slider .swiper-slide.swiper-slide-prev .slide_content, body .swiper.feedback-slider .swiper-slide.swiper-slide-next .slide_content {
-  opacity: 0.3 !important;
+  opacity: 0.3;
 }
 @media screen and (max-width: 992px) {
   body .swiper.feedback-slider .swiper-slide.swiper-slide-prev .slide_content, body .swiper.feedback-slider .swiper-slide.swiper-slide-next .slide_content {

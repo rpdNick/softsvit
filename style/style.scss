@@ -814,7 +814,7 @@ body {
         &.swiper-slide-prev,
         &.swiper-slide-next {
           .slide_content {
-            opacity: 0.3 !important;
+            opacity: 0.3;
 
             @media screen and (max-width: 992px) {
               opacity: 1;
