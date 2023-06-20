@@ -44,8 +44,8 @@ function isElementOnScreen(elementId) {
 let earth = document.getElementById("sphereDesktop").animate(
   [
     { transform: "translate(0) scale(1) rotate(0)", opacity: 1 },
-    { transform: "translate(170px,600px) scale(1.4) rotate(180deg)", opacity: 0.7 },
-    { transform: "translate(-800px,800px) scale(0.75) rotate(360deg)", opacity: 0.5 },
+    { transform: "translate(170px,600px) scale(1.2) rotate(180deg)", opacity: 0.7 },
+    { transform: "translate(-800px,800px) scale(0.7) rotate(360deg)", opacity: 0.5 },
   ],
   {
     fill: "forwards",
