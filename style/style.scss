@@ -38,12 +38,12 @@ body {
     position: absolute;
     right: 100px;
     top: 84px;
-    transition: all 1s ease-out;
+    // transition: all 1s ease-out;
     z-index: -1;
 
     .sphere {
       width: 100%;
-      transition: all 0.3s ease-out;
+      // transition: all 0.3s ease-out;
     }
 
     &#sphereMobile {
