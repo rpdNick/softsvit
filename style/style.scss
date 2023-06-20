@@ -214,13 +214,17 @@ body {
 
     &.main_screen_ellipse-right {
       position: absolute;
-      width: 600px;
-      height: 600px;
-      left: calc(50% + 250px);
+      width: 577px;
+      height: 577px;
+      right: 0;
       top: 117px;
       background: #00ffb2;
       opacity: 0.3;
       filter: blur(130px);
+
+      @media screen and (min-width: 2000px) {
+        right: calc(0px + 270px);
+      }
 
       @media screen and (max-width: $xx-large) {
         left: 1020px;
