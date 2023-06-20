@@ -661,12 +661,12 @@ body .swiper.feedback-slider {
   max-width: 1200px;
 }
 body .swiper.feedback-slider .swiper-slide {
-  width: 384px;
   height: auto;
   opacity: 0;
   bottom: 20px;
   transition: 0.3s;
   min-width: 300px;
+  max-width: 384px;
 }
 @media screen and (max-width: 992px) {
   body .swiper.feedback-slider .swiper-slide {
@@ -749,7 +749,7 @@ body .swiper.feedback-slider .swiper-slide .slide_content .feedback_block .feedb
   color: rgba(255, 255, 255, 0.6);
 }
 body .swiper.feedback-slider .swiper-slide.swiper-slide-prev, body .swiper.feedback-slider .swiper-slide.swiper-slide-next {
-  opacity: 0.3;
+  opacity: 0.3 !important;
 }
 @media screen and (max-width: 992px) {
   body .swiper.feedback-slider .swiper-slide.swiper-slide-prev, body .swiper.feedback-slider .swiper-slide.swiper-slide-next {
