@@ -16,16 +16,6 @@ function scrollDirection() {
   return directionUp;
 }
 
-// function throttle(fn, wait) {
-//   let time = Date.now();
-//   return function() {
-//     if ((time + wait - Date.now()) < 0) {
-//       fn();
-//       time = Date.now();
-//     }
-//   }
-// }
-
 window.addEventListener("scroll", animeteEarth);
 function isElementOnScreen(elementId) {
   var element = document.getElementById(elementId);
@@ -55,26 +45,10 @@ let earth = document.getElementById("sphereDesktop").animate(
   }
 );
 earth.pause();
-// let rotation = document
-//   .getElementById("sphereDesktopImg")
-//   .animate(
-//     [
-//       { transform: "rotate(0)" },
-//       { transform: "rotate(360deg)" },
-//       { transform: "rotate(720deg)" },
-//     ],
-//     {
-//       fill: "forwards",
-//       iterations: Infinity,
-//       duration: 4500,
-//     }
-//   );
 
-// rotation.pause();
 let onTop;
 function handleScroll() {
   
-  // throttle(scrollDirection, 1000);
   let scrollUp = scrollDirection();
   let start = document
     .querySelector("[data-animation]")
@@ -84,33 +58,24 @@ function handleScroll() {
   let bottomTriggerOnScreen = isElementOnScreen("bottom-trigger");
 
   if (!onScreen && !earthOnScreen && onTop && start == "false" && !scrollUp) {
-    console.log("1")
-    // rotation.play();
     earth.play();
     onTop = false;
     document
       .querySelector("[data-animation]")
       .setAttribute("data-animation", true);
   } else if (!onScreen && !earthOnScreen && onTop && !scrollUp) {
-    console.log("2")
-    // rotation.play();
     earth.reverse();
     onTop = false;
   } else if (!onScreen && !earthOnScreen && !onTop && bottomTriggerOnScreen && scrollUp) {
-    console.log("3")
-    // rotation.play();
     earth.reverse();
     onTop = true;
   } else if (!onTop && window.scrollY == 0) {
-    console.log("4")
-    // rotation.play();
     earth.reverse();
     onTop = true;
   }
 }
 
 function animeteEarth() {
-  // handleScroll();
   requestAnimationFrame(handleScroll);
 }
 
