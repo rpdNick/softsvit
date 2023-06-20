@@ -26,7 +26,7 @@ function scrollDirection() {
 //   }
 // }
 
-window.addEventListener("scroll", handleScroll);
+window.addEventListener("scroll", animete);
 function isElementOnScreen(elementId) {
   var element = document.getElementById(elementId);
   if (!element) {
@@ -49,7 +49,7 @@ let earth = document.getElementById("sphereDesktop").animate(
   ],
   {
     fill: "forwards",
-    duration: 2200,
+    duration: 2100,
     easing: 'ease-out',
     // easing: "cubic-bezier(0.9,0.9,0.5,0.5)",
   }
@@ -107,6 +107,11 @@ function handleScroll() {
     earth.reverse();
     onTop = true;
   }
+}
+
+function animete() {
+  handleScroll();
+  requestAnimationFrame(animate);
 }
 
 window.onload = function () {
