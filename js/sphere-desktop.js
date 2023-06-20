@@ -50,7 +50,7 @@ let earth = document.getElementById("sphereDesktop").animate(
   {
     fill: "forwards",
     duration: 2100,
-    easing: 'ease-in-out',
+    easing: 'ease-out',
     // easing: "cubic-bezier(0.9,0.9,0.5,0.5)",
   }
 );
