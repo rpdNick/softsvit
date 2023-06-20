@@ -43,32 +43,33 @@ function isElementOnScreen(elementId) {
 }
 let earth = document.getElementById("sphereDesktop").animate(
   [
-    { transform: "translate(0) scale(1)", opacity: 1 },
-    { transform: "translate(170px,600px) scale(1.4)", opacity: 0.7 },
-    { transform: "translate(-800px,800px) scale(0.75)", opacity: 0.5 },
+    { transform: "translate(0) scale(1) rotate(0)", opacity: 1 },
+    { transform: "translate(170px,600px) scale(1.4) rotate(180deg)", opacity: 0.7 },
+    { transform: "translate(-800px,800px) scale(0.75) rotate(360deg)", opacity: 0.5 },
   ],
   {
     fill: "forwards",
-    duration: 1600,
+    duration: 1700,
     easing: "cubic-bezier(0.9,0.9,0.5,0.5)",
   }
 );
 earth.pause();
-let rotation = document
-  .getElementById("sphereDesktopImg")
-  .animate(
-    [
-      { transform: "rotate(0)" },
-      { transform: "rotate(360deg)" },
-      { transform: "rotate(720deg)" },
-    ],
-    {
-      fill: "forwards",
-      iterations: Infinity,
-      duration: 4000,
-    }
-  );
-rotation.pause();
+// let rotation = document
+//   .getElementById("sphereDesktopImg")
+//   .animate(
+//     [
+//       { transform: "rotate(0)" },
+//       { transform: "rotate(360deg)" },
+//       { transform: "rotate(720deg)" },
+//     ],
+//     {
+//       fill: "forwards",
+//       iterations: Infinity,
+//       duration: 4500,
+//     }
+//   );
+
+// rotation.pause();
 let onTop;
 function handleScroll() {
   
@@ -83,7 +84,7 @@ function handleScroll() {
 
   if (!onScreen && !earthOnScreen && onTop && start == "false" && !scrollUp) {
     console.log("1")
-    rotation.play();
+    // rotation.play();
     earth.play();
     onTop = false;
     document
@@ -91,17 +92,17 @@ function handleScroll() {
       .setAttribute("data-animation", true);
   } else if (!onScreen && !earthOnScreen && onTop && !scrollUp) {
     console.log("2")
-    rotation.play();
+    // rotation.play();
     earth.reverse();
     onTop = false;
   } else if (!onScreen && !earthOnScreen && !onTop && bottomTriggerOnScreen && scrollUp) {
     console.log("3")
-    rotation.play();
+    // rotation.play();
     earth.reverse();
     onTop = true;
   } else if (!onTop && window.scrollY == 0) {
     console.log("4")
-    rotation.play();
+    // rotation.play();
     earth.reverse();
     onTop = true;
   }
@@ -119,5 +120,5 @@ window.onload = function () {
 };
 
 earth.addEventListener("finish", function () {
-  rotation.pause();
+  earth.pause();
 });
