@@ -1128,6 +1128,7 @@ body .form_container .form_item .form_control:not(:placeholder-shown),
 body .form_container .form_item .form_control:-webkit-autofill {
   border-color: #00ffb2;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
 }
 body .form_container .form_item .form_control:focus + label,
 body .form_container .form_item .form_control:not(:placeholder-shown) + label,

@@ -1270,6 +1270,7 @@ body {
       .form_control:-webkit-autofill {
         border-color: $color-main-green;
         -webkit-background-clip: text;
+        -webkit-text-fill-color: #ffffff;
       }
 
       .form_control:focus + label,
