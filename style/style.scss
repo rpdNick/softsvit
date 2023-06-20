@@ -718,7 +718,7 @@ body {
       .swiper-slide {
         // width: 384px;
         height: auto;
-        opacity: 0;
+        // opacity: 0;
         bottom: 20px;
         transition: 0.3s;
         min-width: 300px;
@@ -733,6 +733,7 @@ body {
         .slide_content {
           width: 100%;
           overflow: hidden;
+          opacity: 0;
 
           .img_box {
             position: relative;
@@ -812,16 +813,21 @@ body {
 
         &.swiper-slide-prev,
         &.swiper-slide-next {
-          opacity: 0.3 !important;
+          .slide_content {
+            opacity: 0.3 !important;
 
-          @media screen and (max-width: 992px) {
-            opacity: 1;
+            @media screen and (max-width: 992px) {
+              opacity: 1;
+            }
           }
         }
 
         &.swiper-slide-active {
-          opacity: 1;
           bottom: 0px;
+
+          .slide_content {
+            opacity: 1;
+          }
         }
 
         &:hover {
