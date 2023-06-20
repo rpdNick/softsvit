@@ -88,7 +88,7 @@ window.onload = function () {
   document
     .getElementById("bottom-trigger")
     .setAttribute("data-onbottom", isElementOnScreen("trigger"));
-    animeteEarth();
+    // animeteEarth();
 };
 
 earth.addEventListener("finish", function () {
