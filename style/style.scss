@@ -214,9 +214,9 @@ body {
 
     &.main_screen_ellipse-right {
       position: absolute;
-      width: 577px;
-      height: 577px;
-      left: calc(50% - 577px / 2 + 608.5px);
+      width: 600px;
+      height: 600px;
+      left: calc(50% + 250px);
       top: 117px;
       background: #00ffb2;
       opacity: 0.3;
