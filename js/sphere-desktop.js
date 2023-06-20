@@ -12,7 +12,6 @@ function scrollDirection() {
   }
 
   scrollStartValue = scrollCurrentValue;
-  console.log(directionUp)
   return directionUp;
 }
 
@@ -76,7 +75,7 @@ function handleScroll() {
 }
 
 function animeteEarth() {
-  requestAnimationFrame(handleScroll);
+  window.requestAnimationFrame(handleScroll);
 }
 
 window.onload = function () {
