@@ -677,6 +677,7 @@ body .swiper.feedback-slider .swiper-slide {
 body .swiper.feedback-slider .swiper-slide .slide_content {
   width: 100%;
   overflow: hidden;
+  transition: 0.3s;
   opacity: 0;
 }
 body .swiper.feedback-slider .swiper-slide .slide_content .img_box {
