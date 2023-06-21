@@ -1091,14 +1091,20 @@ body .form_container .form_title {
   color: #ffffff;
   margin-bottom: 40px;
 }
-body .form_container .form_item {
+@media screen and (max-width: 940px) {
+  body .form_container {
+    width: 100%;
+    max-width: unset;
+  }
+}
+body .form_item {
   margin-bottom: 46px;
   position: relative;
 }
-body .form_container .form_item:nth-of-type(5), body .form_container .form_item:nth-of-type(6) {
+body .form_item:nth-of-type(5), body .form_item:nth-of-type(6) {
   margin-bottom: 0;
 }
-body .form_container .form_item .form_item_label {
+body .form_item .form_item_label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1108,7 +1114,7 @@ body .form_container .form_item .form_item_label {
   color: rgba(255, 255, 255, 0.6);
   transition: 0.3s;
 }
-body .form_container .form_item .error_txt {
+body .form_item .error_txt {
   margin-top: 6px;
   font-weight: 400;
   font-size: 12px;
@@ -1116,7 +1122,7 @@ body .form_container .form_item .error_txt {
   color: #dc3c6c;
   display: none;
 }
-body .form_container .form_item .form_control {
+body .form_item .form_control {
   width: 100%;
   background: transparent;
   outline: none;
@@ -1131,56 +1137,56 @@ body .form_container .form_item .form_control {
   color: #ffffff;
   transition: 0.2s;
 }
-body .form_container .form_item .form_control:focus,
-body .form_container .form_item .form_control:not(:placeholder-shown),
-body .form_container .form_item .form_control:-webkit-autofill {
+body .form_item .form_control:focus,
+body .form_item .form_control:not(:placeholder-shown),
+body .form_item .form_control:-webkit-autofill {
   border-color: #00ffb2;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ffffff;
 }
-body .form_container .form_item .form_control:focus + .form_item_label,
-body .form_container .form_item .form_control:not(:placeholder-shown) + .form_item_label,
-body .form_container .form_item .form_control:-webkit-autofill + .form_item_label {
+body .form_item .form_control:focus + .form_item_label,
+body .form_item .form_control:not(:placeholder-shown) + .form_item_label,
+body .form_item .form_control:-webkit-autofill + .form_item_label {
   font-size: 10px;
   transform: translateY(-20px);
   opacity: 1;
 }
-body .form_container .form_item input[data-autocompleted] {
+body .form_item input[data-autocompleted] {
   background-color: transparent !important;
 }
-body .form_container .form_item.error .form_control,
-body .form_container .form_item.error .file_items {
+body .form_item.error .form_control,
+body .form_item.error .file_items {
   border-color: #dc3c6c;
 }
-body .form_container .form_item.error .error_txt {
+body .form_item.error .error_txt {
   display: block;
 }
-body .form_container .form_item.error .checkbox {
+body .form_item.error .checkbox {
   border-color: #dc3c6c;
 }
-body .form_container .form_item.error .checkbox_txt {
+body .form_item.error .checkbox_txt {
   color: #dc3c6c;
 }
 @media screen and (max-width: 575px) {
-  body .form_container .form_item {
+  body .form_item {
     margin-bottom: 32px;
   }
 }
-body .form_container .attachment input {
+body .attachment input {
   display: none;
 }
-body .form_container .attachment .file_title {
+body .attachment .file_title {
   position: absolute;
   transition: 0.2s;
 }
-body .form_container .attachment .file_items {
+body .attachment .file_items {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-body .form_container .attachment .file_items .file_title {
+body .attachment .file_items .file_title {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-weight: 700;
@@ -1188,7 +1194,7 @@ body .form_container .attachment .file_items .file_title {
   padding-bottom: 0;
   border-bottom: none;
 }
-body .form_container .attachment .file_items .file-name {
+body .attachment .file_items .file-name {
   color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
@@ -1196,7 +1202,7 @@ body .form_container .attachment .file_items .file-name {
   opacity: 0;
   transition: 0.2s;
 }
-body .form_container .attachment .file_items .file-button {
+body .attachment .file_items .file-button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 2px 8px;
@@ -1212,43 +1218,37 @@ body .form_container .attachment .file_items .file-button {
   margin-left: 10px;
   cursor: pointer;
 }
-body .form_container .attachment .file_items .file-button:hover {
+body .attachment .file_items .file-button:hover {
   background: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-body .form_container .attachment .file_items .remove-file {
+body .attachment .file_items .remove-file {
   display: none;
 }
-body .form_container .attachment .file_items.active .file_title {
+body .attachment .file_items.active .file_title {
   font-size: 10px;
   transform: translateY(-26px);
 }
-body .form_container .attachment .file_items.active .file-name {
+body .attachment .file_items.active .file-name {
   opacity: 1;
 }
-body .form_container .attachment .file_items.active .remove-file {
+body .attachment .file_items.active .remove-file {
   display: block;
 }
-body .form_container .attachment .file_items.active .add-file {
+body .attachment .file_items.active .add-file {
   display: none;
 }
-body .form_container .form_agreement {
+body .form_agreement {
   margin-top: 32px;
   min-height: 20px;
 }
 @media screen and (max-width: 391px) {
-  body .form_container .form_agreement {
+  body .form_agreement {
     min-height: 40px;
   }
 }
-body .form_container .submit_wrap {
+body .submit_wrap {
   margin-top: 27px;
-}
-@media screen and (max-width: 940px) {
-  body .form_container {
-    width: 100%;
-    max-width: unset;
-  }
 }
 body .main_header {
   display: flex;

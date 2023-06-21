@@ -1229,194 +1229,193 @@ body {
       color: #ffffff;
       margin-bottom: 40px;
     }
-
-    .form_item {
-      margin-bottom: 46px;
-      position: relative;
-
-      &:nth-of-type(5),
-      &:nth-of-type(6) {
-        margin-bottom: 0;
-      }
-
-      .form_item_label {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 20px;
-        color: $color-gray;
-        transition: 0.3s;
-      }
-
-      .error_txt {
-        margin-top: 6px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        color: $color-main-red;
-        display: none;
-      }
-
-      .form_control {
-        width: 100%;
-        background: transparent;
-        outline: none;
-        border-radius: 0;
-        -webkit-appearance: none;
-        border: none;
-        border-bottom: 1px solid #ffffff66;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 20px;
-        padding-bottom: 8px;
-        color: #ffffff;
-        transition: 0.2s;
-      }
-
-      .form_control:focus,
-      .form_control:not(:placeholder-shown),
-      .form_control:-webkit-autofill {
-        border-color: $color-main-green;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: #ffffff;
-      }
-
-      .form_control:focus + .form_item_label,
-      .form_control:not(:placeholder-shown) + .form_item_label,
-      .form_control:-webkit-autofill + .form_item_label {
-        font-size: 10px;
-        transform: translateY(-20px);
-        opacity: 1;
-      }
-
-      input[data-autocompleted] {
-        background-color: transparent !important;
-      }
-
-      &.error {
-        .form_control,
-        .file_items {
-          border-color: $color-main-red;
-        }
-
-        .error_txt {
-          display: block;
-        }
-
-        .checkbox {
-          border-color: $color-main-red;
-        }
-
-        .checkbox_txt {
-          color: $color-main-red;
-        }
-      }
-
-      @media screen and (max-width: $small) {
-        margin-bottom: 32px;
-      }
-    }
-
-    .attachment {
-      input {
-        display: none;
-      }
-
-      .file_title {
-        position: absolute;
-        transition: 0.2s;
-      }
-
-      .file_items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 8px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-
-        .file_title {
-          color: $color-gray;
-          font-size: 14px;
-          font-weight: 700;
-          position: absolute;
-          padding-bottom: 0;
-          border-bottom: none;
-        }
-
-        .file-name {
-          color: #ffffff;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          opacity: 0;
-          transition: 0.2s;
-        }
-
-        .file-button {
-          width: fit-content;
-          padding: 2px 8px;
-          color: #ffffff;
-          font-weight: 700;
-          font-size: 12px;
-          text-align: center;
-          line-height: 20px;
-          background: rgba(255, 255, 255, 0.1);
-          border: 1px solid #ffffff;
-          border-radius: 6px;
-          transition: 0.2s;
-          margin-left: 10px;
-          cursor: pointer;
-
-          &:hover {
-            background: rgba(255, 255, 255, 0.4);
-            border-color: transparent;
-          }
-        }
-
-        .remove-file {
-          display: none;
-        }
-
-        &.active {
-          .file_title {
-            font-size: 10px;
-            transform: translateY(-26px);
-          }
-
-          .file-name {
-            opacity: 1;
-          }
-
-          .remove-file {
-            display: block;
-          }
-
-          .add-file {
-            display: none;
-          }
-        }
-      }
-    }
-
-    .form_agreement {
-      margin-top: 32px;
-      min-height: 20px;
-
-      @media screen and (max-width: 391px) {
-        min-height: 40px;
-      }
-    }
-
-    .submit_wrap {
-      margin-top: 27px;
-    }
-
     @media screen and (max-width: 940px) {
       width: 100%;
       max-width: unset;
     }
+  }
+
+  .form_item {
+    margin-bottom: 46px;
+    position: relative;
+
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      margin-bottom: 0;
+    }
+
+    .form_item_label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-gray;
+      transition: 0.3s;
+    }
+
+    .error_txt {
+      margin-top: 6px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: $color-main-red;
+      display: none;
+    }
+
+    .form_control {
+      width: 100%;
+      background: transparent;
+      outline: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+      border: none;
+      border-bottom: 1px solid #ffffff66;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 8px;
+      color: #ffffff;
+      transition: 0.2s;
+    }
+
+    .form_control:focus,
+    .form_control:not(:placeholder-shown),
+    .form_control:-webkit-autofill {
+      border-color: $color-main-green;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #ffffff;
+    }
+
+    .form_control:focus + .form_item_label,
+    .form_control:not(:placeholder-shown) + .form_item_label,
+    .form_control:-webkit-autofill + .form_item_label {
+      font-size: 10px;
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+
+    input[data-autocompleted] {
+      background-color: transparent !important;
+    }
+
+    &.error {
+      .form_control,
+      .file_items {
+        border-color: $color-main-red;
+      }
+
+      .error_txt {
+        display: block;
+      }
+
+      .checkbox {
+        border-color: $color-main-red;
+      }
+
+      .checkbox_txt {
+        color: $color-main-red;
+      }
+    }
+
+    @media screen and (max-width: $small) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .attachment {
+    input {
+      display: none;
+    }
+
+    .file_title {
+      position: absolute;
+      transition: 0.2s;
+    }
+
+    .file_items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+      .file_title {
+        color: $color-gray;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .file-name {
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: 0;
+        transition: 0.2s;
+      }
+
+      .file-button {
+        width: fit-content;
+        padding: 2px 8px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid #ffffff;
+        border-radius: 6px;
+        transition: 0.2s;
+        margin-left: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.4);
+          border-color: transparent;
+        }
+      }
+
+      .remove-file {
+        display: none;
+      }
+
+      &.active {
+        .file_title {
+          font-size: 10px;
+          transform: translateY(-26px);
+        }
+
+        .file-name {
+          opacity: 1;
+        }
+
+        .remove-file {
+          display: block;
+        }
+
+        .add-file {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .form_agreement {
+    margin-top: 32px;
+    min-height: 20px;
+
+    @media screen and (max-width: 391px) {
+      min-height: 40px;
+    }
+  }
+
+  .submit_wrap {
+    margin-top: 27px;
   }
 
   .main_header {
