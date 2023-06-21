@@ -34,11 +34,10 @@ body {
   }
 
   .sphere-box {
-    width: 674px;
+    width: 600px;
     position: absolute;
     right: 100px;
-    top: 84px;
-    // transition: all 1s ease-out;
+    top: 100px;
     z-index: -1;
 
     .sphere {
