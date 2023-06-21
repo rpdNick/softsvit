@@ -1153,7 +1153,7 @@ body {
   }
 
   .checkbox_item {
-    > label {
+    .form_item_label {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1191,7 +1191,7 @@ body {
         }
       }
 
-      > input {
+      input {
         display: none;
       }
 
@@ -1239,8 +1239,7 @@ body {
     margin-bottom: 46px;
     position: relative;
 
-    &:nth-of-type(5),
-    &:nth-of-type(6) {
+    &.mb-0 {
       margin-bottom: 0;
     }
 
