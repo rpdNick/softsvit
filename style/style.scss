@@ -1239,7 +1239,7 @@ body {
         margin-bottom: 0;
       }
 
-      label {
+      .form_item_label {
         position: absolute;
         left: 0;
         top: 0;
@@ -1283,9 +1283,9 @@ body {
         -webkit-text-fill-color: #ffffff;
       }
 
-      .form_control:focus + label,
-      .form_control:not(:placeholder-shown) + label,
-      .form_control:-webkit-autofill + label {
+      .form_control:focus + .form_item_label,
+      .form_control:not(:placeholder-shown) + .form_item_label,
+      .form_control:-webkit-autofill + .form_item_label {
         font-size: 10px;
         transform: translateY(-20px);
         opacity: 1;
