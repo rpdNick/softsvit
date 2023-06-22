@@ -358,6 +358,7 @@ body .language-mode-switch .language_switch a {
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.01em;
   transition: all 0.3s ease;
+  text-decoration: none;
   cursor: pointer;
 }
 body .language-mode-switch .language_switch a:nth-of-type(1) {
