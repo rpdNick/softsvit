@@ -346,7 +346,7 @@ body .language-mode-switch .language_switch {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-body .language-mode-switch .language_switch span {
+body .language-mode-switch .language_switch a {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -360,24 +360,24 @@ body .language-mode-switch .language_switch span {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-body .language-mode-switch .language_switch span:nth-of-type(1) {
+body .language-mode-switch .language_switch a:nth-of-type(1) {
   left: 0;
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
 }
-body .language-mode-switch .language_switch span:nth-of-type(2) {
+body .language-mode-switch .language_switch a:nth-of-type(2) {
   right: 0;
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px;
 }
-body .language-mode-switch .language_switch span:hover {
+body .language-mode-switch .language_switch a:hover {
   color: #00ffb2;
 }
-body .language-mode-switch .language_switch span.active {
+body .language-mode-switch .language_switch a.current-lang {
   color: #000000;
   background: #00ffb2;
 }
-body .language-mode-switch .language_switch span.active:hover {
+body .language-mode-switch .language_switch a.current-lang:hover {
   color: #000000;
 }
 body .language-mode-switch .language_switch:hover {
