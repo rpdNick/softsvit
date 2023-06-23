@@ -27,13 +27,19 @@ body .sphere-box {
   position: absolute;
   right: 100px;
   top: 100px;
+  transform: translateZ(0);
   z-index: -1;
 }
 body .sphere-box .sphere {
   width: 100%;
+  transform: translateZ(0);
+}
+body .sphere-box#sphereMobile {
+  transform: translateZ(0);
 }
 body .sphere-box#sphereMobile .sphere {
   transition: all 0.6s ease-out;
+  transform: translateZ(0);
 }
 @media screen and (max-width: 1200px) {
   body .sphere-box {

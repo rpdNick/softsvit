@@ -32,13 +32,13 @@ function isElementOnScreen(elementId) {
 }
 let earth = document.getElementById("sphereDesktop").animate(
   [
-    { transform: "translate(0) scale(1) rotate(0)", opacity: 1 },
-    { transform: "translate(170px,600px) scale(1.3) rotate(180deg)", opacity: 0.7 },
-    { transform: "translate(-800px,800px) scale(0.7) rotate(360deg)", opacity: 0.5 },
+    { transform: "translate3D(0,0,0) scale(1) rotate(0)", opacity: 1 },
+    { transform: "translate3D(170px,600px, 0) scale(1.3) rotate(180deg)", opacity: 0.7 },
+    { transform: "translate3D(-800px,800px, 0) scale(0.7) rotate(360deg)", opacity: 0.5 },
   ],
   {
     fill: "forwards",
-    duration: 2100,
+    duration: 2000,
     easing: 'ease-out',
     // easing: "cubic-bezier(0.9,0.9,0.5,0.5)",
   }

@@ -17,7 +17,6 @@ const feedbackSliderOptions = {
   speed: 400,
   loop: true,
   loopedSlides: 2,
-  updateOnWindowResize: true,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -34,7 +33,6 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize: true,
     },
 
     432: {
@@ -45,7 +43,6 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize: true,
     },
 
     575: {
@@ -56,7 +53,6 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize: true,
     },
 
     640: {
@@ -67,7 +63,6 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize: true,
     },
 
     780: {
@@ -78,7 +73,6 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize: true,
     },
 
     919: {
@@ -89,7 +83,6 @@ const feedbackSliderOptions = {
       centeredSlides: false,
       slideShadows: false,
       loop: false,
-      updateOnWindowResize: true,
     },
 
     992: {
@@ -106,7 +99,6 @@ const feedbackSliderOptions = {
       speed: 400,
       loop: true,
       loopedSlides: 2,
-      updateOnWindowResize: true,
     },
   },
 
@@ -173,7 +165,6 @@ const vacancySliderOptions = {
   breakpoints: {
     320: {
       slidesPerView: 1.1,
-      updateOnWindowResize: true,
       grid: {
         rows: 1,
       },
@@ -182,7 +173,6 @@ const vacancySliderOptions = {
 
     617: {
       slidesPerView: 1.8,
-      updateOnWindowResize: true,
       grid: {
         rows: 1,
       },
@@ -191,7 +181,6 @@ const vacancySliderOptions = {
 
     768: {
       slidesPerView: 2,
-      updateOnWindowResize: true,
       grid: {
         rows: 1,
       },
