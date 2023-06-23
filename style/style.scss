@@ -846,7 +846,8 @@ body {
           }
 
           .slide-hover-diamonds {
-            top: 0 !important;
+            // top: 0 !important;
+            transform: translateY(-100%) translateZ(0);
           }
 
           svg {

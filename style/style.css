@@ -780,7 +780,7 @@ body .swiper.feedback-slider .swiper-slide:hover .slide-hover-arrows {
   opacity: 1 !important;
 }
 body .swiper.feedback-slider .swiper-slide:hover .slide-hover-diamonds {
-  top: 0 !important;
+  transform: translateY(-100%) translateZ(0);
 }
 body .swiper.feedback-slider .swiper-slide:hover svg {
   top: 60px;
