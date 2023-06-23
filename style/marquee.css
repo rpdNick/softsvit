@@ -48,6 +48,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - var(--gap)));
+    transform: translate3D(calc(-100% - var(--gap)), 0, 0);
   }
 }/*# sourceMappingURL=marquee.css.map */
