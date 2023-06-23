@@ -792,7 +792,7 @@ body .swiper.feedback-slider .swiper-slide.play-animation .slide-hover-arrows {
   opacity: 1 !important;
 }
 body .swiper.feedback-slider .swiper-slide.play-animation .slide-hover-diamonds {
-  top: 0 !important;
+  transform: translateY(-100%) translateZ(0);
 }
 body .swiper.feedback-slider .swiper-slide.play-animation svg {
   top: 60px;
@@ -805,7 +805,7 @@ body .swiper.feedback-slider .swiper-slide.play-animation svg .slide-circle {
     opacity: 1 !important;
   }
   body .swiper.feedback-slider .swiper-slide.swiper-slide-active .slide-hover-diamonds {
-    top: 0 !important;
+    transform: translateY(-100%) translateZ(0);
   }
   body .swiper.feedback-slider .swiper-slide.swiper-slide-active svg {
     top: 60px;
