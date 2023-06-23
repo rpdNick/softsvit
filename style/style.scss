@@ -34,6 +34,7 @@ body {
   }
 
   .sphere-box {
+    will-change: transform, scale, rotate, opacity;
     width: 600px;
     position: absolute;
     right: 100px;
