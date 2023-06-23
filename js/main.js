@@ -256,14 +256,7 @@ function reDrawVacancySlider() {
   // vacancySlider.destroy();
   // vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 
-  let popupButtons = document.querySelectorAll(
-    ".vacancy-slider .buttons-wrap .button"
-  );
-  popupButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      showModal(button);
-    });
-  });
+  sliderCardsHendler();
 }
 
 /** Switch Tabs logic*/
@@ -271,9 +264,6 @@ function reDrawVacancySlider() {
 const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
-    // let contentWrap = document.querySelector('.vacancy .tab_content');
-    // let contentHeight = contentWrap.offsetHeight;
-    // console.log(contentHeight)
 
     let activeTab = e.target;
     let tabId = e.target.getAttribute("data-category");
@@ -284,7 +274,6 @@ tabs.forEach((tab) => {
         ".vacancy-slider .swiper-wrapper"
       );
       swiperWrapper.classList.add("loading");
-      // contentWrap.style.maxHeight = contentHeight + "px";
       const sliderCard = document
         .querySelector(".vacancy-slider .swiper-slide")
         .cloneNode(true);
@@ -330,7 +319,6 @@ tabs.forEach((tab) => {
             e.preventDefault;
             swiperWrapper.classList.remove("loading");
             reDrawVacancySlider();
-            // contentWrap.style.maxHeight = "auto";
           }, 1000);
         });
 
@@ -345,9 +333,6 @@ const popupOverlay = document.querySelector(".overlay");
 const popupLoader = document.getElementById("preloader");
 
 let closeButton = document.querySelectorAll(".close-modal");
-let popupButtons = document.querySelectorAll(
-  ".vacancy-slider .buttons-wrap .button"
-);
 
 closeButton.forEach(function (el) {
   el.addEventListener("click", function () {
@@ -360,23 +345,31 @@ function closePopup(button) {
   button.closest(".modal").classList.remove("active");
 }
 
-popupButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    showModal(button);
-  });
-});
+function sliderCardsHendler() {
+  const vacancySliderCards = document.querySelectorAll(
+    ".vacancy-slider .slide-content"
+  );
 
-function showModal(button) {
-  let modal;
-  if (button.getAttribute("data-popup") == "my-cv") {
-    modal = document.getElementById("my-cv-popup");
-  } else if (button.getAttribute("data-popup") == "friend-cv") {
-    modal = document.getElementById("friend-cv-popup");
-  }
+  vacancySliderCards.forEach(function (card) {
+    let modal;
+    card.addEventListener("click", function (e) {
+      if (e.target.getAttribute("data-popup") == "friend-cv") {
+        modal = document.getElementById("friend-cv-popup");
+      } else {
+        modal = document.getElementById("my-cv-popup");
+      }
+      showModal(modal);
+    });
+  });
+}
+
+sliderCardsHendler();
+
+function showModal(modal) {
   showOverlay();
   modal.classList.add("active");
   // run query
-  const id = button.getAttribute("data-post-id");
+  // const id = button.getAttribute("data-post-id");
   fetch(`./data.json`, {
     method: "GET",
     headers: {
