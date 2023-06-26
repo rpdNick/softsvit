@@ -207,7 +207,7 @@ const vacancySliderOptions = {
 };
 
 let feedback = initSlider(".feedback-slider", feedbackSliderOptions);
-window.onresize = function () {
+window.addEventListener("resize", function () {
   if (feedback) {
     // reInit slider
     feedback.destroy();
@@ -219,7 +219,7 @@ window.onresize = function () {
       return;
     }
   }
-};
+});
 
 // Feedback slider animation on change
 
@@ -264,7 +264,6 @@ function reDrawVacancySlider() {
 const tabs = document.querySelectorAll(".switch_tabs .s-tab");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
-
     let activeTab = e.target;
     let tabId = e.target.getAttribute("data-category");
 
