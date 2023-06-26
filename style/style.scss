@@ -355,14 +355,20 @@ body {
     color: $color-gray;
     transition: 0.3s;
 
-    .icon {
-      font-size: 24px;
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      opacity: 0.6;
     }
 
     &:hover {
       color: #ffffff;
       border: 1px solid #ffffff;
       opacity: 1;
+
+      .social-icon {
+        opacity: 1;
+      }
     }
   }
 

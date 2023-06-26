@@ -331,12 +331,17 @@ body .social-item {
   color: rgba(255, 255, 255, 0.6);
   transition: 0.3s;
 }
-body .social-item .icon {
-  font-size: 24px;
+body .social-item .social-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
 }
 body .social-item:hover {
   color: #ffffff;
   border: 1px solid #ffffff;
+  opacity: 1;
+}
+body .social-item:hover .social-icon {
   opacity: 1;
 }
 body .language-mode-switch {
