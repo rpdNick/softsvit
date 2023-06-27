@@ -90,6 +90,6 @@ window.onload = function () {
     animeteEarth();
 };
 
-earth.addEventListener("finish", function () {
-  earth.pause();
-});
+// earth.addEventListener("finish", function () {
+//   earth.pause();
+// });
