@@ -1947,12 +1947,16 @@ body {
             height: fit-content;
 
             .icon-box {
-              width: 56px;
-              height: 56px;
+              scale: 0.6;
+              transition: .4s;
+              // width: 56px;
+              // height: 56px;
             }
 
             .card-title {
-              margin-top: 16px;
+              margin-top: 0;
+              transition: .3s;
+              // margin-top: 16px;
             }
           }
 

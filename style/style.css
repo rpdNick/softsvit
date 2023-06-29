@@ -1728,11 +1728,12 @@ body .why_softsvit .cards_wrapper .card_item:hover .card_front {
   height: fit-content;
 }
 body .why_softsvit .cards_wrapper .card_item:hover .card_front .icon-box {
-  width: 56px;
-  height: 56px;
+  scale: 0.6;
+  transition: 0.4s;
 }
 body .why_softsvit .cards_wrapper .card_item:hover .card_front .card-title {
-  margin-top: 16px;
+  margin-top: 0;
+  transition: 0.3s;
 }
 body .why_softsvit .cards_wrapper .card_item:hover .card_description {
   visibility: visible;
