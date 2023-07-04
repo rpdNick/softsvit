@@ -1934,6 +1934,7 @@ body {
           top: 0;
           right: 0;
           transition: 0.3s;
+          opacity: 0.2;
         }
 
         &:hover {
@@ -1962,6 +1963,10 @@ body {
 
           .card_description {
             visibility: visible;
+          }
+
+          .card_mark {
+            opacity: 1;
           }
         }
 

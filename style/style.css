@@ -1715,6 +1715,7 @@ body .why_softsvit .cards_wrapper .card_item .card_mark {
   top: 0;
   right: 0;
   transition: 0.3s;
+  opacity: 0.2;
 }
 body .why_softsvit .cards_wrapper .card_item:hover {
   background-image: url(../img/cards/mark-hover.png);
@@ -1737,6 +1738,9 @@ body .why_softsvit .cards_wrapper .card_item:hover .card_front .card-title {
 }
 body .why_softsvit .cards_wrapper .card_item:hover .card_description {
   visibility: visible;
+}
+body .why_softsvit .cards_wrapper .card_item:hover .card_mark {
+  opacity: 1;
 }
 @media screen and (max-width: 768px) {
   body .why_softsvit .cards_wrapper .card_item {
