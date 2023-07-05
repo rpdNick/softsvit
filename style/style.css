@@ -1743,6 +1743,14 @@ body .why_softsvit .cards_wrapper .card_item:hover .card_mark {
   opacity: 1;
 }
 @media screen and (max-width: 768px) {
+  body .why_softsvit .cards_wrapper .card_item:hover .card_front .icon-box {
+    scale: 1;
+  }
+  body .why_softsvit .cards_wrapper .card_item:hover .card_front .card-title {
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
   body .why_softsvit .cards_wrapper .card_item {
     background-image: url(../img/cards/mark-hover.png);
     background-position: center;

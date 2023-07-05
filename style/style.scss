@@ -1932,12 +1932,12 @@ body {
 
             .icon-box {
               scale: 0.6;
-              transition: .4s;
+              transition: 0.4s;
             }
 
             .card-title {
               margin-top: 0;
-              transition: .3s;
+              transition: 0.3s;
             }
           }
 
@@ -1947,6 +1947,18 @@ body {
 
           .card_mark {
             opacity: 1;
+          }
+
+          @media screen and (max-width: $tablet) {
+            .card_front {
+              .icon-box {
+                scale: 1;
+              }
+
+              .card-title {
+                margin-top: 16px;
+              }
+            }
           }
         }
 
