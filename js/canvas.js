@@ -137,6 +137,10 @@ function init() {
 	animate();
 }
 
+window.addEventListener('resize', () => {
+	setCanvasSize();
+});
+
 function animate() {
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
 
