@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="./style/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style/style.css" />
   <script src="./js/libs/swiper-bundle.min.js"></script>
-  <script src="./js/libs/sparticles.js"></script>
   <script src="./js/libs/web-animations.min.js"></script>
   <title>SOFTSVIT</title>
 </head>
@@ -25,6 +24,7 @@
 <body class="loading">
 
   <div class="scroll-area">
+    <canvas id="canvas" style="position: absolute;"></canvas>
     <div class="ellipse main_screen_ellipse-left"></div>
     <div class="ellipse main_screen_ellipse-right"></div>
     <header class="center">
@@ -889,7 +889,7 @@
   </div>
 </body>
 <script src="./js/drag-slider.js"></script>
-<!-- <script src="./js/init-sparticles.js"></script> -->
+<script src="./js/canvas.js"></script>
 <script src="./js/menu.js"></script>
 <script src="./js/language_switch.js"></script>
 <script src="./js/loader.js"></script>
