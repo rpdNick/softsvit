@@ -128,7 +128,7 @@ const whySoftsvitSliderOptions = {
       spaceBetween: 12,
     },
 
-    575: {
+    769: {
       slidesPerView: 2,
       grid: {
         rows: 1,
@@ -136,14 +136,23 @@ const whySoftsvitSliderOptions = {
       spaceBetween: 24,
     },
 
-    768: {
-      slidesPerView: 3,
+    945: {
+      slidesPerView: 2,
       grid: {
         rows: 2,
         fill: "row",
       },
       spaceBetween: 24,
     },
+
+    1200: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+      spaceBetween: 24,
+    }
   },
   pagination: {
     el: ".why_softsvit_slider .swiper-pagination",

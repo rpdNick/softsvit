@@ -824,7 +824,7 @@ body .swiper.feedback-slider .swiper-slide.play-animation svg .slide-circle {
     padding: 0 12px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   body .swiper.why_softsvit_slider {
     padding-bottom: 30px;
   }
@@ -837,7 +837,7 @@ body .swiper.feedback-slider .swiper-slide.play-animation svg .slide-circle {
 body .swiper.why_softsvit_slider .slider-control {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   body .swiper.why_softsvit_slider .slider-control {
     display: flex;
   }

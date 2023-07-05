@@ -45,7 +45,6 @@ body {
     .sphere {
       width: 100%;
       transform: translateZ(0);
-      // transition: all 0.3s ease-out;
     }
 
     &#sphereMobile {
@@ -731,9 +730,7 @@ body {
       max-width: 1200px;
 
       .swiper-slide {
-        // width: 384px;
         height: auto;
-        // opacity: 0;
         bottom: 20px;
         transition: 0.3s;
         min-width: 300px;
@@ -852,7 +849,6 @@ body {
           }
 
           .slide-hover-diamonds {
-            // top: 0 !important;
             transform: translateY(-100%) translateZ(0);
           }
 
@@ -871,7 +867,6 @@ body {
           }
 
           .slide-hover-diamonds {
-            // top: 0 !important;
             transform: translateY(-100%) translateZ(0);
           }
 
@@ -891,7 +886,6 @@ body {
             }
 
             .slide-hover-diamonds {
-              // top: 0 !important;
               transform: translateY(-100%) translateZ(0);
             }
 
@@ -912,7 +906,7 @@ body {
     }
 
     &.why_softsvit_slider {
-      @media screen and (max-width: $tablet) {
+      @media screen and (max-width: $x-large) {
         padding-bottom: 30px;
       }
 
@@ -923,7 +917,7 @@ body {
       .slider-control {
         display: none;
 
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: $x-large) {
           display: flex;
         }
 
@@ -937,17 +931,6 @@ body {
       width: 100%;
       height: 100%;
       padding: 28px 0 30px;
-
-      .swiper-wrapper {
-        &.loading {
-          .swiper-slide {
-            .slide-content {
-              // transition: 0.3s ease-in-out;
-              // opacity: 0;
-            }
-          }
-        }
-      }
 
       .swiper-slide {
         position: relative;
@@ -1950,14 +1933,11 @@ body {
             .icon-box {
               scale: 0.6;
               transition: .4s;
-              // width: 56px;
-              // height: 56px;
             }
 
             .card-title {
               margin-top: 0;
               transition: .3s;
-              // margin-top: 16px;
             }
           }
 
