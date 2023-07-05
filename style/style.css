@@ -1764,6 +1764,9 @@ body .why_softsvit .cards_wrapper .card_item:hover .card_mark {
   body .why_softsvit .cards_wrapper .card_item .card_description {
     visibility: visible;
   }
+  body .why_softsvit .cards_wrapper .card_item .card_mark {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 768px) {
   body .why_softsvit .cards_wrapper {

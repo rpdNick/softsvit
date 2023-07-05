@@ -128,6 +128,14 @@ const whySoftsvitSliderOptions = {
       spaceBetween: 12,
     },
 
+    500: {
+      slidesPerView: 1.5,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 12,
+    },
+
     769: {
       slidesPerView: 2,
       grid: {
