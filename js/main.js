@@ -345,7 +345,7 @@ tabs.forEach((tab) => {
             e.preventDefault;
             swiperWrapper.classList.remove("loading");
             reDrawVacancySlider();
-          }, 1000);
+          }, 500);
         });
 
       // http query
