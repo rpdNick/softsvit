@@ -137,9 +137,9 @@ function init() {
 	animate();
 }
 
-// window.addEventListener('resize', () => {
-// 	setCanvasSize();
-// });
+window.addEventListener('resize', () => {
+	setCanvasSize();
+});
 
 function animate() {
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
@@ -150,7 +150,7 @@ function animate() {
     for (let i in dots) {
     	dots[i].move();
     }
-	
+
 	var isFirefox = typeof InstallTrigger !== 'undefined';
 	if (!isFirefox) {
 		drawIfMouseMoving();
