@@ -173,7 +173,7 @@ const whySoftsvitSliderOptions = {
 };
 
 const vacancySliderOptions = {
-  slidesPerView: 3,
+  slidesPerView: "auto",
   grid: {
     rows: 2,
     fill: "row",
@@ -204,8 +204,16 @@ const vacancySliderOptions = {
       spaceBetween: 24,
     },
 
+    920: {
+      slidesPerView: "auto",
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 24,
+    },
+
     1109: {
-      slidesPerView: 3,
+      slidesPerView: "auto",
       grid: {
         rows: 2,
         fill: "row",
