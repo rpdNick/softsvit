@@ -191,7 +191,7 @@ function drawIfMouseMoving(){
 	dots[dots.length-1].draw();
 	dots[dots.length-1].link();
 }
-//setInterval(drawIfMouseMoving, 17);
+setInterval(drawIfMouseMoving, 17);
 
 function degToRad(deg) {
 	return deg * (Math.PI / 180);
