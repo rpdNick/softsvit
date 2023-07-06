@@ -1,4 +1,4 @@
-function Star(id, x, y){
+function Star(id, x, y) {
 	this.id = id;
 	this.x = x;
 	this.y = y;
