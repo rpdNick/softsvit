@@ -150,7 +150,12 @@ function animate() {
     for (let i in dots) {
     	dots[i].move();
     }
-    drawIfMouseMoving();
+	
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+	if (!isFirefox) {
+		drawIfMouseMoving();
+	}
+    
     requestAnimationFrame(animate);
 }
 
@@ -191,7 +196,7 @@ function drawIfMouseMoving(){
 	dots[dots.length-1].draw();
 	dots[dots.length-1].link();
 }
-setInterval(drawIfMouseMoving, 17);
+//setInterval(drawIfMouseMoving, 17);
 
 function degToRad(deg) {
 	return deg * (Math.PI / 180);
