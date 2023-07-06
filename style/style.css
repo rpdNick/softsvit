@@ -793,6 +793,20 @@ body .swiper.feedback-slider .swiper-slide:hover svg {
 body .swiper.feedback-slider .swiper-slide:hover svg .slide-circle {
   r: 123.5;
 }
+@media screen and (max-width: 575px) {
+  body .swiper.feedback-slider .swiper-slide:hover .slide-hover-arrows {
+    opacity: 0 !important;
+  }
+  body .swiper.feedback-slider .swiper-slide:hover .slide-hover-diamonds {
+    transform: translateY(0%) translateZ(0);
+  }
+  body .swiper.feedback-slider .swiper-slide:hover svg {
+    top: 93px;
+  }
+  body .swiper.feedback-slider .swiper-slide:hover svg .slide-circle {
+    r: 100;
+  }
+}
 body .swiper.feedback-slider .swiper-slide.play-animation .slide-hover-arrows {
   opacity: 1 !important;
 }

@@ -859,6 +859,24 @@ body {
               r: 123.5;
             }
           }
+
+          @media screen and (max-width: $small) {
+            .slide-hover-arrows {
+              opacity: 0 !important;
+            }
+
+            .slide-hover-diamonds {
+              transform: translateY(0%) translateZ(0);
+            }
+
+            svg {
+              top: 93px;
+  
+              .slide-circle {
+                r: 100;
+              }
+            }
+          }
         }
 
         &.play-animation {
@@ -1227,7 +1245,7 @@ body {
       color: #ffffff;
       margin-bottom: 40px;
     } 
-    
+
     @media screen and (max-width: 940px) {
       width: 100%;
       max-width: unset;
