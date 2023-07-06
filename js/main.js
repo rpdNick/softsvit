@@ -104,7 +104,7 @@ const feedbackSliderOptions = {
 
   pagination: {
     el: ".feedback-slider .swiper-pagination",
-    clickable: true,
+    clickable: false,
   },
   navigation: {
     nextEl: ".feedback-slider .slider-button-next",
@@ -160,7 +160,7 @@ const whySoftsvitSliderOptions = {
         fill: "row",
       },
       spaceBetween: 24,
-    }
+    },
   },
   pagination: {
     el: ".why_softsvit_slider .swiper-pagination",
@@ -276,6 +276,16 @@ function reDrawVacancySlider() {
   sliderCardsHendler();
 }
 
+let queryLoaderTemplate = `<div class="preloader_wrapper active" id="query-loader">
+<div class="preloader">
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+</div>
+</div>`;
+
 /** Switch Tabs logic*/
 
 const tabs = document.querySelectorAll(".switch_tabs .s-tab");
@@ -342,11 +352,12 @@ tabs.forEach((tab) => {
     }
   });
 });
+
 //------- Modal logic
 
 const pageBody = document.querySelector("body");
 const popupOverlay = document.querySelector(".overlay");
-const popupLoader = document.getElementById("preloader");
+// const popupLoader = document.getElementById("preloader");
 
 let closeButton = document.querySelectorAll(".close-modal");
 
@@ -382,8 +393,9 @@ function sliderCardsHendler() {
 sliderCardsHendler();
 
 function showModal(modal) {
-  showOverlay();
-  modal.classList.add("active");
+ let modalLoader = document.getElementById("page-loader");
+ modalLoader.classList.add("active");
+ pageBody.classList.add("loading");
   // run query
   // const id = button.getAttribute("data-post-id");
   fetch(`./data.json`, {
@@ -395,12 +407,18 @@ function showModal(modal) {
     // fetch(`/wp-json/wp/v2/posts/${id}`)
     .then((response) => response.text())
     .then((dataText) => {
-      const data = JSON.parse(dataText);
-      const htmlTitle = data.title.rendered;
-      const htmlDescription = data.content.rendered;
-      modal.querySelector(".title").innerHTML = htmlTitle;
-      modal.querySelector(".description_content").innerHTML = htmlDescription;
-      modal.querySelector(".title-value").value = htmlTitle;
+      setTimeout(() => {
+        const data = JSON.parse(dataText);
+        const htmlTitle = data.title.rendered;
+        const htmlDescription = data.content.rendered;
+        modal.querySelector(".title").innerHTML = htmlTitle;
+        modal.querySelector(".description_content").innerHTML = htmlDescription;
+        modal.querySelector(".title-value").value = htmlTitle;
+        modalLoader.classList.remove("active");
+        pageBody.classList.remove("loading");
+        showOverlay();
+        modal.classList.add("active");
+      }, 1000);
     })
     .catch((error) => {
       console.log(error);
