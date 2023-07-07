@@ -552,7 +552,11 @@ body .main_menu .contacts_block .contact_item .contact_item_name {
 @media screen and (max-width: 640px) {
   body .main_menu .contacts_block .contact_item .contact_item_name {
     font-size: 14px;
-    line-height: 18px;
+  }
+}
+@media screen and (max-width: 388px) {
+  body .main_menu .contacts_block .contact_item .contact_item_name {
+    font-size: 12px;
   }
 }
 body .main_menu .contacts_block .contact_item .contact_item_info {
@@ -574,10 +578,9 @@ body .main_menu .contacts_block .contact_item .contact_item_info a {
     line-height: 18px;
   }
 }
-@media screen and (max-width: 386px) {
+@media screen and (max-width: 388px) {
   body .main_menu .contacts_block .contact_item .contact_item_info {
     font-size: 12px;
-    line-height: 16px;
   }
 }
 @media screen and (max-width: 724px) {
@@ -1567,12 +1570,7 @@ body .main_screen_content .main_screen_footer .experience_row .experience_item .
     line-height: 44px;
   }
   body .main_screen_content .main_screen_footer .experience_row .experience_item .count.infinity {
-    width: 31px;
-  }
-}
-@media screen and (max-width: 979px) and (max-width: 560px) {
-  body .main_screen_content .main_screen_footer .experience_row .experience_item .count.infinity {
-    width: 21px;
+    width: 40px;
   }
 }
 @media screen and (max-width: 979px) {
