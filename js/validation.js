@@ -6,8 +6,6 @@ forms.forEach((form) => {
     e.preventDefault();
     let erroreArrayElemnts = [];
     let errorTxt = "";
-    //     let leng = document.getElementById("lang").textContent;
-    //     console.log("leng: " + leng);
     let requiredElements = form.querySelectorAll("input[aria-required]");
     for (let i = 0; i < requiredElements.length; i++) {
       let elType = requiredElements[i].getAttribute("type");
