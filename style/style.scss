@@ -970,9 +970,11 @@ body {
           left: 0;
           right: 0;
           border-radius: 16px;
+          background-color: rgba(255,255,255,0.01);
+          backdrop-filter: blur(50px);
           background-image: url(../img/sliders/vacancy-slide-hover-bg.svg);
-          background-position: center;
-          background-size: 100% 100%;
+          background-position: bottom right;
+          background-size: cover;
           background-repeat: no-repeat;
           opacity: 0;
           transition: 0.6s;
@@ -1057,6 +1059,29 @@ body {
             padding: 2px 8px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 6px;
+          }
+        }
+
+        &.is-hot {
+          backdrop-filter: none;
+          .slide-content {
+            .info-wrap {
+              .info {
+                .title {
+                  text-shadow: 0px 0px 10px rgba(0, 255, 194, 0.80);
+                }
+              }
+            }
+          }
+
+          &::before {
+            content: "";
+            background-image: url(../img/sliders/hot-vacancy-bg.svg);
+            opacity: 1;
+          }
+
+          &:hover::before {
+            background-image: url(../img/sliders/hot-vacancy-bg-hover.svg);
           }
         }
       }

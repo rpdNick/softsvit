@@ -11,7 +11,7 @@ forms.forEach((form) => {
       let elType = requiredElements[i].getAttribute("type");
       if (elType == "text") {
         errorTxt = "Будь ласка, заповніть поле";
-        console.log("text error");
+        
         if (requiredElements[i].value == "") {
           showValidationError(requiredElements[i], errorTxt);
           erroreArrayElemnts.push(requiredElements[i]);
@@ -63,6 +63,17 @@ forms.forEach((form) => {
           removeValidationError(requiredElements[i]);
         });
       }
+
+      if (elType == "checkbox") {
+        if (!requiredElements[i].checked) {
+          showValidationError(requiredElements[i]);
+          erroreArrayElemnts.push(requiredElements[i]);
+        }
+
+        requiredElements[i].addEventListener("change", () => {
+          removeValidationError(requiredElements[i]);
+        });
+      }
     }
 
     if (erroreArrayElemnts.length == 0) {
@@ -81,6 +92,8 @@ function removeValidationError(errorElement) {
 }
 
 function showValidationError(errorElement, errorTxt) {
-  errorElement.closest(".form_item").querySelector(".error_txt").innerText = errorTxt;
+  if (errorElement.closest(".form_item").querySelector(".error_txt") != null) {
+    errorElement.closest(".form_item").querySelector(".error_txt").innerText = errorTxt;
+  }
   errorElement.closest(".form_item").classList.add("error");
 }
