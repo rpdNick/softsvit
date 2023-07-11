@@ -782,6 +782,7 @@ body {
               top: 100%;
               transition: 0.6s ease-in-out;
               object-fit: cover;
+              opacity: 0;
             }
 
             svg {
@@ -852,6 +853,7 @@ body {
 
           .slide-hover-diamonds {
             transform: translateY(-100%) translateZ(0);
+            opacity: 1 !important;
           }
 
           svg {
@@ -869,6 +871,7 @@ body {
 
             .slide-hover-diamonds {
               transform: translateY(0%) translateZ(0);
+              opacity: 1 !important;
             }
 
             svg {
@@ -888,6 +891,7 @@ body {
 
           .slide-hover-diamonds {
             transform: translateY(-100%) translateZ(0);
+            opacity: 1 !important;
           }
 
           svg {
@@ -907,6 +911,7 @@ body {
 
             .slide-hover-diamonds {
               transform: translateY(-100%) translateZ(0);
+              opacity: 1 !important;
             }
 
             svg {
