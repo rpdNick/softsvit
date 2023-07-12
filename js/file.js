@@ -27,9 +27,11 @@ function addFile(button) {
 
 function removeFile(button) {
   let fileInput = button.closest(".attachment").querySelector("input");
+  const activeFile = button.closest(".file_items");
   fileInput.value = "";
   const fileItems = button.closest(".file_items");
   fileItems.classList.remove("active");
+  activeFile.querySelector(".file-name").innerText = "";
 }
 
 // phone only numbers
