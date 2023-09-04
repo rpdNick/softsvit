@@ -48,7 +48,8 @@
                             <a class="social-item" target="_blank" href="https://www.instagram.com/softsvit.it/">
                                 <img class="social-icon" src="./img/social/instagram.svg" alt="social-icon">
                             </a>
-                            <a class="social-item" target="_blank" href="https://www.linkedin.com/company/softsvit/about/">
+                            <a class="social-item" target="_blank"
+                                href="https://www.linkedin.com/company/softsvit/about/">
                                 <img class="social-icon" src="./img/social/linkedin.svg" alt="social-icon">
                             </a>
                         </div>
@@ -57,6 +58,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function contentHeight() {
+            const doc = document.documentElement
+            doc.style.setProperty('--vh', (window.innerHeight * .01) + 'px');
+        }
+
+        window.addEventListener('resize', contentHeight);
+        contentHeight();
+    </script>
 </body>
 
 </html>
