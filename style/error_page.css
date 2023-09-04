@@ -8,7 +8,7 @@
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
 }
 .error_page.not_found .page-container {
   position: relative;
@@ -78,7 +78,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 96px;
+  padding-top: 120px;
   height: calc(100vh - 66px);
 }
 .error_page.not_found .error-content .error-code {
