@@ -16,7 +16,8 @@
         .page-overflow {
             position: relative;
             overflow: hidden;
-            min-height: 100dvh;
+            height: 100%;
+            // min-height: 100dvh;
         }
 
         .page-container {
@@ -174,7 +175,6 @@
             justify-content: space-between;
             align-items: center;
             padding: 24px 0;
-            margin-top: auto;
 
             .social_block {
                 position: relative;

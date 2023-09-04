@@ -14,7 +14,7 @@
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
-  min-height: 100dvh;
+  height: 100%;
 }
 .error_page.not_found .page-container {
   position: relative;
@@ -174,7 +174,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  margin-top: auto;
 }
 .error_page.not_found .error-footer .social_block {
   position: relative;
