@@ -6,6 +6,12 @@
   background-color: #000000;
   min-height: -webkit-fill-available;
 }
+.error_page.not_found .content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+}
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
@@ -79,8 +85,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 120px;
-  min-height: calc(100vh - 88px);
+  flex: 1;
 }
 .error_page.not_found .error-content .error-code {
   position: relative;

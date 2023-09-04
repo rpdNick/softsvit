@@ -7,6 +7,13 @@
         background-color: #000000;
         min-height: -webkit-fill-available;
 
+        .content-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 120px;
+        }
+
         .page-overflow {
             position: relative;
             overflow: hidden;
@@ -79,8 +86,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding-top: 120px;
-            min-height: calc(100vh - 88px);
+            flex: 1;
+            // min-height: calc(100vh - 88px);
 
             .error-code {
                 position: relative;
