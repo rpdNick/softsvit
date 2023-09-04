@@ -1,0 +1,182 @@
+.error_page.not_found {
+  background-image: url(../img/contact-bg-1400.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+.error_page.not_found .page-overflow {
+  position: relative;
+  overflow: hidden;
+}
+.error_page.not_found .page-container {
+  position: relative;
+}
+.error_page.not_found .page-container .curve-line {
+  position: absolute;
+}
+.error_page.not_found .page-container .curve-line.top-line {
+  top: 0;
+  left: 0;
+  max-width: 842px;
+  min-width: 470px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .error_page.not_found .page-container .curve-line.top-line {
+    max-width: 550px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .error_page.not_found .page-container .curve-line.top-line {
+    max-width: 600px;
+    top: -20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .page-container .curve-line.top-line {
+    max-width: 550px;
+    left: -110px;
+    top: -20px;
+  }
+}
+@media only screen and (max-device-width: 916px) and (orientation: landscape) {
+  .error_page.not_found .page-container .curve-line.top-line {
+    max-width: 380px;
+    min-width: auto;
+  }
+}
+.error_page.not_found .page-container .curve-line.bottom-line {
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .error_page.not_found .page-container .curve-line.bottom-line {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .page-container .curve-line.bottom-line {
+    display: none;
+  }
+}
+.error_page.not_found .page-container .curve-line.bottom-line-mob {
+  display: none;
+  bottom: 0;
+  right: -15px;
+  z-index: -1;
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .page-container .curve-line.bottom-line-mob {
+    display: block;
+  }
+}
+.error_page.not_found .error-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 96px;
+  min-height: calc(100vh - 66px);
+}
+.error_page.not_found .error-content .error-code {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 282px;
+  height: 177px;
+  background-image: url(../img/error_page/error-bg.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .error-content .error-code .code-number {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .error-content .error-code {
+    width: 200px;
+    height: 125px;
+  }
+}
+.error_page.not_found .error-content .error-code-img {
+  position: absolute;
+}
+.error_page.not_found .error-content .error-code-img.left-img {
+  right: calc(100% - 25px);
+  transform: translateY(15px);
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .error-content .error-code-img.left-img {
+    transform: translateY(-10px);
+  }
+}
+.error_page.not_found .error-content .error-code-img.right-img {
+  left: calc(100% - 30px);
+  transform: translateY(10px);
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .error-content .error-code-img.right-img {
+    left: calc(100% - 40px);
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 390px) {
+  .error_page.not_found .error-content .error-code-img.right-img {
+    left: calc(100% - 28px);
+    transform: translateY(-10px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .error_page.not_found .error-content .error-code-img {
+    max-width: 285px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .error_page.not_found .error-content .error-code-img {
+    max-width: 210px;
+  }
+}
+.error_page.not_found .error-content .message {
+  margin: 43px 0;
+  max-width: 540px;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: #fff;
+}
+@media screen and (max-width: 575px) {
+  .error_page.not_found .error-content .message {
+    padding: 0 12px;
+  }
+}
+.error_page.not_found .error-content .button {
+  font-weight: 700;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.error_page.not_found .error-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 26px;
+}
+.error_page.not_found .error-footer .social_block {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .error_page .ellipse.main_screen_ellipse-right {
+    display: none;
+  }
+}/*# sourceMappingURL=error_page.css.map */

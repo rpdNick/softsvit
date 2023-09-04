@@ -1,0 +1,187 @@
+.error_page {
+    &.not_found {
+        background-image: url(../img/contact-bg-1400.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #000000;
+
+        .page-overflow {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-container {
+            position: relative;
+
+            .curve-line {
+                position: absolute;
+
+                &.top-line {
+                    top: 0;
+                    left: 0;
+                    max-width: 842px;
+                    min-width: 470px;
+                    width: 100%;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: 550px;
+                    }
+
+                    @media screen and (max-height: 900px) {
+                        max-width: 600px;
+                        top: -20px;
+                    }
+
+                    @media screen and (max-width: 575px) {
+                        max-width: 550px;
+                        left: -110px;
+                        top: -20px;
+                    }
+
+                    @media only screen and (max-device-width: 916px) and (orientation: landscape) {
+                        max-width: 380px;
+                        min-width: auto;
+                    }
+                }
+
+                &.bottom-line {
+                    bottom: 0;
+                    right: 0;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: 250px;
+                    }
+
+                    @media screen and (max-width: 575px) {
+                        display: none;
+                    }
+                }
+
+                &.bottom-line-mob {
+                    display: none;
+                    bottom: 0;
+                    right: -15px;
+                    z-index: -1;
+
+                    @media screen and (max-width: 575px) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .error-content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 96px;
+            min-height: calc(100vh - 66px);
+
+            .error-code {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 282px;
+                height: 177px;
+                background-image: url(../img/error_page/error-bg.svg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                backdrop-filter: blur(15px);
+
+                .code-number {
+                    @media screen and (max-width: 575px) {
+                        width: 100px;
+                    }
+                }
+
+                @media screen and (max-width: 575px) {
+                    width: 200px;
+                    height: 125px;
+                }
+            }
+
+            .error-code-img {
+                position: absolute;
+
+                &.left-img {
+                    right: calc(100% - 25px);
+                    transform: translateY(15px);
+
+                    @media screen and (max-width: 575px) {
+                        transform: translateY(-10px);
+                    }
+                }
+
+                &.right-img {
+                    left: calc(100% - 30px);
+                    transform: translateY(10px);
+
+                    @media screen and (max-width: 575px) {
+                        left: calc(100% - 40px);
+                        transform: translateY(0px);
+                    }
+
+                    @media screen and (max-width: 390px) {
+                        left: calc(100% - 28px);
+                        transform: translateY(-10px);
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    max-width: 285px;
+                }
+
+                @media screen and (max-width: 390px) {
+                    max-width: 210px;
+                }
+            }
+
+            .message {
+                margin: 43px 0;
+                max-width: 540px;
+                text-align: center;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px;
+                color: #fff;
+
+                @media screen and (max-width: 575px) {
+                    padding: 0 12px;
+                }
+            }
+
+            .button {
+                font-weight: 700;
+                min-width: fit-content;
+            }
+        }
+
+        .error-footer {
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 26px;
+            }
+
+            .social_block {
+                position: relative;
+                display: flex;
+                gap: 5px;
+                z-index: 1;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .ellipse.main_screen_ellipse-right {
+            display: none;
+        }
+    }
+}

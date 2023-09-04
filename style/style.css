@@ -874,6 +874,10 @@ body .swiper.vacancy-slider {
   height: 100%;
   padding: 28px 0 30px;
 }
+body .swiper.vacancy-slider .swiper-wrapper {
+  max-height: 516px;
+  margin: 0 auto;
+}
 body .swiper.vacancy-slider .swiper-slide {
   position: relative;
   text-align: center;

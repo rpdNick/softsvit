@@ -213,7 +213,7 @@ const vacancySliderOptions = {
     },
 
     1109: {
-      slidesPerView: "auto",
+      slidesPerView: 3,
       grid: {
         rows: 2,
         fill: "row",

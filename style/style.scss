@@ -957,6 +957,11 @@ body {
       height: 100%;
       padding: 28px 0 30px;
 
+      .swiper-wrapper {
+        max-height: 516px;
+        margin: 0 auto;
+      }
+
       .swiper-slide {
         position: relative;
         text-align: center;
