@@ -79,7 +79,7 @@
             align-items: center;
             flex-direction: column;
             padding-top: 120px;
-            height: calc(100vh - 66px);
+            min-height: calc(100vh - 66px);
 
             .error-code {
                 position: relative;
