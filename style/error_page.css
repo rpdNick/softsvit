@@ -8,6 +8,7 @@
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
+  height: 100vh;
 }
 .error_page.not_found .page-container {
   position: relative;
