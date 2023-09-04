@@ -4,11 +4,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #000000;
+  min-height: -webkit-fill-available;
 }
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 100%;
 }
 .error_page.not_found .page-container {
   position: relative;
@@ -79,7 +80,7 @@
   align-items: center;
   flex-direction: column;
   padding-top: 120px;
-  min-height: calc(100vh - 66px);
+  min-height: calc(100vh - 88px);
 }
 .error_page.not_found .error-content .error-code {
   position: relative;
@@ -164,11 +165,11 @@
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.error_page.not_found .error-footer .footer-content {
+.error_page.not_found .error-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 26px;
+  padding: 24px 0;
 }
 .error_page.not_found .error-footer .social_block {
   position: relative;
