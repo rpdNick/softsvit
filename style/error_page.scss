@@ -5,19 +5,18 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-color: #000000;
-        min-height: -webkit-fill-available;
 
         .content-wrapper {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             padding-top: 120px;
+            min-height: 100vh;
         }
 
         .page-overflow {
             position: relative;
             overflow: hidden;
-            min-height: 100%;
+            min-height: 100vh;
         }
 
         .page-container {
@@ -176,6 +175,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 24px 0;
+            margin-top: auto;
 
             .social_block {
                 position: relative;

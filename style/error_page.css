@@ -4,18 +4,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #000000;
-  min-height: -webkit-fill-available;
 }
 .error_page.not_found .content-wrapper {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
+  min-height: 100vh;
 }
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
-  min-height: 100%;
+  min-height: 100vh;
 }
 .error_page.not_found .page-container {
   position: relative;
@@ -175,6 +174,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
+  margin-top: auto;
 }
 .error_page.not_found .error-footer .social_block {
   position: relative;
