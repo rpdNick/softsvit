@@ -62,11 +62,6 @@
     max-width: 250px;
   }
 }
-@media screen and (max-width: 575px) {
-  .error_page.not_found .page-container .curve-line.bottom-line {
-    display: none;
-  }
-}
 .error_page.not_found .error-content {
   position: relative;
   display: flex;
