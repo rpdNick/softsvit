@@ -14,7 +14,7 @@
 .error_page.not_found .page-overflow {
   position: relative;
   overflow: hidden;
-  min-height: 100svh;
+  min-height: 100dvh;
 }
 .error_page.not_found .page-container {
   position: relative;
