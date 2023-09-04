@@ -67,17 +67,6 @@
     display: none;
   }
 }
-.error_page.not_found .page-container .curve-line.bottom-line-mob {
-  display: none;
-  bottom: 0;
-  right: -12px;
-  z-index: -1;
-}
-@media screen and (max-width: 575px) {
-  .error_page.not_found .page-container .curve-line.bottom-line-mob {
-    display: block;
-  }
-}
 .error_page.not_found .error-content {
   position: relative;
   display: flex;

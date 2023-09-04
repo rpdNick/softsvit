@@ -65,17 +65,6 @@
                         display: none;
                     }
                 }
-
-                &.bottom-line-mob {
-                    display: none;
-                    bottom: 0;
-                    right: -12px;
-                    z-index: -1;
-
-                    @media screen and (max-width: 575px) {
-                        display: block;
-                    }
-                }
             }
         }
 
