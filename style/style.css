@@ -1172,7 +1172,8 @@ body .form_item .form_item_label {
   transition: 0.3s;
 }
 body .form_item .error_txt {
-  margin-top: 6px;
+  position: absolute;
+  margin-top: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
